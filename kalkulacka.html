@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investičná kalkulačka | Crossrock Capital</title>
+    <meta name="description" content="Vypočítajte si presný výnos z vašej investície. 9-10% ročne s mesačným vyplácani
+
+úrokov.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Crossrock Capital" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="investicie.html">Investície</a></li>
+                <li><a href="financovanie.html">Financovanie</a></li>
+                <li><a href="kalkulacka.html" class="active">Kalkulačka</a></li>
+                <li><a href="pribehy.html">Príbehy</a></li>
+                <li><a href="kontakt.html" class="btn-primary-nav">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Investičná kalkulačka</h1>
+            <p class="page-subtitle">Vypočítajte si presný výnos z vašej investície</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-page">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <div class="calculator-main">
+                    <div class="calculator-inputs">
+                        <h2>Nastavte parametre investície</h2>
+                        
+                        <div class="input-group">
+                            <label for="investmentPeriod">Doba investície</label>
+                            <div class="period-options">
+                                <button type="button" class="period-btn active" data-years="3">
+                                    <span class="period-years">3 roky</span>
+                                    <span class="period-rate">9% ročne</span>
+                                </button>
+                                <button type="button" class="period-btn" data-years="5">
+                                    <span class="period-years">5 rokov</span>
+                                    <span class="period-rate">10% ročne</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="investmentPeriod" value="3">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="investmentAmount">Suma investície</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="investmentAmount" value="50000" step="1000">
+                                <span class="currency">€</span>
+                            </div>
+                            <input type="range" id="amountSlider" min="10000" max="300000" step="5000" value="50000" class="slider">
+                            <div class="slider-labels">
+                                <span>10 000 €</span>
+                                <span>300 000 €</span>
+                            </div>
+                            <p class="input-note">Investície nad 300 000 € - individuálne podmienky</p>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <h3>Váš výnos</h3>
+                        
+                        <div class="result-section">
+                            <div class="result-card highlight-card">
+                                <div class="result-label">Celkový výnos za <span id="totalPeriodLabel">3 roky</span></div>
+                                <div class="result-value" id="totalReturn">0 €</div>
+                            </div>
+                            
+                            <div class="result-breakdown">
+                                <div class="breakdown-title">Rozdelenie výnosu:</div>
+                                
+                                <div class="breakdown-item">
+                                    <div class="breakdown-label">
+                                        Mesačný výnos (6% p.a.)
+                                        <span class="breakdown-note">Vyplácaná každý mesiac</span>
+                                    </div>
+                                    <div class="breakdown-value" id="monthlyReturn">0 €</div>
+                                </div>
+                                
+                                <div class="breakdown-item">
+                                    <div class="breakdown-label">
+                                        Ročný bonus (<span id="bonusPercentLabel">3</span>% p.a.)
+                                        <span class="breakdown-note">Vyplácaná na konci roka</span>
+                                    </div>
+                                    <div class="breakdown-value" id="yearlyBonus">0 €</div>
+                                </div>
+                                
+                                <div class="breakdown-divider"></div>
+                                
+                                <div class="breakdown-item total">
+                                    <div class="breakdown-label">
+                                        Ročný výnos celkom
+                                        <span class="breakdown-note"><span id="totalRateLabel">9</span>% p.a.</span>
+                                    </div>
+                                    <div class="breakdown-value" id="yearlyTotal">0 €</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">Spolu dostanete:</span>
+                                <span class="summary-value" id="totalWithInvestment">0 €</span>
+                            </div>
+                            <p class="summary-note">Investícia + všetky výnosy</p>
+                            
+                            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center;">
+                                <p style="font-weight: 600; margin-bottom: 1rem; color: var(--text-primary);">Zaujíma vás táto investícia?</p>
+                                <a href="../kontakt.html" style="display: inline-block; padding: 0.875rem 2rem; background: var(--accent); color: #000; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.5px; text-decoration: none; transition: all 0.3s;">Kontaktovať nás</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-info">
+                    <div class="info-card">
+                        <h3>Ako to funguje</h3>
+                        <ul class="info-list">
+                            <li>
+                                <strong>Mesačné vyplácanie:</strong> Každý mesiac dostávate 0,5% z investovanej sumy (6% ročne)
+                            </li>
+                            <li>
+                                <strong>Ročný bonus:</strong> Na konci každého roka dostanete bonus 3% (pri 3 rokoch) alebo 4% (pri 5 rokoch)
+                            </li>
+                            <li>
+                                <strong>Istina:</strong> Vaša investovaná suma zostáva nedotknutá a vracia sa na konci doby investície
+                            </li>
+                            <li>
+                                <strong>Zabezpečenie:</strong> Všetky investície sú zabezpečené nehnuteľnosťami s 150% mierou zabezpečenia
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card dark-card">
+                        <h3>Príklad výpočtu</h3>
+                        <div class="example-calc" id="exampleCalc">
+                            <p><strong>Investícia 50 000 €</strong> na <strong>3 roky</strong> (9% p.a.)</p>
+                            <div class="example-breakdown">
+                                <div>Mesačný výnos: <strong>250 €</strong> (0,5% mesačne)</div>
+                                <div>Ročný bonus: <strong>1 500 €</strong> (3% ročne)</div>
+                                <div class="example-divider"></div>
+                                <div>Celkom ročne: <strong>4 500 €</strong> (9% p.a.)</div>
+                                <div>Za 3 roky: <strong>13 500 €</strong></div>
+                                <div class="example-total">Spolu dostanete: <strong>63 500 €</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="calculator-faq">
+        <div class="container">
+            <h2 class="section-title">Často kladené otázky</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Aká je minimálna investícia?</h3>
+                    <p>Minimálna investícia je 10 000 €. Pre sumy nad 300 000 € ponúkame individuálne podmienky s možnosťou výhodnejších sadzieb.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Kedy dostávam mesačné výnosy?</h3>
+                    <p>Mesačné výnosy (0,5% mesačne) sa vyplácajú vždy k 15. dňu nasledujúceho mesiaca na váš bankový účet.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Môžem si vybrať investíciu pred termínom?</h3>
+                    <p>Investícia je viazaná na dohodnuté obdobie (3 alebo 5 rokov). V odôvodnených prípadoch je možné predčasné ukončenie za dohodnutých podmienok.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Čím je investícia zabezpečená?</h3>
+                    <p>Vaša investícia je zabezpečená nehnuteľnosťami s minimálnou mierou zabezpečenia 150%. Nehnuteľnosti si môžete osobne navštíviť.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Script -->
+    <script src="calculator.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.svg" alt="Crossrock Capital" class="footer-logo">
+                    <p class="footer-tagline">
+                        Sprístupniť investície do nehnuteľností každému a pomôcť tým, ktorí potrebujú kapitál.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigácia</h4>
+                        <ul>
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="investicie.html">Investície</a></li>
+                            <li><a href="financovanie.html">Financovanie</a></li>
+                            <li><a href="kalkulacka.html">Kalkulačka</a></li>
+                            <li><a href="pribehy.html">Príbehy</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Právne</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Ochrana údajov</a></li>
+                            <li><a href="#">Obchodné podmienky</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Kontakt</h4>
+                        <ul>
+                            <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="640d0a020b2407160b1717160b070f0705140d1005084a170f">[email&#160;protected]</a></li>
+                            <li>+421 XXX XXX XXX</li>
+                            <li>Bratislava, Slovensko</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Crossrock Capital. Všetky práva vyhradené.</p>
+            </div>

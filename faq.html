@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Často kladené otázky (FAQ) | Crossrock Capital</title>
+    <meta name="description" content="Odpovede na najčastejšie otázky o investíciách a financovaní s Crossrock Capital.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .faq-section {
+            padding: 6rem 0;
+        }
+        .faq-category {
+            margin-bottom: 4rem;
+        }
+        .faq-category-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #D4AF37;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #E5E5E5;
+            transition: all 0.3s;
+        }
+        .faq-item:hover {
+            border-color: #D4AF37;
+        }
+        .faq-question {
+            padding: 1.5rem;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+        }
+        .faq-question:hover {
+            background: #F8F8F8;
+        }
+        .faq-question.active {
+            background: #F8F8F8;
+            color: #D4AF37;
+        }
+        .faq-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.active {
+            max-height: 1000px;
+        }
+        .faq-answer-content {
+            padding: 1.5rem;
+            background: #F8F8F8;
+            color: #4A4A4A;
+            line-height: 1.7;
+        }
+        .faq-highlight {
+            background: #F4E4BC;
+            padding: 0.125rem 0.5rem;
+            color: #000;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Crossrock Capital" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><span><span><span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="investicie.html">Investície</a></li>
+                <li><a href="financovanie.html">Financovanie</a></li>
+                <li><a href="kalkulacka.html">Kalkulačka</a></li>
+                <li><a href="pribehy.html">Príbehy</a></li>
+                <li><a href="kontakt.html" class="btn-primary-nav">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Často kladené otázky</h1>
+            <p class="page-subtitle">Odpovede na najčastejšie otázky o investíciách a financovaní</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container" style="max-width: 900px;">
+            
+            <!-- Investície -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">💰 Investície</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Ako je zabezpečená moja investícia?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Ochrana vašej investície spočíva v tom, že naša spoločnosť priamo vlastní nehnuteľnosti v majetku firmy, čiže sú zapísané na ich listoch vlastníctva. Trhová hodnota týchto nehnuteľností v majetku spoločnosti prevyšuje vklady investorov (150% miera zabezpečenia).</p>
+                            <p style="margin-top: 1rem;">To znamená, že každé euro vašej investície je kryté nehnuteľnosťami v hodnote 1,50 €. Môžete si ich navštíviť a vidieť na vlastné oči.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Aký typ nehnuteľností chráni moju investíciu?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Ide o komerčné a rezidenčné nehnuteľnosti, prípadne pozemky. Naše portfólio je diverzifikované, aby sme minimalizovali riziko.</p>
+                            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.5rem;">✓ Rezidenčné byty a domy</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Komerčné priestory</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Stavebné pozemky</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>V akom prípade dosiahnem 10% ročný výnos?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>V prípade, že u nás vložíte vklad s viazanosťou 3 roky, garantujeme vám 9% ročný výnos.</p>
+                            <p style="margin-top: 1rem;">Ak sa rozhodnete investovať na 5 rokov, vieme vám zdroje úročiť až s 10% ročným výnosom.</p>
+                            <div style="background: #F4E4BC; padding: 1rem; margin-top: 1rem; border-left: 3px solid #D4AF37;">
+                                <strong>3 roky:</strong> 9% p.a. (6% mesačne + 3% ročný bonus)<br>
+                                <strong>5 rokov:</strong> 10% p.a. (6% mesačne + 4% ročný bonus)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Ako je možné, že môžete vyplácať výnos mesačne?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Mesačný výnos sa vypláca z nájmov a iných obchodných modelov spojených s vlastníctvom nehnuteľností v našom portfóliu.</p>
+                            <p style="margin-top: 1rem;"><strong>0,5% z investovanej sumy</strong> vám vyplácame mesačne vždy k <strong>20. dňu v mesiaci</strong>, a zvyšok k výročiu zmluvy.</p>
+                            <p style="margin-top: 1rem;">Príklad: Pri investícii 50 000 € dostávate každý mesiac 250 € + na konci roka bonus 1 500 € (pri 3-ročnej zmluve).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Je potrebné výnos zdaniť a zaplatiť odvody?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Áno, výnos z investície je potrebné zahrnúť do daňového priznania.</p>
+                            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.5rem;">Daň z príjmu: <strong>19%</strong> (alebo 25% v závislosti od výšky príjmu)</li>
+                                <li style="margin-bottom: 0.5rem;">Zdravotné odvody: <strong>15%</strong></li>
+                            </ul>
+                            <p style="margin-top: 1rem;">Naša spoločnosť vám posiela výnosy <strong>neočistené od dane z príjmu</strong>. Toto je bežná prax, väčšina investičných spoločností posiela výnosy, ktoré nie sú očistené od dane.</p>
+                            <p style="margin-top: 1rem;">Daňové priznanie je povinnosťou každého daňovníka samostatne, podobne, ako keď je predmetom zdanenia napríklad výnos z predaja/prenájmu nehnuteľnosti, predaja cenných papierov alebo inej zárobkovej činnosti.</p>
+                            <div style="background: #D4F4DD; padding: 1rem; margin-top: 1rem; border-left: 3px solid #4CAF50;">
+                                <strong>✓ Pomôžeme vám:</strong> Na požiadanie našich klientov poskytujeme podklady potrebné k vyplneniu daňového priznania a daňové poradenstvo.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Všeobecné -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">❓ Všeobecné</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Prečo ponúkate tak vysoké výnosy a ručíte nehnuteľnosťou, keď vás banka môže prefinancovať za oveľa nižší úrok?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Banky poskytujú pôžičky tohto typu na dlhodobý nehnuteľný majetok. Náš finančný model však počíta už s trojročným zúročením (doba fixácie vkladov našich klientov).</p>
+                            <p style="margin-top: 1rem;">Tak sme schopní našim klientom poskytnúť minimálne 9% kombinovaný mesačný a ročný výnos závisiac od viazanosti investície.</p>
+                            <p style="margin-top: 1rem;">Tento model je pre banky neatraktívny aj kvôli <strong>vyšším nákladom na administratívu</strong>, ktorú v plnej miere preberáme na seba.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Aká je minimálna investícia?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Minimálna investícia je 10 000 €.</p>
+                            <p style="margin-top: 1rem;">Pre sumy nad 300 000 € ponúkame individuálne podmienky s možnosťou výhodnejších sadzieb.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Môžem si vybrať investíciu pred termínom?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Investícia je viazaná na dohodnuté obdobie (3 alebo 5 rokov).</p>
+                            <p style="margin-top: 1rem;">V odôvodnených prípadoch je možné predčasné ukončenie za dohodnutých podmienok. Kontaktujte nás a spoločne nájdeme riešenie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financovanie -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">🏠 Financovanie</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Pomôžete aj keď mi banka odmietla?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Áno! Pomáhame aj tam, kde banky odmietli. Nepozeráme sa len na oficiálne dokumenty, ale aj na vašu skutočnú situáciu.</p>
+                            <p style="margin-top: 1rem;">Riešime:</p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                <li>✓ Financovanie pre SZČO a freelancerov</li>
+                                <li>✓ Bridging finance (preklenovacie úvery)</li>
+                                <li>✓ Refinancovanie nevýhodných úverov</li>
+                                <li>✓ Živnostník čo potrebuje hypotéku programy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Koľko trvá schválenie?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Schválenie trvá do 48 hodín. Peniaze môžete mať na účte do týždňa.</p>
+                            <p style="margin-top: 1rem;">Sme rýchli, pretože rozumieme, že v mnohých situáciách každý deň počíta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Musím sa vysťahovať z bytu?
+                        <span class="faq-icon">▼
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Nie! V mnohých prípadach (napr. Sale & Leaseback, Živnostník čo potrebuje hypotéku) môžete zostať bývať vo vašom dome/byte.</p>
+                            <p style="margin-top: 1rem;">Odkúpime nehnuteľnosť, splatíme vaše dlhy, a vy zostanete ako nájomník. Po dohodnutej dobe si môžete nehnuteľnosť odkúpiť späť.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="background: #000; color: white; padding: 3rem; text-align: center; margin-top: 4rem;">
+                <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem; color: #D4AF37;">Nenašli ste odpoveď?</h3>
+                <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.8);">Kontaktujte nás a radi vám pomôžeme</p>
+                <a href="kontakt.html" class="btn-primary btn-large" style="background: #D4AF37; border-color: #D4AF37; color: #000;">Kontaktovať nás</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.svg" alt="Crossrock Capital" class="footer-logo">
+                    <p class="footer-tagline">Sprístupniť investície do nehnuteľností každému a pomôcť tým, ktorí potrebujú kapitál.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigácia</h4>
+                        <ul>
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="investicie.html">Investície</a></li>
+                            <li><a href="financovanie.html">Financovanie</a></li>
+                            <li><a href="kalkulacka.html">Kalkulačka</a></li>
+                            <li><a href="pribehy.html">Príbehy</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Právne</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Ochrana údajov</a></li>
+                            <li><a href="#">Obchodné podmienky</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Kontakt</h4>
+                        <ul>
+                            <li>info@crossrockcapital.sk</li>
+                            <li>+421 XXX XXX XXX</li>
+                            <li>Bratislava, Slovensko</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crossrock Capital. Všetky práva vyhradené.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const isActive = question.classList.contains('active');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.parentElement.querySelector('.faq-answer').classList.remove('active');
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>Používame cookies na zlepšenie vášho zážitku. <a href="privacy-policy.html">Viac informácií</a></p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookieReject" class="cookie-btn cookie-btn-text">Odmietnuť</button>
+                <button id="cookieAccept" class="cookie-btn cookie-btn-primary">Prijať</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const banner = document.getElementById("cookieBanner");
+        const acceptBtn = document.getElementById("cookieAccept");
+        const rejectBtn = document.getElementById("cookieReject");
+        const cookieConsent = localStorage.getItem("cookieConsent");
+        if (!cookieConsent) {
+            setTimeout(() => { banner.style.display = "block"; }, 1000);
+        }
+        acceptBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "accepted");
+            banner.style.opacity = "0";
+            setTimeout(() => { banner.style.display = "none"; }, 300);
+        });
+        rejectBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "rejected");
+            banner.style.opacity = "0";
+            setTimeout(() => { banner.style.display = "none"; }, 300);
+        });
+    })();
+    </script>
+</body>
+</html>
