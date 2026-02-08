@@ -22,14 +22,39 @@
             display: grid;
             grid-template-columns: 280px 1fr;
             gap: 3rem;
-            padding: 3rem 0;
-            border-bottom: 1px solid #E5E5E5;
+            padding: 5rem 0;
         }
-        .story-card:last-child {
-            border-bottom: none;
+        .story-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #D4AF37, transparent);
+            margin: 1rem 0;
+        }
+        .story-mini-cta {
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #D4AF37;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: color 0.3s;
+        }
+        .story-mini-cta:hover {
+            color: #b8962e;
+        }
+        .story-mini-cta span {
+            margin-left: 0.35rem;
+            transition: margin-left 0.3s;
+        }
+        .story-mini-cta:hover span {
+            margin-left: 0.6rem;
         }
 
         .story-person {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             position: sticky;
             top: 6rem;
@@ -68,14 +93,16 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            padding-right: 1.5rem;
         }
         .story-quote {
             font-size: 1.25rem;
             font-style: italic;
             line-height: 1.8;
-            color: #000;
+            color: #333;
             margin-bottom: 2rem;
-            padding-left: 1.5rem;
+            padding: 1.5rem 2rem;
+            background: #F8F8F8;
             border-left: 3px solid #D4AF37;
         }
 
@@ -105,10 +132,9 @@
                 text-align: center;
             }
             .story-quote {
-                padding-left: 0;
+                padding: 1.5rem;
                 border-left: none;
                 border-top: 3px solid #D4AF37;
-                padding-top: 1.5rem;
                 text-align: left;
             }
             .story-person {
@@ -168,8 +194,10 @@
                             <p>Rodina získala nový byt bez straty rezervácie. Jozef zaplatil len úroky za preklenovacie obdobie, čo bolo zlomok toho, čo by stratil pri zrušení rezervácie. Dnes býva s rodinou v novom byte a je rád, že nemusel robiť kompromisy. "Keby som vtedy nezavolal Crossrocku, prišiel by som minimálne o 15 000 €," hovorí.</p>
                         </div>
                     </div>
+                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
             </div>
+            <hr class="story-divider">
 
             <!-- Story 2: Jana -->
             <div class="story-card">
@@ -195,8 +223,10 @@
                             <p>Po 2 rokoch Jana dom odkúpila späť. Dnes je bez dlhov, má dom vo vlastníctve a deti majú stabilný domov. "Crossrock mi vrátil nádej v čase, keď som ju úplne stratila. Neboli to len peniaze — bol to ľudský prístup. Niekto mi konečne povedal: pomôžeme vám," spomína Jana s vďačnosťou.</p>
                         </div>
                     </div>
+                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
             </div>
+            <hr class="story-divider">
 
             <!-- Story 3: Ján -->
             <div class="story-card">
@@ -222,8 +252,10 @@
                             <p>Byt bol zrekonštruovaný za 2 mesiace a predaný do týždňa od dokončenia. Ján zarobil pekné peniaze na flipe a Crossrock dostal stabilný výnos zo svojej investície. Bola to win-win situácia pre obe strany. "Spolupráca s Crossrock bola bezproblémová. Žiadna byrokracia, žiadne zbytočné otázky. Profesionáli, ktorí rozumejú biznisu," hodnotí Ján. Dnes spolupracujú na ďalších projektoch.</p>
                         </div>
                     </div>
+                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
             </div>
+            <hr class="story-divider">
 
             <!-- Story 4: Marta -->
             <div class="story-card">
@@ -249,6 +281,7 @@
                             <p>Marta mala peniaze na účte do niekoľkých dní od podpisu. Žiadne znižovanie ceny, žiadne mesiace neistoty a čakania. "Keby som šla cez realitku, možno by som čakala 6 mesiacov a nakoniec by som aj tak musela zľaviť. Crossrock mi dal férovú cenu hneď. Bola to obrovská úľava," hovorí Marta. Dnes je rada, že sa rozhodla správne a nemusela robiť kompromisy.</p>
                         </div>
                     </div>
+                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
             </div>
 

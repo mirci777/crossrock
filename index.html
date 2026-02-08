@@ -136,85 +136,123 @@
     <section class="featured-stories">
         <div class="container">
             <div class="section-header">
-                <div style="display: inline-block; padding: 0.5rem 1.25rem; background: #F4E4BC; color: #D4AF37; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.5px;">
+                <div style="display: inline-block; padding: 0.5rem 1.25rem; background: rgba(212, 175, 55, 0.15); color: #D4AF37; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.5px;">
                     REÁLNE PRÍBEHY
                 </div>
                 <h2 class="section-title">Možno to je aj váš príbeh?</h2>
                 <p class="section-subtitle" style="max-width: 700px;">Každý z týchto ľudí čelil výzve, ktorá sa zdala neprekonateľná. Každý našiel riešenie s Crossrock Capital.</p>
             </div>
-            
-            <div class="stories-grid">
-                <div class="story-card">
-                    <div class="story-number">01</div>
-                    <div class="story-quote">"Bez Crossrock by som prišiel o rezerváciu aj o peniaze."</div>
-                    <div class="story-content">
-                        <h3>Developer nečaká a banka nepomôže</h3>
-                        <p>Pán Jozef potreboval rýchlo peniaze na nový byt. Developer nečakal, kým predá starý...</p>
-                        <div class="story-meta">
-                            <div class="story-avatar">J</div>
-                            <div>
-                                <div class="story-name">Jozef</div>
-                                <div class="story-type">Nákup nového bytu</div>
-                            </div>
+
+            <div class="stories-slider-wrapper">
+                <div class="stories-slider" id="storiesSlider">
+                    <!-- Slide 1: 3 stories -->
+                    <div class="stories-slide">
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=160&q=80&fit=crop&crop=face" alt="Jozef" class="card-avatar">
+                            <div class="card-name">Jozef, 42 rokov</div>
+                            <div class="card-type">Nákup nového bytu</div>
+                            <p class="card-quote">"Bez Crossrock by som prišiel o rezerváciu aj o peniaze. Developer nečakal, kým predám starý byt."</p>
+                            <h4 class="card-title">Developer nečaká a banka nepomôže</h4>
+                            <p class="card-desc">Rezervoval si nový byt, ale starý ešte nebol predaný. Crossrock prebral záväzok a rodina dnes býva v novom byte.</p>
+                        </div>
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=160&q=80&fit=crop&crop=face" alt="Jana" class="card-avatar">
+                            <div class="card-name">Jana</div>
+                            <div class="card-type">Oddlženie</div>
+                            <p class="card-quote">"Nebankovky ma dostali do pasce. Bála som sa, že prídem o dom. Crossrock mi dal druhú šancu."</p>
+                            <h4 class="card-title">Zbavenie sa nevýhodnej pôžičky</h4>
+                            <p class="card-desc">Dlhová pasca s nebankovými úvermi. Crossrock odkúpil dom, splatil dlhy a po 2 rokoch ho Jana odkúpila späť.</p>
+                        </div>
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=160&q=80&fit=crop&crop=face" alt="Ján" class="card-avatar">
+                            <div class="card-name">Ján</div>
+                            <div class="card-type">Financovanie obchodu</div>
+                            <p class="card-quote">"V realitnom biznise musíte konať rýchlo. Crossrock mi umožnil flip bez banky."</p>
+                            <h4 class="card-title">Realitná príležitosť nečakala</h4>
+                            <p class="card-desc">Výborná príležitosť na trhu, ale chýbal kapitál. Crossrock financoval nákup aj rekonštrukciu — win-win pre obe strany.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: next 3 stories -->
+                    <div class="stories-slide">
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=160&q=80&fit=crop&crop=face" alt="Marta" class="card-avatar">
+                            <div class="card-name">Marta</div>
+                            <div class="card-type">Rýchly predaj</div>
+                            <p class="card-quote">"Zdedila som byt a potrebovala som ho predať rýchlo. Crossrock ponúkol férovú cenu za pár dní."</p>
+                            <h4 class="card-title">Zdedený byt bez stresu</h4>
+                            <p class="card-desc">Realitky radili znížiť cenu. Crossrock odkúpil za férovú trhovú cenu — peniaze na účte do niekoľkých dní.</p>
+                        </div>
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=160&q=80&fit=crop&crop=face" alt="Jozef" class="card-avatar">
+                            <div class="card-name">Jozef, 42 rokov</div>
+                            <div class="card-type">Nákup nového bytu</div>
+                            <p class="card-quote">"Dnes bývam v novom byte s rodinou a nemusel som robiť kompromisy."</p>
+                            <h4 class="card-title">Nový domov pre rodinu</h4>
+                            <p class="card-desc">Crossrock preklenovil financovanie, kým sa predal starý byt. Úroky boli zlomok toho, čo by Jozef stratil.</p>
+                        </div>
+                        <div class="story-card">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=160&q=80&fit=crop&crop=face" alt="Jana" class="card-avatar">
+                            <div class="card-name">Jana</div>
+                            <div class="card-type">Oddlženie</div>
+                            <p class="card-quote">"Crossrock mi vrátil nádej v čase, keď som ju úplne stratila."</p>
+                            <h4 class="card-title">Druhá šanca pre rodinu</h4>
+                            <p class="card-desc">Dnes je bez dlhov, má dom vo vlastníctve a deti majú stabilný domov. Ľudský prístup, ktorý zmenil život.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="story-card">
-                    <div class="story-number">02</div>
-                    <div class="story-quote">"Nebankovky ma dostali do pasce. Crossrock mi pomohol."</div>
-                    <div class="story-content">
-                        <h3>Zbavenie sa nevýhodnej pôžičky</h3>
-                        <p>Jana splácala jeden úver druhým. Bála sa, že príde o dom. Crossrock jej dal druhú šancu...</p>
-                        <div class="story-meta">
-                            <div class="story-avatar">J</div>
-                            <div>
-                                <div class="story-name">Jana</div>
-                                <div class="story-type">Oddlženie</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-card">
-                    <div class="story-number">03</div>
-                    <div class="story-quote">"V realitnom biznise musíte konať rýchlo."</div>
-                    <div class="story-content">
-                        <h3>Realitná príležitosť vyžadovala rýchle peniaze</h3>
-                        <p>Pán Ján našiel skvelú príležitosť na flip. Potreboval konať okamžite...</p>
-                        <div class="story-meta">
-                            <div class="story-avatar">J</div>
-                            <div>
-                                <div class="story-name">Ján</div>
-                                <div class="story-type">Financovanie obchodu s nehnuteľnosťami</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-card">
-                    <div class="story-number">04</div>
-                    <div class="story-quote">"Potrebovala som predať rýchlo, ale nechcela som znižovať cenu."</div>
-                    <div class="story-content">
-                        <h3>Zdedená nehnuteľnosť a potreba rýchleho predaja</h3>
-                        <p>Marta zdedila byt, no potrebovala ho predať čo najrýchlejšie. Crossrock odkúpil za férovú cenu...</p>
-                        <div class="story-meta">
-                            <div class="story-avatar">M</div>
-                            <div>
-                                <div class="story-name">Marta</div>
-                                <div class="story-type">Rýchly predaj nehnuteľnosti</div>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="slider-dots" id="sliderDots">
+                    <button class="slider-dot active" data-slide="0"></button>
+                    <button class="slider-dot" data-slide="1"></button>
                 </div>
             </div>
-            
+
             <div class="section-cta">
                 <p style="font-size: 1.125rem; margin-bottom: 1.5rem; color: #4A4A4A;">Máte podobnú situáciu?</p>
                 <a href="pribehy.html" class="btn-secondary">Prečítať všetky príbehy</a>
             </div>
         </div>
     </section>
+
+    <script>
+    (function() {
+        const slider = document.getElementById('storiesSlider');
+        const dots = document.querySelectorAll('#sliderDots .slider-dot');
+        let current = 0;
+        const total = dots.length;
+        let interval;
+
+        function goTo(index) {
+            current = index;
+            slider.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dots.forEach(d => d.classList.remove('active'));
+            dots[current].classList.add('active');
+        }
+
+        function next() {
+            goTo((current + 1) % total);
+        }
+
+        function startAuto() {
+            interval = setInterval(next, 5000);
+        }
+
+        function stopAuto() {
+            clearInterval(interval);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                stopAuto();
+                goTo(parseInt(this.dataset.slide));
+                startAuto();
+            });
+        });
+
+        startAuto();
+    })();
+    </script>
 
     <!-- Trust Section -->
     <section class="trust-section">
@@ -252,6 +290,16 @@
                     <p>150% miera zabezpečenia. Každá koruna krytá nehnuteľnosťou.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Promo -->
+    <section style="padding: 5rem 0; background: #F8F8F8;">
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <div style="font-size: 0.875rem; font-weight: 600; color: #D4AF37; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Často kladené otázky</div>
+            <h2 style="font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; margin-bottom: 1rem;">Máte otázky? Máme odpovede.</h2>
+            <p style="color: #4A4A4A; font-size: 1.125rem; line-height: 1.7; margin-bottom: 2rem;">Ako fungujú investície? Je to bezpečné? Čo ak potrebujem financovanie a banka ma odmietla? Všetko, čo potrebujete vedieť, na jednom mieste.</p>
+            <a href="faq.html" style="display: inline-block; padding: 1rem 2.5rem; background: #000; color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9375rem; letter-spacing: 0.5px; text-decoration: none; transition: all 0.3s;">Prečítať FAQ</a>
         </div>
     </section>
 
