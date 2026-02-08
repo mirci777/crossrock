@@ -778,7 +778,7 @@ button {
     }
 
     .stories-mobile-marquee .story-card {
-        min-width: 280px;
+        min-width: calc(100vw - 3rem);
         flex-shrink: 0;
         scroll-snap-align: start;
     }
