@@ -283,45 +283,6 @@
         });
 
         startAuto();
-
-        // Mobile card-by-card auto-scroll
-        var marquee = document.getElementById('storiesMobile');
-        if (marquee) {
-            var mobileCard = 0;
-            var isTouch = false;
-            var mobileInterval;
-            var cards = marquee.querySelectorAll('.story-card');
-            var totalCards = cards.length;
-
-            function scrollToCard() {
-                if (isTouch) return;
-                mobileCard = (mobileCard + 1) % totalCards;
-                cards[mobileCard].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-            }
-
-            function startMobileScroll() {
-                mobileInterval = setInterval(scrollToCard, 2550);
-            }
-
-            marquee.addEventListener('touchstart', function() {
-                isTouch = true;
-                clearInterval(mobileInterval);
-            });
-            marquee.addEventListener('touchend', function() {
-                setTimeout(function() {
-                    isTouch = false;
-                    startMobileScroll();
-                }, 3000);
-            });
-
-            if (window.innerWidth <= 768) {
-                startMobileScroll();
-            }
-            window.addEventListener('resize', function() {
-                clearInterval(mobileInterval);
-                if (window.innerWidth <= 768) startMobileScroll();
-            });
-        }
     })();
     </script>
 
