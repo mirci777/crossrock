@@ -650,6 +650,10 @@ button {
     display: none;
 }
 
+.mobile-dots {
+    display: none;
+}
+
 .stories-slider-wrapper {
     overflow: hidden;
     position: relative;
@@ -778,13 +782,35 @@ button {
     }
 
     .stories-mobile-marquee .story-card {
-        min-width: calc(100vw - 3rem);
+        min-width: calc(100vw - 2rem);
         flex-shrink: 0;
         scroll-snap-align: start;
     }
 
     .slider-dots {
         display: none;
+    }
+
+    .mobile-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .mobile-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #E5E5E5;
+        border: none;
+        padding: 0;
+        transition: all 0.3s;
+    }
+
+    .mobile-dot.active {
+        background: #D4AF37;
+        transform: scale(1.3);
     }
 }
 

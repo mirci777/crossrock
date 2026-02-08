@@ -238,6 +238,12 @@
                         <p class="card-desc">Zdedený byt predaný za trhovú cenu bez stresu a čakania.</p>
                     </div>
                 </div>
+                <div class="mobile-dots" id="mobileDots">
+                    <span class="mobile-dot active"></span>
+                    <span class="mobile-dot"></span>
+                    <span class="mobile-dot"></span>
+                    <span class="mobile-dot"></span>
+                </div>
             </div>
 
             <div class="section-cta">
@@ -283,6 +289,21 @@
         });
 
         startAuto();
+
+        // Mobile dots scroll tracking
+        var mobileMarquee = document.getElementById('storiesMobile');
+        var mobileDots = document.querySelectorAll('#mobileDots .mobile-dot');
+        if (mobileMarquee && mobileDots.length) {
+            mobileMarquee.addEventListener('scroll', function() {
+                var scrollLeft = mobileMarquee.scrollLeft;
+                var cardWidth = mobileMarquee.querySelector('.story-card').offsetWidth;
+                var gap = 24; // 1.5rem
+                var index = Math.round(scrollLeft / (cardWidth + gap));
+                mobileDots.forEach(function(d, i) {
+                    d.classList.toggle('active', i === index);
+                });
+            });
+        }
     })();
     </script>
 
