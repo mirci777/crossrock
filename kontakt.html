@@ -6,6 +6,136 @@
     <title>Kontakt | Crossrock Capital</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .kontakt-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .kontakt-intro h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .kontakt-intro p {
+            color: #D4AF37;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        .kontakt-form-wrapper {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid #E5E5E5;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        .kontakt-form-wrapper label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .kontakt-form-wrapper input,
+        .kontakt-form-wrapper textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #E5E5E5;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .kontakt-form-wrapper input:focus,
+        .kontakt-form-wrapper textarea:focus {
+            outline: none;
+            border-color: #D4AF37;
+        }
+        .kontakt-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .kontakt-form-group {
+            margin-bottom: 1.5rem;
+        }
+        .kontakt-submit {
+            width: 100%;
+            padding: 1.25rem;
+            background: #000;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        .kontakt-submit:hover {
+            background: #D4AF37;
+        }
+        .kontakt-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .kontakt-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .kontakt-info-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .kontakt-info-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .kontakt-info-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .kontakt-info-label {
+            font-size: 0.8125rem;
+            color: #8A8A8A;
+            margin-bottom: 0.15rem;
+        }
+        .kontakt-info-value {
+            font-weight: 600;
+        }
+        .kontakt-photo {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border: 1px solid #E5E5E5;
+        }
+        @media (max-width: 768px) {
+            .kontakt-form-row {
+                grid-template-columns: 1fr;
+            }
+            .kontakt-form-wrapper {
+                padding: 1.5rem;
+                margin-bottom: 3rem;
+            }
+            .kontakt-intro h2 {
+                font-size: 2rem;
+            }
+            .kontakt-bottom {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -26,107 +156,117 @@
         </div>
     </nav>
 
-    <section class="page-header">
+    <section class="page-header page-header-hero">
         <div class="container">
             <h1 class="page-title">Kontaktujte nás</h1>
-            <p class="page-subtitle">Sme tu, aby sme vám pomohli s vašimi investíciami alebo financovaním</p>
+            <p class="page-subtitle">Sme tu, aby sme vám pomohli s investíciami alebo financovaním</p>
         </div>
     </section>
 
-    <section style="padding: 6rem 0; background: #F8F8F8;">
-        <div class="container" style="max-width: 1000px;">
-            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;">
-                <div>
-                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">Napíšte nám</h2>
-                    <p style="color: #4A4A4A; margin-bottom: 2rem; line-height: 1.7;">Ozveme sa vám do 24 hodín</p>
+    <section style="padding: 5rem 0; background: #F8F8F8;">
+        <div class="container">
 
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                            <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.25rem;">Email</div>
-                                <div style="font-weight: 600;">info@crossrockcapital.sk</div>
-                            </div>
+            <!-- Title -->
+            <div class="kontakt-intro">
+                <h2>Napíšte nám</h2>
+                <p>Ozveme sa vám do 24 hodín</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="kontakt-form-wrapper">
+                <form id="contactForm">
+                    <div class="kontakt-form-group">
+                        <label>Meno a priezvisko *</label>
+                        <input type="text" name="name" required maxlength="100" pattern="[A-Za-zÀ-žА-я\s]{2,100}" title="Zadajte platné meno (2-100 znakov)">
+                    </div>
+
+                    <div class="kontakt-form-row">
+                        <div>
+                            <label>Email *</label>
+                            <input type="email" name="email" required maxlength="100">
                         </div>
-
-                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                            <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.25rem;">Telefón</div>
-                                <div style="font-weight: 600;">+421 XXX XXX XXX</div>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                            <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.25rem;">Adresa</div>
-                                <div style="font-weight: 600;">Bratislava, Slovensko</div>
-                            </div>
+                        <div>
+                            <label>Telefón</label>
+                            <input type="tel" name="phone" maxlength="20" pattern="[0-9+\s\-()]{9,20}" title="Zadajte platné telefónne číslo">
                         </div>
                     </div>
 
-                    <!-- Photo Placeholder -->
-                    <div style="background: #E5E5E5; margin-top: 2rem; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px;">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8A8A8A" stroke-width="1.5" style="margin-bottom: 1rem;">
-                            <rect x="2" y="2" width="20" height="20" rx="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <path d="M21 15l-5-5L5 21"/>
+                    <div class="kontakt-form-group">
+                        <label>Vaša správa</label>
+                        <textarea name="message" rows="5" maxlength="1000" style="resize: vertical;"></textarea>
+                        <div style="font-size: 0.75rem; color: #8A8A8A; margin-top: 0.25rem;">Max. 1000 znakov</div>
+                    </div>
+
+                    <!-- Hidden fields for Web3Forms -->
+                    <input type="hidden" name="access_key" value="df3457d4-2288-4835-9ab0-caa4f8e48606">
+                    <input type="hidden" name="subject" value="Nový lead z Crossrock Capital">
+                    <input type="checkbox" name="botcheck" id="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
+
+                    <button type="submit" class="kontakt-submit">Odoslať správu</button>
+
+                    <div id="formMessage" style="display: none; margin-top: 1rem; padding: 1rem; text-align: center; font-weight: 600;"></div>
+
+                    <p style="font-size: 0.75rem; color: #8A8A8A; margin-top: 1rem; text-align: center; line-height: 1.6;">
+                        Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="privacy-policy.html" style="color: #D4AF37; text-decoration: underline;">GDPR</a>.
+                        Vaše údaje použijeme len na kontaktovanie a nebudeme ich zdieľať tretím stranám.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Contacts + Photo -->
+            <div class="kontakt-bottom">
+                <div class="kontakt-info">
+                    <div class="kontakt-info-title">Kontaktné údaje</div>
+
+                    <div class="kontakt-info-item">
+                        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        <span style="color: #8A8A8A; font-size: 0.9375rem; font-weight: 600;">Foto tímu</span>
+                        <div>
+                            <div class="kontakt-info-label">Email</div>
+                            <div class="kontakt-info-value">info@crossrockcapital.sk</div>
+                        </div>
+                    </div>
+
+                    <div class="kontakt-info-item">
+                        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <div>
+                            <div class="kontakt-info-label">Telefón</div>
+                            <div class="kontakt-info-value">+421 XXX XXX XXX</div>
+                        </div>
+                    </div>
+
+                    <div class="kontakt-info-item">
+                        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div>
+                            <div class="kontakt-info-label">Adresa</div>
+                            <div class="kontakt-info-value">Lazaretská 3/A, 811 08 Bratislava</div>
+                        </div>
+                    </div>
+
+                    <div class="kontakt-info-item">
+                        <svg width="24" height="24" fill="none" stroke="#D4AF37" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        <div>
+                            <div class="kontakt-info-label">Pracovná doba</div>
+                            <div class="kontakt-info-value">Po — Pi: 9:00 — 17:00</div>
+                        </div>
                     </div>
                 </div>
 
-                <div style="background: white; padding: 2.5rem; border: 1px solid #E5E5E5;">
-                    <form id="contactForm">
-                        <div style="margin-bottom: 1.5rem;">
-                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Meno a priezvisko *</label>
-                            <input type="text" name="name" required maxlength="100" pattern="[A-Za-zÀ-žА-я\s]{2,100}" title="Zadajte platné meno (2-100 znakov)" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem;">
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Email *</label>
-                                <input type="email" name="email" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem;">
-                            </div>
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Telefón</label>
-                                <input type="tel" name="phone" maxlength="20" pattern="[0-9+\s\-()]{9,20}" title="Zadajte platné telefónne číslo" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem;">
-                            </div>
-                        </div>
-                        
-                        <div style="margin-bottom: 1.5rem;">
-                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Vaša správa</label>
-                            <textarea name="message" rows="4" maxlength="1000" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
-                            <div style="font-size: 0.75rem; color: #8A8A8A; margin-top: 0.25rem;">Max. 1000 znakov</div>
-                        </div>
-                        
-                        <!-- Hidden fields for Web3Forms -->
-                        <input type="hidden" name="access_key" value="df3457d4-2288-4835-9ab0-caa4f8e48606">
-                        <input type="hidden" name="subject" value="Nový lead z Crossrock Capital">
-                        
-                        <!-- Honeypot spam protection (invisible to users, catches bots) -->
-                        <input type="checkbox" name="botcheck" id="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
-                        
-                        <button type="submit" style="width: 100%; padding: 1.25rem; background: #000; color: white; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9375rem; cursor: pointer; transition: all 0.3s;">Odoslať správu</button>
-                        
-                        <div id="formMessage" style="display: none; margin-top: 1rem; padding: 1rem; text-align: center; font-weight: 600;"></div>
-                        
-                        <p style="font-size: 0.75rem; color: #8A8A8A; margin-top: 1rem; text-align: center; line-height: 1.6;">
-                            Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="privacy-policy.html" style="color: #D4AF37; text-decoration: underline;">GDPR</a>. 
-                            Vaše údaje použijeme len na kontaktovanie a nebudeme ich zdieľať tretím stranám.
-                        </p>
-                    </form>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&fit=crop" alt="Crossrock Capital tím" class="kontakt-photo">
                 </div>
             </div>
+
         </div>
     </section>
 
