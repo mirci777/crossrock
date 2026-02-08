@@ -714,6 +714,7 @@ button {
     line-height: 1.7;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    overflow-wrap: break-word;
 }
 
 .story-card .card-title {
@@ -755,7 +756,7 @@ button {
 
 @media (max-width: 768px) {
     .stories-slider-wrapper {
-        overflow: visible;
+        overflow: hidden;
     }
 
     .stories-slider {
@@ -782,9 +783,13 @@ button {
     }
 
     .stories-mobile-marquee .story-card {
+        width: calc(100vw - 2rem);
         min-width: calc(100vw - 2rem);
+        max-width: calc(100vw - 2rem);
         flex-shrink: 0;
         scroll-snap-align: start;
+        overflow: hidden;
+        word-wrap: break-word;
     }
 
     .slider-dots {
