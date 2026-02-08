@@ -7,50 +7,113 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .story-separator {
-            margin: 6rem 0;
-            padding-bottom: 6rem;
-            border-bottom: 2px solid #E5E5E5;
-        }
-        .story-badge {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .story-badge span {
-            display: inline-block;
-            padding: 0.5rem 1.25rem;
-            background: #F4E4BC;
-            color: #D4AF37;
-            font-size: 0.875rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .story-cta-box {
-            background: #D4AF37;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-        .story-cta-box p {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            font-size: 1.125rem;
-            color: #000;
-        }
-        .story-cta-box a {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            background: #000;
+        .stories-hero {
+            padding: 10rem 0 4rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover no-repeat;
             color: white;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.875rem;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            transition: all 0.3s;
+            text-align: center;
         }
-        .story-cta-box a:hover {
-            background: #333;
+        .stories-hero .page-subtitle {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .story-card {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            padding: 3rem 0;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .story-card:last-child {
+            border-bottom: none;
+        }
+
+        .story-person {
+            text-align: center;
+            position: sticky;
+            top: 6rem;
+            align-self: start;
+        }
+        .story-avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid #E5E5E5;
+        }
+        .story-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .story-situation {
+            font-size: 0.875rem;
+            color: #8A8A8A;
+            margin-bottom: 0.75rem;
+        }
+        .story-type {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: #D4AF37;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .story-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .story-quote {
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.8;
+            color: #000;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #D4AF37;
+        }
+
+        .story-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .story-detail h4 {
+            font-size: 0.8125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #D4AF37;
+            margin-bottom: 0.5rem;
+        }
+        .story-detail p {
+            font-size: 0.9375rem;
+            color: #4A4A4A;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .story-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            .story-quote {
+                padding-left: 0;
+                border-left: none;
+                border-top: 3px solid #D4AF37;
+                padding-top: 1.5rem;
+                text-align: left;
+            }
+            .story-person {
+                position: static;
+            }
         }
     </style>
 </head>
@@ -71,229 +134,133 @@
         </div>
     </nav>
 
-    <section class="page-header">
+    <section class="stories-hero">
         <div class="container">
             <h1 class="page-title">Príbehy našich klientov</h1>
             <p class="page-subtitle">Reálne situácie. Reálne riešenia. Reálne výsledky.</p>
         </div>
     </section>
 
-    <section style="padding: 6rem 0;">
-        <div class="container" style="max-width: 1100px;">
-            
+    <section style="padding: 4rem 0;">
+        <div class="container" style="max-width: 1000px;">
+
             <!-- Story 1: Jozef -->
-            <div class="story-separator">
-                <div class="story-badge"><span>PRÍBEH #1</span></div>
-                
-                <div style="background: #000; color: rgba(255,255,255,0.95); padding: 2rem; margin-bottom: 2rem; border-left: 4px solid #D4AF37;">
-                    <p style="font-size: 1.25rem; font-style: italic; line-height: 1.7; font-weight: 400;">"Bez Crossrock by som prišiel o rezerváciu aj o peniaze čo som už zaplatil. Developer nečakal, kým predám starý byt. Crossrock mi pomohol prekleniť tento moment a dnes bývam v novom byte s rodinou."</p>
+            <div class="story-card">
+                <div class="story-person">
+                    <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=320&q=80&fit=crop&crop=face" alt="Jozef" class="story-avatar">
+                    <div class="story-name">Jozef, 42 rokov</div>
+                    <div class="story-situation">Rodina s dvoma deťmi</div>
+                    <span class="story-type">Nákup nového bytu</span>
                 </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
-                    <div>
-                        <div style="background: #F8F8F8; padding: 2rem; margin-bottom: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #D4AF37; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Profil</h4>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Meno</div>
-                                <div style="font-weight: 600;">Jozef, 42 rokov</div>
-                            </div>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Situácia</div>
-                                <div>Rodina s dvoma deťmi</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Typ riešenia</div>
-                                <div style="font-weight: 600; color: #D4AF37;">Nákup nového bytu</div>
-                            </div>
+                <div class="story-content">
+                    <p class="story-quote">"Bez Crossrock by som prišiel o rezerváciu aj o peniaze čo som už zaplatil. Developer nečakal, kým predám starý byt. Crossrock mi pomohol prekleniť tento moment a dnes bývam v novom byte s rodinou."</p>
+                    <div class="story-details">
+                        <div class="story-detail">
+                            <h4>Problém</h4>
+                            <p>Pán Jozef si rezervoval nový byt u developera a zaplatil 20% rezervačný poplatok. Keď sa blížil termín na zaplatenie ďalších tranží, jeho finančná situácia sa zmenila. Starý byt ešte nebol predaný a developer nedával odklad — hrozilo, že príde o rezerváciu aj o peniaze, čo už zaplatil. Banka mu nepomohla, lebo nemal dostatok príjmu na nový úver, kým splácal ten starý.</p>
                         </div>
-                        
-                        <div class="story-cta-box">
-                            <p>Potrebujete podobnú pomoc?</p>
-                            <a href="kontakt.html">Kontaktovať nás</a>
+                        <div class="story-detail">
+                            <h4>Riešenie</h4>
+                            <p>Crossrock prebral záväzok od pána Jozefa voči developerovi. Jozef začal bývať v novom byte ako nájomník a medzitým predal starý byt. Celý proces prebehol plynulo — Crossrock komunikoval priamo s developerom a Jozef nemusel riešiť žiadne komplikácie. Po predaji starého bytu doplatil Crossrock-u investované prostriedky a byt sa previedol späť na neho.</p>
                         </div>
-                    </div>
-                    
-                    <div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem;">Developer nečaká a banka nepomôže</h3>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Problém</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Pán Jozef si rezervoval nový byt u developera a zaplatil 20% rezervačný poplatok. Keď sa blížil termín na zaplatenie ďalších tranží, jeho finančná situácia sa zmenila. Starý byt ešte nebol predaný a developer nedával odklad - hrozilo, že príde o rezerváciu aj o peniaze, čo už zaplatil.</p>
-                        </div>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Riešenie Crossrock</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Crossrock prebral záväzok od pána Jozefa voči developerovi. Jozef začal bývať v novom byte ako nájomník a medzitým predal starý byt. Po predaji doplatil Crossrock-u investované prostriedky a byt sa previedol späť na neho.</p>
-                        </div>
-                        
-                        <div style="background: #F8F8F8; padding: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Výsledok</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Rodina získala nový byt bez straty rezervácie. Jozef zaplatil len úroky za preklenovacie obdobie, čo bolo zlomok toho, čo by stratil pri zrušení rezervácie.</p>
+                        <div class="story-detail">
+                            <h4>Výsledok</h4>
+                            <p>Rodina získala nový byt bez straty rezervácie. Jozef zaplatil len úroky za preklenovacie obdobie, čo bolo zlomok toho, čo by stratil pri zrušení rezervácie. Dnes býva s rodinou v novom byte a je rád, že nemusel robiť kompromisy. "Keby som vtedy nezavolal Crossrocku, prišiel by som minimálne o 15 000 €," hovorí.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Story 2: Jana -->
-            <div class="story-separator">
-                <div class="story-badge"><span>PRÍBEH #2</span></div>
-                
-                <div style="background: #000; color: rgba(255,255,255,0.95); padding: 2rem; margin-bottom: 2rem; border-left: 4px solid #D4AF37;">
-                    <p style="font-size: 1.25rem; font-style: italic; line-height: 1.7; font-weight: 400;">"Nebankovky ma dostali do pasce. Jeden úver som splácala druhým a už som nevedela čo mám robiť. Bála som sa že prídem o dom a deti nebudú mať kde bývať. Crossrock mi pomohol. Dostala som druhú šancu."</p>
+            <div class="story-card">
+                <div class="story-person">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=320&q=80&fit=crop&crop=face" alt="Jana" class="story-avatar">
+                    <div class="story-name">Jana</div>
+                    <div class="story-situation">Samoživiteľka s deťmi</div>
+                    <span class="story-type">Oddlženie</span>
                 </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
-                    <div>
-                        <div style="background: #F8F8F8; padding: 2rem; margin-bottom: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #D4AF37; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Profil</h4>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Meno</div>
-                                <div style="font-weight: 600;">Jana</div>
-                            </div>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Situácia</div>
-                                <div>Samoživiteľka s deťmi</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Typ riešenia</div>
-                                <div style="font-weight: 600; color: #D4AF37;">Oddlženie</div>
-                            </div>
+                <div class="story-content">
+                    <p class="story-quote">"Nebankovky ma dostali do pasce. Jeden úver som splácala druhým a už som nevedela čo mám robiť. Bála som sa že prídem o dom a deti nebudú mať kde bývať. Crossrock mi pomohol. Dostala som druhú šancu."</p>
+                    <div class="story-details">
+                        <div class="story-detail">
+                            <h4>Problém</h4>
+                            <p>Jana sa dostala do dlhovej pasce s nevýhodnými nebankovými úvermi. Splácala jeden úver druhým a situácia sa stále zhoršovala. Úroky rástli, splátky sa hromadili a hrozila jej exekúcia domu. Ako samoživiteľka s deťmi čelila najhoršiemu scenáru — strate strechy nad hlavou. V bankách jej nepomohli, pretože mala zlú kreditnú históriu.</p>
                         </div>
-                        
-                        <div class="story-cta-box">
-                            <p>Potrebujete podobnú pomoc?</p>
-                            <a href="kontakt.html">Kontaktovať nás</a>
+                        <div class="story-detail">
+                            <h4>Riešenie</h4>
+                            <p>Crossrock odkúpil dom, splatil všetky Janine dlhy a zastavil tak exekúciu. Jana zostala bývať v dome ako nájomníčka za prijateľný nájom. Mohla si konečne vydýchnuť a začať si postupne dávať bokom peniaze. Crossrock jej dal jasný plán — presne vedela, koľko musí nasporiť a do kedy, aby dom odkúpila späť. Žiadne skryté podmienky, žiadne prekvapenia.</p>
                         </div>
-                    </div>
-                    
-                    <div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem;">Zbavenie sa nevýhodnej pôžičky</h3>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Problém</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Jana sa dostala do dlhovej pasce s nevýhodnými nebankovými úvermi. Splácala jeden úver druhým a hrozila jej exekúcia domu. Bála sa, že príde o strechu nad hlavou a deti nebudú mať kde bývať.</p>
-                        </div>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Riešenie Crossrock</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Crossrock odkúpil dom, splatil všetky Janine dlhy a Jana zostala bývať v dome ako nájomníčka. Mohla si postupne dávať bokom peniaze a po 2 rokoch dom odkúpila späť.</p>
-                        </div>
-                        
-                        <div style="background: #F8F8F8; padding: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Výsledok</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Jana má dom späť, je bez dlhov a je nesmierne vďačná za druhú šancu.</p>
+                        <div class="story-detail">
+                            <h4>Výsledok</h4>
+                            <p>Po 2 rokoch Jana dom odkúpila späť. Dnes je bez dlhov, má dom vo vlastníctve a deti majú stabilný domov. "Crossrock mi vrátil nádej v čase, keď som ju úplne stratila. Neboli to len peniaze — bol to ľudský prístup. Niekto mi konečne povedal: pomôžeme vám," spomína Jana s vďačnosťou.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Story 3: Ján -->
-            <div class="story-separator">
-                <div class="story-badge"><span>PRÍBEH #3</span></div>
-                
-                <div style="background: #000; color: rgba(255,255,255,0.95); padding: 2rem; margin-bottom: 2rem; border-left: 4px solid #D4AF37;">
-                    <p style="font-size: 1.25rem; font-style: italic; line-height: 1.7; font-weight: 400;">"V realitnom biznise musíte konať rýchlo. Keď sa objaví dobrá príležitosť, máte dni, nie týždne. Crossrock mi umožnil uskutočniť tento flip bez toho, aby som musel ísť do banky alebo hľadať investorov."</p>
+            <div class="story-card">
+                <div class="story-person">
+                    <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=320&q=80&fit=crop&crop=face" alt="Ján" class="story-avatar">
+                    <div class="story-name">Ján</div>
+                    <div class="story-situation">Realitný maklér</div>
+                    <span class="story-type">Financovanie obchodu</span>
                 </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
-                    <div>
-                        <div style="background: #F8F8F8; padding: 2rem; margin-bottom: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #D4AF37; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Profil</h4>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Meno</div>
-                                <div style="font-weight: 600;">Ján (realitný maklér)</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Typ riešenia</div>
-                                <div style="font-weight: 600; color: #D4AF37;">Financovanie obchodu s nehnuteľnosťami</div>
-                            </div>
+                <div class="story-content">
+                    <p class="story-quote">"V realitnom biznise musíte konať rýchlo. Keď sa objaví dobrá príležitosť, máte dni, nie týždne. Crossrock mi umožnil uskutočniť tento flip bez toho, aby som musel ísť do banky alebo hľadať investorov."</p>
+                    <div class="story-details">
+                        <div class="story-detail">
+                            <h4>Problém</h4>
+                            <p>Realitný maklér Ján našiel výbornú príležitosť na trhu s nehnuteľnosťami — mohol nakúpiť starší byt v dobrej lokalite, prerobiť ho a predať s dobrým ziskom. Kalkulácia bola jasná a príležitosť overená. Nemal však dostatok vlastného kapitálu na nákup aj rekonštrukciu súčasne. Na bankový úver nebolo dosť času — schvaľovanie by trvalo týždne a medzitým by byt kúpil niekto iný.</p>
                         </div>
-                        
-                        <div class="story-cta-box">
-                            <p>Potrebujete podobnú pomoc?</p>
-                            <a href="kontakt.html">Kontaktovať nás</a>
+                        <div class="story-detail">
+                            <h4>Riešenie</h4>
+                            <p>Crossrock vstúpil do partnerstva s Jánom. Financoval nákup nehnuteľnosti aj kompletnú rekonštrukciu. Ján priniesol skúsenosti, kontakty na remeselníkov a znalosť trhu. Crossrock priniesol kapitál a rýchle rozhodovanie. Celý obchod bol dohodnutý za 3 dni od prvého telefonátu. Ján mal voľnú ruku pri rekonštrukcii a po predaji sa podelili o zisk podľa dohodnutých podmienok.</p>
                         </div>
-                    </div>
-                    
-                    <div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem;">Realitná príležitosť vyžadovala rýchle peniaze</h3>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Problém</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Realitný maklér Ján našiel výbornú príležitosť na trhu s nehnuteľnosťami - mohol nakúpiť, prerobiť a predať s dobrým ziskom. Nemal však dostatok financií a na bankový úver nebolo dosť času.</p>
-                        </div>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Riešenie Crossrock</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Crossrock vstúpil do partnerstva s Jánom. Financoval nákup aj rekonštrukciu a po predaji sa podelili o zisk.</p>
-                        </div>
-                        
-                        <div style="background: #F8F8F8; padding: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Výsledok</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Ján zarobil pekné peníaze na flipe a Crossrock dostal stabilný výnos. Win-win situácia.</p>
+                        <div class="story-detail">
+                            <h4>Výsledok</h4>
+                            <p>Byt bol zrekonštruovaný za 2 mesiace a predaný do týždňa od dokončenia. Ján zarobil pekné peniaze na flipe a Crossrock dostal stabilný výnos zo svojej investície. Bola to win-win situácia pre obe strany. "Spolupráca s Crossrock bola bezproblémová. Žiadna byrokracia, žiadne zbytočné otázky. Profesionáli, ktorí rozumejú biznisu," hodnotí Ján. Dnes spolupracujú na ďalších projektoch.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Story 4: Marta -->
-            <div style="margin-bottom: 4rem;">
-                <div class="story-badge"><span>PRÍBEH #4</span></div>
-
-                <div style="background: #000; color: rgba(255,255,255,0.95); padding: 2rem; margin-bottom: 2rem; border-left: 4px solid #D4AF37;">
-                    <p style="font-size: 1.25rem; font-style: italic; line-height: 1.7; font-weight: 400;">"Zdedila som byt po rodičoch a potrebovala som ho predať čo najrýchlejšie. Nechcela som ale znižovať cenu len preto, že ponáhľam. Crossrock mi ponúkol férovú cenu a všetko vybavil za pár dní. Žiadny stres, žiadne čakanie na kupca."</p>
+            <div class="story-card">
+                <div class="story-person">
+                    <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=320&q=80&fit=crop&crop=face" alt="Marta" class="story-avatar">
+                    <div class="story-name">Marta</div>
+                    <div class="story-situation">Zdedená nehnuteľnosť</div>
+                    <span class="story-type">Rýchly predaj</span>
                 </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
-                    <div>
-                        <div style="background: #F8F8F8; padding: 2rem; margin-bottom: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #D4AF37; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Profil</h4>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Meno</div>
-                                <div style="font-weight: 600;">Marta</div>
-                            </div>
-                            <div style="margin-bottom: 1rem;">
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Situácia</div>
-                                <div>Zdedená nehnuteľnosť</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 0.875rem; color: #8A8A8A;">Typ riešenia</div>
-                                <div style="font-weight: 600; color: #D4AF37;">Rýchly predaj nehnuteľnosti</div>
-                            </div>
+                <div class="story-content">
+                    <p class="story-quote">"Zdedila som byt po rodičoch a potrebovala som ho predať čo najrýchlejšie. Nechcela som ale znižovať cenu len preto, že sa ponáhľam. Crossrock mi ponúkol férovú cenu a všetko vybavil za pár dní. Žiadny stres, žiadne čakanie na kupca."</p>
+                    <div class="story-details">
+                        <div class="story-detail">
+                            <h4>Problém</h4>
+                            <p>Marta zdedila byt po rodičoch, no potrebovala ho predať čo najrýchlejšie. Mala vlastné finančné záväzky a byt v inom meste bol pre ňu skôr záťažou ako prínosom — platila energie, správu a poistku. Realitné kancelárie jej radili znížiť cenu o 15-20%, aby sa byt predal rýchlo. To ale nechcela, pretože vedela, že byt má svoju reálnu hodnotu a nechcela predávať pod cenu len kvôli časovému tlaku.</p>
                         </div>
-
-                        <div class="story-cta-box">
-                            <p>Potrebujete podobnú pomoc?</p>
-                            <a href="kontakt.html">Kontaktovať nás</a>
+                        <div class="story-detail">
+                            <h4>Riešenie</h4>
+                            <p>Crossrock odkúpil byt za férovú trhovú cenu bez zbytočného znižovania. Žiadne vyjednávanie, žiadne podmienky typu "ak sa nám to podarí predať". Celý proces prebehol rýchlo a bez komplikácií — od prvého stretnutia po podpis zmluvy prešli len 4 pracovné dni. Marta nemusela riešiť obhliadky s potenciálnymi kupcami, ani čakať mesiace na záujemcu.</p>
                         </div>
-                    </div>
-
-                    <div>
-                        <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem;">Zdedená nehnuteľnosť a potreba rýchleho predaja</h3>
-
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Problém</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Marta zdedila byt po rodičoch, no potrebovala ho predať čo najrýchlejšie. Realitné kancelárie jej radili znížiť cenu, aby sa byt predal rýchlo. To ale nechcela - vedela, že byt má svoju hodnotu.</p>
-                        </div>
-
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Riešenie Crossrock</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Crossrock odkúpil byt za férovú trhovú cenu bez zbytočného znižovania. Celý proces prebehol rýchlo a bez komplikácií - Marta mala peniaze na účte do niekoľkých dní.</p>
-                        </div>
-
-                        <div style="background: #F8F8F8; padding: 1.5rem;">
-                            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Výsledok</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Marta predala byt za férovú cenu bez stresu a čakania. Žiadne znižovanie ceny, žiadne mesiace neistoty.</p>
+                        <div class="story-detail">
+                            <h4>Výsledok</h4>
+                            <p>Marta mala peniaze na účte do niekoľkých dní od podpisu. Žiadne znižovanie ceny, žiadne mesiace neistoty a čakania. "Keby som šla cez realitku, možno by som čakala 6 mesiacov a nakoniec by som aj tak musela zľaviť. Crossrock mi dal férovú cenu hneď. Bola to obrovská úľava," hovorí Marta. Dnes je rada, že sa rozhodla správne a nemusela robiť kompromisy.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div style="background: #000; color: white; padding: 4rem; text-align: center;">
-                <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Možno to je aj váš príbeh?</h2>
-                <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.8); font-size: 1.125rem;">Kontaktujte nás a spoločne nájdeme riešenie</p>
-                <a href="kontakt.html" class="btn-primary btn-large" style="background: #D4AF37; border-color: #D4AF37;">Chcem pomôcť</a>
-            </div>
+        </div>
+    </section>
+
+    <!-- Single CTA at bottom -->
+    <section style="padding: 5rem 0; background: #F8F8F8; text-align: center;">
+        <div class="container" style="max-width: 600px;">
+            <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; color: #000;">Napíšte aj vy svoj príbeh</h2>
+            <p style="margin-bottom: 2rem; color: #4A4A4A; font-size: 1.125rem; line-height: 1.7;">Pomohli sme už desiatky klientov nájsť riešenie. Radi pomôžeme aj vám.</p>
+            <a href="kontakt.html" style="display: inline-block; padding: 1.125rem 2.5rem; background: #D4AF37; color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; font-size: 0.9375rem;">Kontaktujte nás</a>
         </div>
     </section>
 
