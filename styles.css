@@ -1481,8 +1481,15 @@ button {
         font-size: 1.125rem;
     }
 
+    .summary-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
     .summary-value {
-        font-size: 1.75rem;
+        font-size: 2rem;
+        white-space: nowrap;
     }
 
     .calculator-inputs h2,
