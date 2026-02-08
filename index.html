@@ -206,6 +206,38 @@
                     <button class="slider-dot active" data-slide="0"></button>
                     <button class="slider-dot" data-slide="1"></button>
                 </div>
+
+                <!-- Mobile horizontal scroll -->
+                <div class="stories-mobile-marquee" id="storiesMobile">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=160&q=80&fit=crop&crop=face" alt="Jozef" class="card-avatar">
+                        <div class="card-name">Jozef, 42 rokov</div>
+                        <div class="card-type">Nákup nového bytu</div>
+                        <p class="card-quote">"Bez Crossrock by som prišiel o rezerváciu aj o peniaze."</p>
+                        <p class="card-desc">Crossrock prebral záväzok a rodina dnes býva v novom byte.</p>
+                    </div>
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=160&q=80&fit=crop&crop=face" alt="Jana" class="card-avatar">
+                        <div class="card-name">Jana</div>
+                        <div class="card-type">Oddlženie</div>
+                        <p class="card-quote">"Crossrock mi dal druhú šancu. Dnes som bez dlhov."</p>
+                        <p class="card-desc">Odkúpili dom, splatili dlhy. Po 2 rokoch ho Jana odkúpila späť.</p>
+                    </div>
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=160&q=80&fit=crop&crop=face" alt="Ján" class="card-avatar">
+                        <div class="card-name">Ján</div>
+                        <div class="card-type">Financovanie obchodu</div>
+                        <p class="card-quote">"Crossrock mi umožnil flip bez banky."</p>
+                        <p class="card-desc">Financoval nákup aj rekonštrukciu — win-win pre obe strany.</p>
+                    </div>
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=160&q=80&fit=crop&crop=face" alt="Marta" class="card-avatar">
+                        <div class="card-name">Marta</div>
+                        <div class="card-type">Rýchly predaj</div>
+                        <p class="card-quote">"Férovú cenu a všetko vybavili za pár dní."</p>
+                        <p class="card-desc">Zdedený byt predaný za trhovú cenu bez stresu a čakania.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="section-cta">
@@ -235,7 +267,7 @@
         }
 
         function startAuto() {
-            interval = setInterval(next, 5000);
+            interval = setInterval(next, 4250);
         }
 
         function stopAuto() {
@@ -251,12 +283,54 @@
         });
 
         startAuto();
+
+        // Mobile card-by-card auto-scroll
+        var marquee = document.getElementById('storiesMobile');
+        if (marquee) {
+            var mobileCard = 0;
+            var isTouch = false;
+            var mobileInterval;
+            var cards = marquee.querySelectorAll('.story-card');
+            var totalCards = cards.length;
+
+            function scrollToCard() {
+                if (isTouch) return;
+                mobileCard = (mobileCard + 1) % totalCards;
+                cards[mobileCard].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+
+            function startMobileScroll() {
+                mobileInterval = setInterval(scrollToCard, 2550);
+            }
+
+            marquee.addEventListener('touchstart', function() {
+                isTouch = true;
+                clearInterval(mobileInterval);
+            });
+            marquee.addEventListener('touchend', function() {
+                setTimeout(function() {
+                    isTouch = false;
+                    startMobileScroll();
+                }, 3000);
+            });
+
+            if (window.innerWidth <= 768) {
+                startMobileScroll();
+            }
+            window.addEventListener('resize', function() {
+                clearInterval(mobileInterval);
+                if (window.innerWidth <= 768) startMobileScroll();
+            });
+        }
     })();
     </script>
 
     <!-- Trust Section -->
     <section class="trust-section">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Naše hodnoty</h2>
+            </div>
             <div class="trust-grid">
                 <div class="trust-item">
                     <div class="trust-icon">
