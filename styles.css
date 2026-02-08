@@ -1432,29 +1432,71 @@ button {
    ============================================ */
 
 @media (max-width: 768px) {
+    .calculator-page {
+        padding: 2rem 0;
+    }
+
     .calculator-main {
         grid-template-columns: 1fr;
-        padding: 2rem 1.5rem;
+        padding: 1.25rem;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
     }
-    
+
+    .calculator-results {
+        padding: 1rem;
+    }
+
+    .result-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .result-breakdown {
+        padding: 1rem;
+    }
+
+    .result-summary {
+        padding: 1rem;
+    }
+
+    .breakdown-item.total {
+        margin: 1rem -1rem -1rem;
+        padding: 1rem;
+    }
+
     .period-options {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
-    
+
     .calculator-info {
         grid-template-columns: 1fr;
     }
-    
+
     .result-value {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
-    
+
     .breakdown-value {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
-    
+
     .summary-value {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+
+    .calculator-inputs h2,
+    .calculator-results h3 {
+        font-size: 1.375rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .input-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.25rem;
     }
 }
 
