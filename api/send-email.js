@@ -71,9 +71,8 @@ function getCustomerEmail(data) {
 <table cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width:600px;margin:0 auto;background:#fff;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
 <!-- Header -->
-<tr><td style="background:linear-gradient(135deg,#000 0%,#1a1a1a 100%);padding:40px 40px 30px;text-align:center;">
-<h1 style="margin:0;color:#D4AF37;font-size:28px;font-weight:700;">Crossrock Capital</h1>
-<div style="width:60px;height:3px;background:#D4AF37;margin:20px auto 0;"></div>
+<tr><td style="background:#fff;padding:40px 40px 30px;text-align:center;border-bottom:2px solid #D4AF37;">
+<img src="https://crossrockcapital.sk/logo.svg" alt="Crossrock Capital" width="200" style="display:inline-block;max-width:200px;">
 </td></tr>
 
 <!-- Check icon -->
@@ -116,12 +115,10 @@ ${data.message ? `
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="background:#000;padding:30px 40px;text-align:center;">
-<p style="margin:0 0 15px;color:rgba(255,255,255,0.9);font-size:13px;line-height:1.6;">
-<strong style="color:#D4AF37;">Crossrock Capital a.s.</strong><br>
-Lazaretská 3/A, 811 08 Bratislava<br>
-<a href="mailto:info@crossrockcapital.sk" style="color:#D4AF37;text-decoration:none;">info@crossrockcapital.sk</a>
-</p>
+<tr><td style="background:#f8f8f8;padding:30px 40px;text-align:center;border-top:1px solid #e5e5e5;">
+<p style="margin:0 0 8px;color:#000;font-size:13px;font-weight:600;">Crossrock Capital a.s.</p>
+<p style="margin:0 0 8px;color:#8a8a8a;font-size:12px;line-height:1.6;">Lazaretská 3/A, 811 08 Bratislava</p>
+<a href="mailto:info@crossrockcapital.sk" style="color:#D4AF37;font-size:12px;text-decoration:none;">info@crossrockcapital.sk</a>
 </td></tr>
 
 </table>
@@ -139,9 +136,9 @@ function getSalesEmail(data) {
 <table cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width:700px;margin:0 auto;background:#fff;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
 <!-- Header -->
-<tr><td style="background:linear-gradient(135deg,#D4AF37 0%,#E5C04A 100%);padding:30px 40px;">
-<h1 style="margin:0;color:#000;font-size:24px;font-weight:700;">Nový lead z webu</h1>
-<p style="margin:5px 0 0;color:rgba(0,0,0,0.7);font-size:14px;font-weight:600;">${data.timestamp}</p>
+<tr><td style="background:#fff;padding:40px 40px 25px;text-align:center;border-bottom:2px solid #D4AF37;">
+<img src="https://crossrockcapital.sk/logo.svg" alt="Crossrock Capital" width="200" style="display:inline-block;max-width:200px;">
+<p style="margin:15px 0 0;font-size:13px;font-weight:600;color:#D4AF37;text-transform:uppercase;letter-spacing:1px;">Nový lead z webu &bull; ${data.timestamp}</p>
 </td></tr>
 
 <!-- Content -->
@@ -191,8 +188,9 @@ ${data.message ? `
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="background:#f8f8f8;padding:20px 40px;border-top:1px solid #e5e5e5;text-align:center;">
-<p style="margin:0;color:#8a8a8a;font-size:12px;">Crossrock Capital • Automatická notifikácia z webu</p>
+<tr><td style="background:#f8f8f8;padding:25px 40px;border-top:1px solid #e5e5e5;text-align:center;">
+<p style="margin:0 0 5px;color:#000;font-size:13px;font-weight:600;">Crossrock Capital a.s.</p>
+<p style="margin:0;color:#8a8a8a;font-size:11px;">Automatická notifikácia z webu</p>
 </td></tr>
 
 </table>
