@@ -72,7 +72,7 @@ function getCustomerEmail(data) {
 
 <!-- Header -->
 <tr><td style="background:#fff;padding:40px 40px 30px;text-align:center;border-bottom:2px solid #D4AF37;">
-<img src="https://crossrockcapital.sk/logo.svg" alt="Crossrock Capital" width="200" style="display:inline-block;max-width:200px;">
+<img src="https://crossrockcapital.sk/logo.jpeg" alt="Crossrock Capital" width="200" style="display:inline-block;max-width:200px;">
 </td></tr>
 
 <!-- Check icon -->
@@ -137,7 +137,7 @@ function getSalesEmail(data) {
 
 <!-- Header -->
 <tr><td style="background:#fff;padding:40px 40px 25px;text-align:center;border-bottom:2px solid #D4AF37;">
-<img src="https://crossrockcapital.sk/logo.svg" alt="Crossrock Capital" width="200" style="display:inline-block;max-width:200px;">
+<img src="https://crossrockcapital.sk/logo.jpeg" alt="Crossrock Capital" width="200" style="display:inline-block;max-width:200px;">
 <p style="margin:15px 0 0;font-size:13px;font-weight:600;color:#D4AF37;text-transform:uppercase;letter-spacing:1px;">Nový lead z webu &bull; ${data.timestamp}</p>
 </td></tr>
 
