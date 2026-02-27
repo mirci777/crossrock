@@ -6,6 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // const FROM_EMAIL = 'Crossrock Capital <noreply@crossrockcapital.sk>';
 const FROM_EMAIL = 'Crossrock Capital <onboarding@resend.dev>';
 
+
 const SALES_EMAIL = 'info@crossrockcapital.sk';
 
 module.exports = async function handler(req, res) {
