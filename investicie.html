@@ -464,6 +464,14 @@
             var periodBtn = document.querySelector('.period-btn[data-product="' + product + '"]');
             if (periodBtn) periodBtn.click();
         }
+
+        // Scroll to calculator section
+        var calcSection = document.getElementById('kalkulacka-vynosov');
+        if (calcSection) {
+            setTimeout(function() {
+                calcSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+        }
     }
 
     // Individual form submit
