@@ -8,23 +8,60 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        .inv-product-card {
+            background: white;
+            border: 2px solid #E5E5E5;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .inv-product-card:hover {
+            border-color: #D4AF37;
+        }
+        .inv-product-card.selected {
+            border-color: #D4AF37;
+            background: #FDFAF3;
+        }
+        .inv-product-rate {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: #D4AF37;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        .inv-product-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+        .inv-product-label {
+            font-size: 0.75rem;
+            color: #8A8A8A;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+        .inv-product-detail {
+            font-size: 0.9375rem;
+            color: #1A1A1A;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .inv-product-separator {
+            border: none;
+            border-top: 1px solid #E5E5E5;
+            margin: 1.25rem 0;
+        }
         @media (max-width: 768px) {
-            .inv-stats-grid {
-                gap: 1.5rem !important;
-            }
-            .inv-stats-grid .inv-stat-number {
-                margin-bottom: 0.15rem !important;
-                font-size: 2.5rem !important;
-            }
-            .inv-period-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .inv-result-box {
-                padding: 1.25rem 1rem !important;
-            }
-            .inv-result-box .inv-result-number {
-                font-size: 2.25rem !important;
-            }
+            .inv-stats-grid { gap: 1.5rem !important; }
+            .inv-stats-grid .inv-stat-number { font-size: 2.5rem !important; }
+            .inv-products-grid { grid-template-columns: 1fr !important; }
+            .ind-form-row { grid-template-columns: 1fr !important; }
         }
     </style>
 </head>
@@ -40,7 +77,6 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="investicie.html" class="active">Investície</a></li>
                 <li><a href="financovanie.html">Financovanie</a></li>
-                <li><a href="kalkulacka.html">Kalkulačka</a></li>
                 <li><a href="pribehy.html">Príbehy</a></li>
                 <li><a href="kontakt.html" class="btn-primary-nav">Kontakt</a></li>
             </ul>
@@ -59,7 +95,7 @@
         <div class="container">
             <div class="inv-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
                 <div>
-                    <div class="inv-stat-number" style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #D4AF37; margin-bottom: 0.5rem;">9-12%</div>
+                    <div class="inv-stat-number" style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #D4AF37; margin-bottom: 0.5rem;">9–12%</div>
                     <div style="color: rgba(255,255,255,0.8); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.5px;">Ročný výnos</div>
                 </div>
                 <div>
@@ -67,41 +103,237 @@
                     <div style="color: rgba(255,255,255,0.8); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.5px;">Zabezpečenie</div>
                 </div>
                 <div>
-                    <div class="inv-stat-number" style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #D4AF37; margin-bottom: 0.5rem;">3-5</div>
-                    <div style="color: rgba(255,255,255,0.8); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.5px;">Rokov viazanosti</div>
+                    <div class="inv-stat-number" style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #D4AF37; margin-bottom: 0.5rem;">120+</div>
+                    <div style="color: rgba(255,255,255,0.8); font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.5px;">Spokojných investorov</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- 3 Products -->
     <section style="padding: 6rem 0;">
-        <div class="container" style="max-width: 900px;">
-            <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Ako to funguje</h2>
-            
-            <div style="background: #F8F8F8; padding: 3rem; border-left: 4px solid #D4AF37; margin-bottom: 3rem;">
-                <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1rem;">Mesačné výnosy + ročný bonus</h3>
-                <p style="color: #4A4A4A; line-height: 1.8; margin-bottom: 1.5rem;">Vaša investícia pracuje pre vás každý mesiac. Dostávate pravidelný mesačný výnos vo výške 6% p.a. (0,5% mesačne) a na konci každého roka bonus 3% alebo 4% podľa doby viazanosti.</p>
-                
-                <div class="inv-period-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-                    <div style="background: white; padding: 2rem; border: 1px solid #E5E5E5;">
-                        <div style="font-weight: 700; margin-bottom: 1rem; color: #D4AF37;">3 roky</div>
-                        <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.5rem;">Mesačne: 0,5% (6% p.a.)</div>
-                        <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.5rem;">Ročný bonus: 3%</div>
-                        <div style="border-top: 1px solid #E5E5E5; margin: 1rem 0; padding-top: 1rem; font-weight: 700;">Spolu: 9% ročne</div>
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem;">Investičné produkty</h2>
+                <p style="color: #4A4A4A; font-size: 1.125rem;">Vyberte si produkt, ktorý zodpovedá vašej situácii</p>
+            </div>
+
+            <div class="inv-products-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; max-width: 960px; margin: 0 auto;">
+
+                <!-- Easy -->
+                <div class="inv-product-card selected" data-product="easy" onclick="selectProduct('easy')">
+                    <div class="inv-product-name">Easy</div>
+                    <div class="inv-product-rate">9%</div>
+                    <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 1.5rem;">ročne</div>
+                    <hr class="inv-product-separator">
+                    <div class="inv-product-label">Doba viazanosti</div>
+                    <div class="inv-product-detail">3 roky</div>
+                    <div class="inv-product-label">Min. investícia</div>
+                    <div class="inv-product-detail">10 000 €</div>
+                    <div class="inv-product-label">Mesačne</div>
+                    <div class="inv-product-detail">6% p.a.</div>
+                    <div class="inv-product-label">Ročný bonus</div>
+                    <div class="inv-product-detail">3%</div>
+                </div>
+
+                <!-- Profi -->
+                <div class="inv-product-card" data-product="profi" onclick="selectProduct('profi')">
+                    <div class="inv-product-name">Profi</div>
+                    <div class="inv-product-rate">10%</div>
+                    <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 1.5rem;">ročne</div>
+                    <hr class="inv-product-separator">
+                    <div class="inv-product-label">Doba viazanosti</div>
+                    <div class="inv-product-detail">5 rokov</div>
+                    <div class="inv-product-label">Min. investícia</div>
+                    <div class="inv-product-detail">10 000 €</div>
+                    <div class="inv-product-label">Mesačne</div>
+                    <div class="inv-product-detail">6% p.a.</div>
+                    <div class="inv-product-label">Ročný bonus</div>
+                    <div class="inv-product-detail">4%</div>
+                </div>
+
+                <!-- Individual -->
+                <div class="inv-product-card" data-product="individual" onclick="selectProduct('individual')">
+                    <div class="inv-product-name">Individual</div>
+                    <div class="inv-product-rate">12%+</div>
+                    <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 1.5rem;">ročne</div>
+                    <hr class="inv-product-separator">
+                    <div class="inv-product-label">Doba viazanosti</div>
+                    <div class="inv-product-detail">Individuálne</div>
+                    <div class="inv-product-label">Min. investícia</div>
+                    <div class="inv-product-detail">300 000 €</div>
+                    <div class="inv-product-label">Podmienky</div>
+                    <div class="inv-product-detail">Šité na mieru</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalkulačka výnosov -->
+    <section id="kalkulacka-vynosov" style="padding: 5rem 0; background: #F8F8F8;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 0.5rem;">Kalkulačka výnosov</h2>
+            </div>
+
+            <!-- Calculator (Easy / Profi) -->
+            <div id="calc-section" class="calculator-wrapper">
+                <div class="calculator-main">
+                    <div class="calculator-inputs">
+                        <h2>Nastavte parametre investície</h2>
+
+                        <div class="input-group">
+                            <label>Produkt</label>
+                            <div class="period-options">
+                                <button type="button" class="period-btn active" data-product="easy" data-years="3">
+                                    <span class="period-years">Easy — 3 roky</span>
+                                    <span class="period-rate">9% ročne</span>
+                                </button>
+                                <button type="button" class="period-btn" data-product="profi" data-years="5">
+                                    <span class="period-years">Profi — 5 rokov</span>
+                                    <span class="period-rate">10% ročne</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="investmentPeriod" value="3">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="investmentAmount">Suma investície</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="investmentAmount" value="50000" step="1000">
+                                <span class="currency">€</span>
+                            </div>
+                            <input type="range" id="amountSlider" min="10000" max="300000" step="5000" value="50000" class="slider">
+                            <div class="slider-labels">
+                                <span>10 000 €</span>
+                                <span>300 000 €</span>
+                            </div>
+                            <p class="input-note">Investície nad 300 000 € — produkt Individual, kontaktujte nás</p>
+                        </div>
                     </div>
-                    <div style="background: white; padding: 2rem; border: 1px solid #E5E5E5;">
-                        <div style="font-weight: 700; margin-bottom: 1rem; color: #D4AF37;">5 rokov</div>
-                        <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.5rem;">Mesačne: 0,5% (6% p.a.)</div>
-                        <div style="font-size: 0.875rem; color: #8A8A8A; margin-bottom: 0.5rem;">Ročný bonus: 4%</div>
-                        <div style="border-top: 1px solid #E5E5E5; margin: 1rem 0; padding-top: 1rem; font-weight: 700;">Spolu: 10% ročne</div>
+
+                    <div class="calculator-results">
+                        <h3>Váš výnos</h3>
+
+                        <div class="result-section">
+                            <div class="result-card highlight-card">
+                                <div class="result-label">Celkový výnos za <span id="totalPeriodLabel">3 roky</span></div>
+                                <div class="result-value" id="totalReturn">0 €</div>
+                            </div>
+
+                            <div class="result-breakdown">
+                                <div class="breakdown-title">Rozdelenie výnosu:</div>
+
+                                <div class="breakdown-item">
+                                    <div class="breakdown-label">
+                                        Mesačný výnos (6% p.a.)
+                                        <span class="breakdown-note">Vyplácaná každý mesiac</span>
+                                    </div>
+                                    <div class="breakdown-value" id="monthlyReturn">0 €</div>
+                                </div>
+
+                                <div class="breakdown-item">
+                                    <div class="breakdown-label">
+                                        Ročný bonus (<span id="bonusPercentLabel">3</span>% p.a.)
+                                        <span class="breakdown-note">Vyplácaná na konci roka</span>
+                                    </div>
+                                    <div class="breakdown-value" id="yearlyBonus">0 €</div>
+                                </div>
+
+                                <div class="breakdown-divider"></div>
+
+                                <div class="breakdown-item total">
+                                    <div class="breakdown-label">
+                                        Ročný výnos celkom
+                                        <span class="breakdown-note"><span id="totalRateLabel">9</span>% p.a.</span>
+                                    </div>
+                                    <div class="breakdown-value" id="yearlyTotal">0 €</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">Spolu dostanete:</span>
+                                <span class="summary-value" id="totalWithInvestment">0 €</span>
+                            </div>
+                            <p class="summary-note">Investícia + všetky výnosy</p>
+
+                            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center;">
+                                <p style="font-weight: 600; margin-bottom: 1rem; color: var(--text-primary);">Zaujíma vás táto investícia?</p>
+                                <a href="kontakt.html" style="display: inline-block; padding: 0.875rem 2rem; background: var(--accent); color: #000; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.5px; text-decoration: none; transition: all 0.3s;">Kontaktovať nás</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <div class="info-card">
+                        <h3>Ako to funguje</h3>
+                        <ul class="info-list">
+                            <li><strong>Mesačné vyplácanie:</strong> Každý mesiac dostávate 0,5% z investovanej sumy (6% ročne)</li>
+                            <li><strong>Ročný bonus:</strong> Na konci každého roka dostanete bonus 3% (Easy) alebo 4% (Profi)</li>
+                            <li><strong>Istina:</strong> Vaša investovaná suma zostáva nedotknutá a vracia sa na konci doby investície</li>
+                            <li><strong>Zabezpečenie:</strong> Všetky investície sú zabezpečené nehnuteľnosťami s 150% mierou zabezpečenia</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card dark-card">
+                        <h3>Príklad výpočtu</h3>
+                        <div class="example-calc" id="exampleCalc">
+                            <p><strong>Investícia 50 000 €</strong> na <strong>3 roky</strong> (9% p.a.)</p>
+                            <div class="example-breakdown">
+                                <div>Mesačný výnos: <strong>250 €</strong> (0,5% mesačne)</div>
+                                <div>Ročný bonus: <strong>1 500 €</strong> (3% ročne)</div>
+                                <div class="example-divider"></div>
+                                <div>Celkom ročne: <strong>4 500 €</strong> (9% p.a.)</div>
+                                <div>Za 3 roky: <strong>13 500 €</strong></div>
+                                <div class="example-total">Spolu dostanete: <strong>63 500 €</strong></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Individual contact section (hidden by default) -->
+            <div id="individual-section" style="display: none; max-width: 680px; margin: 0 auto;">
+                <p style="font-size: 1.125rem; color: #4A4A4A; margin-bottom: 2.5rem; line-height: 1.8; text-align: center;">
+                    Produkt <strong>Individual</strong> je určený pre investície od 300 000 €.
+                    Výnos 12%+ a podmienky nastavujeme individuálne podľa vašich potrieb.
+                    Kontaktujte nás a dohodneme si stretnutie.
+                </p>
+                <div style="background: white; padding: 2.5rem; border: 1px solid #E5E5E5;">
+                    <form id="individualForm">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Meno a priezvisko *</label>
+                            <input type="text" name="name" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; transition: border-color 0.3s;">
+                        </div>
+                        <div class="ind-form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Email *</label>
+                                <input type="email" name="email" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; transition: border-color 0.3s;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">Telefón</label>
+                                <input type="tel" name="phone" maxlength="20" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; transition: border-color 0.3s;">
+                            </div>
+                        </div>
+                        <button type="submit" style="width: 100%; padding: 1.25rem; background: #000; color: white; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9375rem; cursor: pointer; border: none; font-family: inherit; transition: background 0.3s;">Mám záujem o Individual</button>
+                        <div id="individualFormMsg" style="display: none; margin-top: 1rem; padding: 1rem; text-align: center; font-weight: 600;"></div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Crossrock -->
+    <section style="padding: 6rem 0;">
+        <div class="container" style="max-width: 900px;">
+
             <div style="margin-bottom: 3rem;">
                 <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem;">Prečo investovať s Crossrock</h3>
-                
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
                         <div style="flex-shrink: 0; width: 48px; height: 48px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">1</div>
@@ -110,7 +342,6 @@
                             <p style="color: #4A4A4A; line-height: 1.7;">Každá investícia je zabezpečená nehnuteľnosťami s minimálnou mierou zabezpečenia 150%. Vaše peniaze sú chránené reálnym majetkom.</p>
                         </div>
                     </div>
-                    
                     <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
                         <div style="flex-shrink: 0; width: 48px; height: 48px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">2</div>
                         <div>
@@ -118,15 +349,13 @@
                             <p style="color: #4A4A4A; line-height: 1.7;">Na rozdiel od akcií alebo fondov môžete navštíviť nehnuteľnosť, ktorá zabezpečuje vašu investíciu. Uvidíte na vlastné oči, kam idú vaše peniaze.</p>
                         </div>
                     </div>
-                    
                     <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
                         <div style="flex-shrink: 0; width: 48px; height: 48px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">3</div>
                         <div>
                             <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Pravidelný cash flow</h4>
-                            <p style="color: #4A4A4A; line-height: 1.7;">Mesačné výplaty úrokov znamenajú stabilný príjem. Nemusíte čakať rok na výnosy - peniaze dostávate priebežne.</p>
+                            <p style="color: #4A4A4A; line-height: 1.7;">Mesačné výplaty úrokov znamenajú stabilný príjem. Nemusíte čakať rok na výnosy — peniaze dostávate priebežne.</p>
                         </div>
                     </div>
-                    
                     <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
                         <div style="flex-shrink: 0; width: 48px; height: 48px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">4</div>
                         <div>
@@ -137,133 +366,19 @@
                 </div>
             </div>
 
-            <div style="background: #F8F8F8; color: #000; padding: 3rem; margin-bottom: 3rem; border: 1px solid #E5E5E5;">
-                <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem; color: #000; text-align: center;">Vypočítajte si váš výnos</h3>
-                
-                <!-- Mini Calculator -->
-                <div style="max-width: 600px; margin: 0 auto;">
-                    <div style="margin-bottom: 2rem;">
-                        <label style="display: block; font-weight: 600; margin-bottom: 1rem; color: #000;">Doba investície</label>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <button type="button" class="mini-period-btn active" data-years="3" style="padding: 1.25rem; background: white; border: 2px solid #D4AF37; color: #000; font-weight: 700; cursor: pointer; transition: all 0.3s;">
-                                <span style="display: block; font-size: 1.125rem; margin-bottom: 0.25rem;">3 roky</span>
-                                <span style="display: block; font-size: 0.875rem; color: #D4AF37;">9% ročne</span>
-                            </button>
-                            <button type="button" class="mini-period-btn" data-years="5" style="padding: 1.25rem; background: white; border: 2px solid #E5E5E5; color: #000; font-weight: 700; cursor: pointer; transition: all 0.3s;">
-                                <span style="display: block; font-size: 1.125rem; margin-bottom: 0.25rem;">5 rokov</span>
-                                <span style="display: block; font-size: 0.875rem; color: #4A4A4A;">10% ročne</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <label style="display: block; font-weight: 600; margin-bottom: 1rem; color: #000;">Suma investície</label>
-                        <div style="position: relative; margin-bottom: 1rem;">
-                            <input type="number" id="miniAmount" value="50000" min="10000" step="1000" style="width: 100%; padding: 1rem 3rem 1rem 1rem; background: white; border: 1px solid #E5E5E5; color: #000; font-size: 1.125rem; font-weight: 600;">
-                            <span style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: #4A4A4A; font-weight: 600;">€</span>
-                        </div>
-                        <input type="range" id="miniSlider" min="10000" max="300000" step="5000" value="50000" style="width: 100%; height: 6px; background: #E5E5E5; -webkit-appearance: none;">
-                        <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.75rem; color: #8A8A8A;">
-                            <span>10 000 €</span>
-                            <span>300 000 €</span>
-                        </div>
-                    </div>
-                    
-                    <div class="inv-result-box" style="background: white; border: 2px solid #D4AF37; padding: 2rem; margin-bottom: 2rem; text-align: center;">
-                        <div style="font-size: 0.875rem; color: #4A4A4A; margin-bottom: 0.5rem;">Váš celkový výnos za <span id="miniPeriodLabel">3 roky</span></div>
-                        <div class="inv-result-number" style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: #D4AF37;" id="miniTotalReturn">13 500 €</div>
-                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #E5E5E5; font-size: 0.875rem; color: #4A4A4A;">
-                            Mesačne: <strong id="miniMonthlyReturn" style="color: #000;">250 €</strong> + Ročný bonus: <strong id="miniYearlyBonus" style="color: #000;">1 500 €</strong>
-                        </div>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <a href="kalkulacka.html" style="display: inline-block; padding: 1rem 2rem; background: #000; color: white; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; transition: all 0.3s;">Detailný výpočet</a>
-                    </div>
-                </div>
-                
-                <script>
-                const miniAmount = document.getElementById('miniAmount');
-                const miniSlider = document.getElementById('miniSlider');
-                const miniPeriodBtns = document.querySelectorAll('.mini-period-btn');
-                const miniTotalReturn = document.getElementById('miniTotalReturn');
-                const miniMonthlyReturn = document.getElementById('miniMonthlyReturn');
-                const miniYearlyBonus = document.getElementById('miniYearlyBonus');
-                const miniPeriodLabel = document.getElementById('miniPeriodLabel');
-                let miniPeriod = 3;
-                
-                function calculateMini() {
-                    const amount = parseFloat(miniAmount.value) || 10000;
-                    const years = miniPeriod;
-                    const rate = years === 3 ? 0.09 : 0.10;
-                    const monthlyRate = 0.06 / 12;
-                    const bonusRate = years === 3 ? 0.03 : 0.04;
-                    
-                    const monthlyValue = amount * monthlyRate;
-                    const yearlyBonusValue = amount * bonusRate;
-                    const totalReturnValue = (amount * rate) * years;
-                    
-                    miniTotalReturn.textContent = new Intl.NumberFormat('sk-SK').format(totalReturnValue) + ' €';
-                    miniMonthlyReturn.textContent = new Intl.NumberFormat('sk-SK').format(monthlyValue) + ' €';
-                    miniYearlyBonus.textContent = new Intl.NumberFormat('sk-SK').format(yearlyBonusValue) + ' €';
-                    miniPeriodLabel.textContent = years === 3 ? '3 roky' : '5 rokov';
-                }
-                
-                miniAmount.addEventListener('input', (e) => {
-                    miniSlider.value = e.target.value;
-                    calculateMini();
-                });
-                
-                miniAmount.addEventListener('blur', (e) => {
-                    let value = parseFloat(e.target.value) || 10000;
-                    if (value < 10000) {
-                        value = 10000;
-                        miniAmount.value = value;
-                    }
-                    miniSlider.value = value;
-                    calculateMini();
-                });
-                
-                miniSlider.addEventListener('input', (e) => {
-                    miniAmount.value = e.target.value;
-                    calculateMini();
-                });
-                
-                miniPeriodBtns.forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        miniPeriodBtns.forEach(b => {
-                            b.style.background = 'white';
-                            b.style.borderColor = '#E5E5E5';
-                            b.querySelector('span:last-child').style.color = '#4A4A4A';
-                        });
-                        this.style.background = 'white';
-                        this.style.borderColor = '#D4AF37';
-                        this.querySelector('span:last-child').style.color = '#D4AF37';
-                        miniPeriod = parseInt(this.dataset.years);
-                        calculateMini();
-                    });
-                });
-                
-                calculateMini();
-                </script>
-            </div>
-
-            <div style="margin-bottom: 3rem;">
+            <div>
                 <h3 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 1.5rem;">Pre koho je táto investícia vhodná</h3>
-                
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
                     <div style="padding: 2rem; border: 1px solid #E5E5E5;">
                         <div style="font-size: 2rem; margin-bottom: 1rem;">💰</div>
                         <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Konzervativní investori</h4>
                         <p style="color: #4A4A4A; font-size: 0.9375rem;">Chcete stabilný výnos bez veľkých výkyvov. Akciovému trhu neveríte.</p>
                     </div>
-                    
                     <div style="padding: 2rem; border: 1px solid #E5E5E5;">
                         <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
                         <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Hľadáte pasívny príjem</h4>
                         <p style="color: #4A4A4A; font-size: 0.9375rem;">Potrebujete pravidelný mesačný cash flow na doplnenie príjmu.</p>
                     </div>
-                    
                     <div style="padding: 2rem; border: 1px solid #E5E5E5;">
                         <div style="font-size: 2rem; margin-bottom: 1rem;">🏦</div>
                         <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Nespokojní s bankou</h4>
@@ -272,9 +387,6 @@
                 </div>
             </div>
 
-            <div style="text-align: center; padding: 3rem 0;">
-                <a href="kalkulacka.html" class="btn-primary btn-large">Vypočítajte si výnos</a>
-            </div>
         </div>
     </section>
 
@@ -292,7 +404,6 @@
                             <li><a href="index.html">Domov</a></li>
                             <li><a href="investicie.html">Investície</a></li>
                             <li><a href="financovanie.html">Financovanie</a></li>
-                            <li><a href="kalkulacka.html">Kalkulačka</a></li>
                             <li><a href="pribehy.html">Príbehy</a></li>
                             <li><a href="kontakt.html">Kontakt</a></li>
                         </ul>
@@ -321,6 +432,121 @@
         </div>
     </footer>
 
+    <script src="js/calculator.js"></script>
+
+    <script>
+    // Sync period buttons with product cards (two-way)
+    document.querySelectorAll('.period-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var product = this.dataset.product;
+            document.querySelectorAll('.inv-product-card').forEach(function(card) {
+                card.classList.remove('selected');
+            });
+            var card = document.querySelector('.inv-product-card[data-product="' + product + '"]');
+            if (card) card.classList.add('selected');
+        });
+    });
+
+    function selectProduct(product) {
+        // Update product card highlights
+        document.querySelectorAll('.inv-product-card').forEach(function(card) {
+            card.classList.remove('selected');
+        });
+        document.querySelector('.inv-product-card[data-product="' + product + '"]').classList.add('selected');
+
+        if (product === 'individual') {
+            document.getElementById('calc-section').style.display = 'none';
+            document.getElementById('individual-section').style.display = 'block';
+        } else {
+            document.getElementById('calc-section').style.display = '';
+            document.getElementById('individual-section').style.display = 'none';
+            // Click the matching period button in the calculator
+            var periodBtn = document.querySelector('.period-btn[data-product="' + product + '"]');
+            if (periodBtn) periodBtn.click();
+        }
+    }
+
+    // Individual form submit
+    document.getElementById('individualForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = form.querySelector('button');
+        var msg = document.getElementById('individualFormMsg');
+
+        btn.textContent = 'Odosiela sa...';
+        btn.disabled = true;
+
+        try {
+            var data = {
+                name: form.querySelector('[name="name"]').value,
+                email: form.querySelector('[name="email"]').value,
+                phone: form.querySelector('[name="phone"]').value,
+                message: 'Záujem o produkt Individual (investícia od 300 000 €)'
+            };
+
+            var response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            var result = await response.json();
+
+            if (result.success) {
+                msg.textContent = '✓ Správa bola úspešne odoslaná! Ozveme sa vám čoskoro.';
+                msg.style.background = '#D4EDDA';
+                msg.style.color = '#155724';
+                msg.style.border = '1px solid #C3E6CB';
+                msg.style.display = 'block';
+                form.reset();
+            } else {
+                throw new Error(result.error || 'Failed');
+            }
+        } catch (error) {
+            msg.textContent = '✗ Nastala chyba. Skúste to prosím znova.';
+            msg.style.background = '#F8D7DA';
+            msg.style.color = '#721C24';
+            msg.style.border = '1px solid #F5C6CB';
+            msg.style.display = 'block';
+        } finally {
+            btn.textContent = 'Mám záujem o Individual';
+            btn.disabled = false;
+        }
+    });
+    </script>
+
     <script src="js/script.js"></script>
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>Používame cookies na zlepšenie vášho zážitku. <a href="privacy-policy.html">Viac informácií</a></p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookieReject" class="cookie-btn cookie-btn-text">Odmietnuť</button>
+                <button id="cookieAccept" class="cookie-btn cookie-btn-primary">Prijať</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var banner = document.getElementById("cookieBanner");
+        var acceptBtn = document.getElementById("cookieAccept");
+        var rejectBtn = document.getElementById("cookieReject");
+        if (!localStorage.getItem("cookieConsent")) {
+            setTimeout(function() { banner.style.display = "block"; }, 1000);
+        }
+        acceptBtn.addEventListener("click", function() {
+            localStorage.setItem("cookieConsent", "accepted");
+            banner.style.opacity = "0";
+            setTimeout(function() { banner.style.display = "none"; }, 300);
+        });
+        rejectBtn.addEventListener("click", function() {
+            localStorage.setItem("cookieConsent", "rejected");
+            banner.style.opacity = "0";
+            setTimeout(function() { banner.style.display = "none"; }, 300);
+        });
+    })();
+    </script>
 </body>
 </html>
