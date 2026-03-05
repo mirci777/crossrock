@@ -3,22 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ochrana osobných údajov (GDPR) | Crossrock Capital</title>
+    <title>GDPR – Ochrana osobných údajov | Crossrock Capital</title>
     <meta name="description" content="Informácie o spracúvaní osobných údajov v súlade s GDPR. Crossrock Capital a.s.">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .privacy-page { background: #F8F8F8; }
-        .privacy-container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; background: white; }
-        .privacy-container h1 { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
-        .privacy-container h2 { font-family: var(--font-display); font-size: 1.75rem; margin: 2.5rem 0 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid #D4AF37; }
-        .privacy-container h3 { font-weight: 700; font-size: 1.125rem; margin: 1.5rem 0 0.75rem; }
-        .privacy-container p, .privacy-container li { color: #4A4A4A; line-height: 1.8; margin-bottom: 1rem; }
-        .privacy-container ul { padding-left: 2rem; }
-        .privacy-container a { color: #D4AF37; text-decoration: underline; }
-        .privacy-container strong { color: #000; font-weight: 700; }
-        .privacy-box { background: #F8F8F8; padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid #D4AF37; }
-        .privacy-contact { background: #FFF9E6; padding: 1.5rem; margin: 1rem 0; }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+            background: white;
+        }
+
+        .privacy-container h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .privacy-container .lead {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            border-left: 4px solid #D4AF37;
+            padding-left: 1.25rem;
+            background: #FAFAF7;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+        }
+
+        .privacy-container h2 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #D4AF37;
+            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .privacy-container h3 {
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #222;
+        }
+
+        .privacy-container p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .privacy-container li {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .privacy-container ul,
+        .privacy-container ol {
+            padding-left: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-container a {
+            color: #B8960C;
+            text-decoration: underline;
+        }
+
+        .privacy-container strong {
+            color: #111;
+            font-weight: 600;
+        }
+
+        .privacy-box {
+            background: #FAFAF7;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #D4AF37;
+        }
+
+        .privacy-box p { margin-bottom: 0.5rem; }
+        .privacy-box p:last-child { margin-bottom: 0; }
+
+        .privacy-contact {
+            background: #F5F5F5;
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: #D4AF37;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .page-divider {
+            border: none;
+            border-top: 1px solid #E5E5E5;
+            margin: 3rem 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E5E5E5;
+            color: #8A8A8A;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .privacy-container { padding: 2rem 1rem 4rem; }
+            .privacy-container h2 { font-size: 1.1rem; }
+        }
     </style>
 </head>
 <body class="privacy-page">
@@ -37,111 +153,287 @@
 
     <div style="background: #000; color: white; padding: 4rem 0; text-align: center;">
         <div class="container">
-            <h1 style="font-family: var(--font-display); font-size: 3rem; margin-bottom: 0.5rem; color: white;">Ochrana osobných údajov</h1>
-            <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8);">GDPR • Privacy Policy • Cookies</p>
+            <h1 style="font-family: var(--font-display); font-size: 3rem; margin-bottom: 0.5rem; color: white;">GDPR</h1>
+            <p style="font-size: 1.125rem; color: rgba(255,255,255,0.8);">Ochrana osobných údajov • Privacy Policy • Cookies</p>
         </div>
     </div>
 
     <div class="privacy-container">
-        <div class="privacy-box">
-            <p style="margin-bottom: 0;"><strong>INFORMÁCIE O SPRACÚVANÍ OSOBNÝCH ÚDAJOV PRE KLIENTOV A POTENCIÁLNYCH KLIENTOV SPOLOČNOSTÍ V CROSSROCK CAPITAL a.s.</strong></p>
+
+        <h1>INFORMÁCIE O SPRACÚVANÍ OSOBNÝCH ÚDAJOV</h1>
+        <div class="lead">
+            Pre klientov a potenciálnych klientov spoločností v CROSSROCK CAPITAL a.s.<br><br>
+            V súvislosti s nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 o ochrane fyzických osôb pri spracúvaní osobných údajov a o voľnom pohybe takýchto údajov, ktorým sa zrušuje smernica 95/46/ES (ďalej len „nariadenie") a zákona č. 18/2018 Z. z. o ochrane osobných údajov a o zmene a doplnení niektorých zákonov v platnom znení si Vám dovoľujeme dať do pozornosti podmienky spracovania Vašich osobných údajov. Odporúčame Vám, aby ste týmto informáciám venovali náležitú pozornosť.
         </div>
 
-        <p>V súvislosti s nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 o ochrane fyzických osôb pri spracúvaní osobných údajov a o voľnom pohybe takýchto údajov, ktorým sa zrušuje smernica 95/46/ES (ďalej len "nariadenie") a zákona č. 18/2018 Z. z. o ochrane osobných údajov a o zmene a doplnení niektorých zákonov v platnom znení si Vám dovoľujeme dať do pozornosti podmienky spracovania Vašich osobných údajov.</p>
+        <!-- 1 -->
+        <h2>1. Prevádzkovatelia spracúvajúci vaše osobné údaje</h2>
 
-        <h2>1. PREVÁDZKOVATELIA SPRACÚVAJÚCI VAŠE OSOBNÉ ÚDAJE</h2>
-        <p>Prevádzkovateľom osobných údajov podľa § 5 písm. o) zákona č. 18/2018 Z.z. o ochrane osobných údajov v znení neskorších predpisov (ďalej len „Zákon") je <strong>CROSSROCK CAPITAL a.s</strong>., IČO: 50770454 so sídlom Lazaretská 3/A, 811 08 Bratislava - mestská časť Staré Mesto Slovensko.</p>
-        
+        <p>Prevádzkovateľom osobných údajov podľa § 5 písm. o) zákona č. 18/2018 Z.z. o ochrane osobných údajov v znení neskorších predpisov (ďalej len „Zákon") je <strong>CROSSROCK CAPITAL a.s.</strong>, IČO: 50770454 so sídlom Lazaretská 3/A, 811 08 Bratislava – mestská časť Staré Mesto, Slovensko (ďalej len: „prevádzkovateľ" alebo „CROSSROCK CAPITAL a.s.").</p>
+
         <div class="privacy-contact">
             <strong>Kontaktné údaje prevádzkovateľa:</strong><br>
-            <strong>Adresa:</strong> Lazaretská 3/A, 811 08 Bratislava - mestská časť Staré Mesto Slovensko<br>
-            <strong>Email:</strong> <a href="mailto:gdpr@crossrockcapital.sk">gdpr@crossrockcapital.sk</a>
+            Adresa: Lazaretská 3/A, 811 08 Bratislava – mestská časť Staré Mesto, Slovensko<br>
+            E-mail: <a href="mailto:gdpr@crossrockcapital.sk">gdpr@crossrockcapital.sk</a>
         </div>
 
-        <h2>2. PRÁVNY ZÁKLAD SPRACÚVANIA</h2>
-        <h3>A. Kontaktný formulár</h3>
-        <p>Osobné údaje spracovávame na základe súhlasu dotknutých osôb. Kontaktný formulár je uvedený na internetovej stránke <a href="https://crossrockcapital.sk">crossrockcapital.sk</a>. Udelením súhlasu vyhlasujete, že ste osobou staršou ako 16 rokov.</p>
+        <p>Vaše osobné údaje spracúvajú spoločnosti patriace do CROSSROCK CAPITAL a.s. To znamená, že Vaše osobné údaje môžu byť spracúvané:</p>
+        <ol>
+            <li>osobami, ktoré majú priamu alebo nepriamu majetkovú, personálnu alebo inú účasť spoločnosti v CROSSROCK CAPITAL a.s.,</li>
+            <li>osobami, na ktorých má priamu alebo nepriamu majetkovú, personálnu alebo inú účasť v spoločnosti v CROSSROCK CAPITAL a.s.,</li>
+            <li>osobami, na ktorých má priamu alebo nepriamu majetkovú, personálnu alebo inú účasť osoba majúca majetkovú, personálnu alebo inú účasť na spoločnosti v CROSSROCK CAPITAL a.s.,</li>
+            <li>osobami majúcimi priamu alebo nepriamu majetkovú, personálnu alebo inú účasť na osobe majúcej majetkovú účasť na spoločnosti v CROSSROCK CAPITAL a.s.</li>
+        </ol>
+        <p>Spoločnosti aktuálne patriace do CROSSROCK CAPITAL a.s. sú uvedené v prílohe na konci tohto dokumentu (ďalej spoločne len „CROSSROCK CAPITAL a.s.").</p>
 
-        <h3>B. Marketing</h3>
-        <p>Získavanie osobných údajov dotknutých osôb za účelom zasielania marketingovej komunikácie, obchodných ponúk a informácií obchodného a reklamného charakteru.</p>
+        <!-- 2 -->
+        <h2>2. Právny základ spracúvania vašich osobných údajov podľa typov služieb</h2>
 
-        <h3>C. Zmluvy</h3>
-        <p>Získavanie osobných údajov za účelom uzatvorenia zmluvného vzťahu. Bez uvedenia týchto údajov nie je možné Zmluvy uzavrieť.</p>
+        <h3><span class="section-label">A</span> Kontaktný formulár</h3>
+        <p>Osobné údaje spracovávame na základe súhlasu dotknutých osôb. Kontaktný formulár je uvedený na internetových adresách <a href="https://crossrockcapital.sk/#kontaktujte-nas" target="_blank">crossrockcapital.sk/#kontaktujte-nas</a>, <a href="https://crossrockcapital.outgrow.us/kontaktny-formular" target="_blank">crossrockcapital.outgrow.us/kontaktny-formular</a>, alebo v sídle spoločností v CROSSROCK CAPITAL a.s.</p>
+        <p>Udelením súhlasu vyhlasujete, že ste osobou staršou ako 16 rokov; v opačnom prípade, že máte súhlas svojich zákonných zástupcov. Súhlas na spracovanie Vašich osobných údajov sa zakladá na pravdivých, aktuálnych, úplných a správnych údajoch. Súhlas je výslovný, dobrovoľný a bezvýhradný.</p>
 
-        <h2>3. ÚČEL SPRACÚVANIA</h2>
-        <p>Účelom spracúvania osobných údajov je najmä:</p>
+        <h3><span class="section-label">B</span> Marketing</h3>
+        <p>Získavanie osobných údajov dotknutých osôb za účelom zasielania marketingovej komunikácie, obchodných ponúk a informácií obchodného a reklamného charakteru, a to prostredníctvom listovej pošty, elektronickej komunikácie, SMS alebo MMS správ alebo priamym telefonickým oslovením. Tento súhlas sa považuje za súhlas so zasielaním správ reklamného charakteru a správ elektronickej pošty podľa § 3 ods. 3 a 4 zákona č. 147/2001 Z. z. o reklame a § 62 ods. 2 zákona č. 452/2021 Z. z. o elektronických komunikáciách.</p>
+        <p><strong>Existujúci klienti</strong> – osobné údaje na účely priameho marketingu sa získavajú na právnom základe oprávneného záujmu (teda bez potreby Vášho súhlasu).</p>
+        <p><strong>Potenciálni klienti</strong> (ak ešte nie ste v zmluvnom vzťahu so spoločnosťou z CROSSROCK CAPITAL a.s.) – osobné údaje na účely marketingu sa získavajú na základe Vášho súhlasu.</p>
+        <p>Osobné údaje maloletých a osôb s obmedzenou spôsobilosťou na právne úkony spracovávame na základe súhlasu ich zákonných zástupcov. Súhlas je výslovný, dobrovoľný a bezvýhradný.</p>
+
+        <h3><span class="section-label">C</span> Zmluvy so spoločnosťami patriacimi do CROSSROCK CAPITAL a.s.</h3>
+        <p>Získavanie osobných údajov dotknutých osôb za účelom uzatvorenia zmluvného vzťahu v zmysle zákona č. 40/1964 Zb. Občiansky zákonník alebo zákona č. 513/1991 Zb. Obchodný zákonník s cieľom uzavretia zmlúv demonštratívne uvedených nižšie. Bez uvedenia týchto povinných údajov nie je možné zmluvy uzavrieť.</p>
+        <p>Osobné údaje spracovávame na základe právneho základu uzatvorenie zmluvy, ktorý súvisí s uzatvorením kúpnej zmluvy, zmluvy o prevode vlastníctva bytu a nebytových priestorov, nájomnej zmluvy, zmluvy o podmienkach partnerstva v projekte, zmluvy o pôžičke alebo inej zmluvy uzatvorenej medzi Vami a niektorou spoločnosťou patriacou do CROSSROCK CAPITAL a.s.</p>
+
+        <!-- 3 -->
+        <h2>3. Účel spracúvania vašich osobných údajov podľa typov služieb</h2>
+
+        <h3><span class="section-label">A</span> Kontaktný formulár</h3>
+        <p>Účelom spracúvania osobných údajov je komunikácia medzi Vami a spoločnosťami z CROSSROCK CAPITAL a.s. Osobné údaje poskytnuté v kontaktnom formulári sú spracúvané na základe súhlasu dotknutej osoby. Udelený súhlas sa vzťahuje na všetky spracovateľské činnosti vykonávané na tento účel alebo niektoré príbuzné a vzájomne súvisiace účely.</p>
+
+        <h3><span class="section-label">B</span> Marketing</h3>
+        <p>Účelom spracúvania osobných údajov je zasielanie marketingových ponúk a informácií o službách CROSSROCK CAPITAL a.s. a zasielanie newsletterov.</p>
+        <p>Pôvodný účel spracúvania (kontaktovanie klienta a poskytnutie informácií o službe) je zlučiteľný s ďalším účelom spracovania, ktorým je propagácia ponúkanej služby s cieľom plnohodnotne uspokojiť potreby a priania klienta. Dotknutá osoba môže oprávnene a primerane očakávať, že k ďalšiemu spracúvaniu dôjde.</p>
+        <p>Dotknutá osoba nie je povinná uviesť svoje osobné údaje, ale v takomto prípade jej nie je možné poskytnúť požadované informácie. Osobné údaje za účelom kontaktovania/poskytnutia informácií poskytuje dobrovoľne, na dobu 2 rokov.</p>
+
+        <h3><span class="section-label">C</span> Zmluvy so spoločnosťami patriacimi do CROSSROCK CAPITAL a.s.</h3>
+        <p>Účelom spracúvania osobných údajov je využitie osobných údajov na vystavenie, nakladanie a uzatváranie príslušných zmlúv.</p>
+        <p>Spracúvanie Vašich osobných údajov zo zmlúv je nevyhnutné na plnenie zmluvy, ktorej zmluvnou stranou dotknutá osoba je, a súčasne je nevyhnutné podľa osobitného predpisu.</p>
+        <p>Účelom spracúvania osobných údajov zo strany CROSSROCK CAPITAL a.s. je najmä:</p>
         <ul>
-            <li>rokovanie s klientom/potenciálnym klientom</li>
-            <li>identifikácia klienta a jeho zástupcov</li>
-            <li>príprava a uzatvorenie zmluvy s klientom</li>
-            <li>komunikácia a zabezpečenie plnenia povinností vyplývajúcich z uzavretej zmluvy</li>
-            <li>správa zmluvy</li>
-            <li>propagačná a marketingovú činnosť</li>
+            <li>rokovanie s klientom / potenciálnym klientom,</li>
+            <li>identifikácia klienta a jeho zástupcov,</li>
+            <li>príprava a uzatvorenie zmluvy s klientom,</li>
+            <li>komunikácia a zabezpečenie plnenia povinností vyplývajúcich z uzavretej zmluvy,</li>
+            <li>rokovanie o zmene zmluvy uskutočnené na návrh klienta,</li>
+            <li>správa zmluvy,</li>
+            <li>ochrana a domáhanie sa práv CROSSROCK CAPITAL a.s. voči svojim klientom,</li>
+            <li>zdokumentovanie činnosti CROSSROCK CAPITAL a.s.,</li>
+            <li>výkon dohľadu a plnenie úloh a povinností podľa Zákona o FS, Zákona o CP, Zákona o AML a/alebo iných osobitných zákonov,</li>
+            <li>propagačná a marketingová činnosť,</li>
+            <li>účely registrácie na stránke crossrockcapital.sk.</li>
         </ul>
 
-        <h2>4. ROZSAH SPRACÚVANIA</h2>
-        <p><strong>Kontaktný formulár a Marketing:</strong> meno, priezvisko, adresa trvalého pobytu, tel.č. a e-mail</p>
-        <p><strong>Zmluvy:</strong> meno, priezvisko, adresa trvalého pobytu, korešpondenčná adresa, dátum narodenia, rodné číslo, e-mailová adresa, telefónny kontakt, číslo bankového účtu</p>
+        <!-- 4 -->
+        <h2>4. Rozsah spracúvania vašich osobných údajov podľa typov služieb</h2>
 
-        <h2>10. DOBA ÚSCHOVY</h2>
-        <p><strong>Kontaktný formulár a Marketing:</strong> 2 roky + zákonné lehoty (5-10 rokov)</p>
-        <p><strong>Zmluvy:</strong> Doba trvania zmluvného vzťahu + 10 rokov</p>
+        <h3><span class="section-label">A</span> Kontaktný formulár</h3>
+        <p>Rozsah osobných údajov: meno, priezvisko, adresa trvalého pobytu, tel. č. a e-mail.</p>
 
-        <h2>11. VAŠE PRÁVA</h2>
-        <p>Máte právo na:</p>
+        <h3><span class="section-label">B</span> Marketing</h3>
+        <p>Rozsah osobných údajov: meno, priezvisko, adresa trvalého pobytu, tel. č. a e-mail.</p>
+
+        <h3><span class="section-label">C</span> Zmluvy so spoločnosťami patriacimi do CROSSROCK CAPITAL a.s.</h3>
+        <p>Rozsah osobných údajov: meno, priezvisko, adresa trvalého pobytu, korešpondenčná adresa, dátum narodenia, rodné číslo, e-mailová adresa, telefónny kontakt, číslo bankového účtu.</p>
+        <p>Rozsah osobných údajov spracúvaných za účelom výkonu činnosti spoločnosti CROSSROCK CAPITAL a.s. v súlade so Zákonom o FS, Zákonom o CP a identifikácie klienta podľa Zákona o AML, stanovujú uvedené zákony. Ide o:</p>
+        <ol>
+            <li>ak ide o fyzickú osobu vrátane fyzickej osoby zastupujúcej právnickú osobu – osobné údaje o totožnosti v rozsahu meno, priezvisko, adresa trvalého pobytu, adresa prechodného pobytu, rodné číslo (ak je pridelené), dátum narodenia, štátna príslušnosť, druh a číslo dokladu totožnosti; ak ide o podnikateľa, aj adresa miesta podnikania a označenie úradného registra alebo evidencie a číslo zápisu;</li>
+            <li>identifikačné údaje v rozsahu názov, identifikačné číslo (ak je pridelené), adresa sídla, adresa umiestnenia podniku alebo organizačných zložiek a iná adresa miesta činnosti; ak ide o právnickú osobu, aj zoznam členov štatutárneho orgánu a ich údaje podľa bodu 1, a označenie príslušného registra a číslo zápisu;</li>
+            <li>kontaktné telefónne číslo, faxové číslo a adresa elektronickej pošty (ak ich má);</li>
+            <li>doklady a údaje preukazujúce oprávnenie na zastupovanie v prípade zástupcu a splnenie ostatných požiadaviek na uzavretie alebo vykonanie obchodu;</li>
+            <li>osobné údaje týkajúce sa ekonomickej identity klienta na účely plnenia povinností podľa zákona o cenných papieroch. Klient je povinný umožniť CROSSROCK CAPITAL a.s. získať kopírovaním, skenovaním alebo iným zaznamenávaním: osobné údaje o totožnosti z dokladu totožnosti (obrazová podobizeň, titul, meno, priezvisko, rodné priezvisko, rodné číslo, dátum narodenia, miesto a okres narodenia, adresa trvalého pobytu, adresa prechodného pobytu, štátna príslušnosť, záznam o obmedzení spôsobilosti na právne úkony, druh a číslo dokladu totožnosti, vydávajúci orgán, dátum vydania a platnosť dokladu totožnosti) a ďalšie údaje z dokladov preukazujúcich údaje podľa bodov 2 až 4.</li>
+        </ol>
+
+        <!-- 6 -->
+        <h2>6. Všeobecná informácia</h2>
+        <p>Pre vyššie uvedené účely je poskytnutie Vašich osobných údajov dobrovoľné, avšak nevyhnutné na ďalšie poskytovanie služieb spoločnosťami z CROSSROCK CAPITAL a.s.</p>
+        <p>Prenos osobných údajov do tretích krajín sa neuskutočňuje, nepredpokladá sa ani cezhraničný prenos osobných údajov do krajín Európskej únie.</p>
+
+        <!-- 7 -->
+        <h2>7. Kategórie osobných údajov</h2>
+        <p>Spoločnosti z CROSSROCK CAPITAL a.s. spracovávajú len bežné kategórie osobných údajov.</p>
+
+        <!-- 8 -->
+        <h2>8. Zdroj, z ktorého pochádzajú osobné údaje</h2>
+        <p>Vaše osobné údaje pochádzajú priamo od Vás alebo od tretích osôb.</p>
+
+        <!-- 9 -->
+        <h2>9. Osoby, ktoré majú prístup k vašim osobným údajom</h2>
+        <p>Za účelom možnosti poskytovať Vám komplexné a kvalitné služby je nevyhnutné, aby Vaše osobné údaje boli poskytnuté vybraným osobám v rámci a spolupracujúcich so spoločnosťami z CROSSROCK CAPITAL a.s. Ide o spoločnosti v CROSSROCK CAPITAL a.s. (zoznam nájdete na <a href="https://crossrockcapital.sk/osobne-udaje" target="_blank">crossrockcapital.sk/osobne-udaje</a>), advokátske kancelárie, účtovné, daňové, mzdové, marketingové, IT spoločnosti, spoločnosti prevádzkujúce úložiská osobných údajov, ako i ďalšie osoby nevyhnutné k riadnej činnosti spoločností patriacich do CROSSROCK CAPITAL a.s. a orgány dohľadu.</p>
+        <p>Vaše osobné údaje sa poskytujú uvedeným spoločnostiam buď bez zákonnej povinnosti uzatvorenia zmluvy, alebo na základe uzatvorenia zmluvy. V prípade dohľadu sa Vaše osobné údaje poskytujú príslušným národným a medzinárodným orgánom dohľadu. CROSSROCK CAPITAL a.s. pri výbere zmluvných partnerov dbá na ich spoľahlivosť a v zmluve so zmluvným partnerom sú vždy určené aj pravidlá ochrany osobných údajov.</p>
+
+        <!-- 10 -->
+        <h2>10. Doba úschovy vašich osobných údajov</h2>
+        <p>Spoločnosti z CROSSROCK CAPITAL a.s. uchovávajú Vaše osobné údaje iba po nevyhnutne potrebnú dobu, následne sú pod dohľadom zlikvidované.</p>
+
+        <h3><span class="section-label">A</span> Kontaktný formulár</h3>
+        <p>Vaše osobné údaje sú spracúvané na marketingové účely po dobu <strong>2 rokov</strong> a následne sú uchovávané po dobu určenú osobitnými právnymi predpismi (spravidla 5–10 rokov); v prípade potreby sa tieto doby predlžujú o všeobecné premlčacie doby.</p>
+
+        <h3><span class="section-label">B</span> Marketing</h3>
+        <p>Vaše osobné údaje sú spracúvané na marketingové účely po dobu <strong>2 rokov</strong> a následne sú uchovávané po dobu určenú osobitnými právnymi predpismi (spravidla 5–10 rokov); v prípade potreby sa tieto doby predlžujú o všeobecné premlčacie doby.</p>
+
+        <h3><span class="section-label">C</span> Zmluvy so spoločnosťami patriacimi do CROSSROCK CAPITAL a.s.</h3>
+        <p>Vaše osobné údaje na účely vystavenia, nakladania a uzatvorenia zmlúv sú spracúvané po dobu trvania zmluvného vzťahu a následne uchovávané po dobu určenú osobitnými právnymi predpismi (spravidla <strong>10 rokov</strong>); v prípade potreby sa tieto doby predlžujú o všeobecné premlčacie doby.</p>
+        <p>Spoločnosť CROSSROCK CAPITAL a.s. je povinná uschovávať a ochraňovať pred poškodením, pozmenením, zničením, stratou, odcudzením, vyzradením, zneužitím a neoprávneným sprístupnením údaje a kópie dokladov o preukázaní totožnosti klienta a doklady o zisťovaní vlastníctva prostriedkov použitých klientom na vykonanie obchodu a zmluvy a iné doklady o uskutočnených obchodoch najmenej desať rokov od skončenia obchodu.</p>
+        <p>Pokiaľ dobu úschovy osobných údajov upravujú viaceré zákony, platí najdlhšia zákonná doba. CROSSROCK CAPITAL a.s. je oprávnená získavať osobné údaje aj kopírovaním, skenovaním alebo iným zaznamenávaním dokladov totožnosti a iných úradných dokladov na nosiče informácií.</p>
+
+        <!-- 11 -->
+        <h2>11. Vaše práva v súvislosti s osobnými údajmi</h2>
+        <p>Právna úprava Vám umožňuje využiť v súvislosti so spracúvaním Vašich osobných údajov nasledovné práva:</p>
         <ul>
-            <li>informácie o zdroji, z ktorého pochádzajú Vaše osobné údaje</li>
-            <li>prístup k Vašim osobným údajom</li>
-            <li>opravu Vašich osobných údajov, ak sú nesprávne</li>
-            <li>výmaz Vašich osobných údajov</li>
-            <li>námietku proti spracovaniu Vašich osobných údajov</li>
-            <li>obmedzenie spracúvania Vašich osobných údajov</li>
-            <li>prenos Vašich osobných údajov k inej osobe/spoločnosti</li>
+            <li>právo na <strong>informácie</strong> o zdroji, z ktorého pochádzajú Vaše osobné údaje (ak ste ich neposkytli priamo Vy),</li>
+            <li>právo na <strong>prístup</strong> k Vašim osobným údajom a na ich kópiu (písomne alebo elektronicky),</li>
+            <li>právo na <strong>opravu</strong> Vašich osobných údajov, ak sú nesprávne,</li>
+            <li>právo na <strong>informácie</strong> o tom, aké Vaše osobné údaje sa spracúvajú,</li>
+            <li>právo na <strong>výmaz</strong> Vašich osobných údajov (ak sú spracovávané nezákonne, zanikol účel ich spracovávania alebo ste odvolali súhlas),</li>
+            <li>právo <strong>namietať</strong> spracovanie Vašich osobných údajov (v prípade oprávneného záujmu, ak spoločnosť nemá legitímny dôvod; v prípade priameho marketingu sa nesmú osobné údaje na tento účel viac spracúvať),</li>
+            <li>právo na <strong>obmedzenie</strong> spracúvania Vašich osobných údajov (ak je spracovávanie protizákonné, sú spracovávané nesprávne údaje, alebo údaje už nie sú potrebné),</li>
+            <li>právo na <strong>prenos</strong> Vašich osobných údajov k inej osobe / spoločnosti.</li>
         </ul>
 
         <div class="privacy-box">
             <h3>Odvolanie súhlasov</h3>
-            <p>Súhlas môžete kedykoľvek odvolať zaslaním e-mailu na <a href="mailto:gdpr@crossrockcapital.sk">gdpr@crossrockcapital.sk</a> alebo písomne na adrese <strong>CROSSROCK CAPITAL a.s., Lazaretská 3/A, 811 08 Bratislava</strong>.</p>
-            <p style="margin-bottom: 0;">Ak ste názoru, že Vaše práva boli dotknuté, môžete podať sťažnosť na <strong>Úrad na ochranu osobných údajov SR</strong>, Hraničná 12, 820 07 Bratislava 27; tel: 02 3231 3214; email: <a href="mailto:statny.dozor@pdp.gov.sk">statny.dozor@pdp.gov.sk</a></p>
+            <p>Súhlas na komunikáciu cez kontaktný formulár a/alebo zasielanie marketingových materiálov môžete kedykoľvek odvolať spoločne alebo jednotlivo:</p>
+            <ul style="margin-bottom: 0.75rem;">
+                <li>e-mailom na adresu <a href="mailto:gdpr@crossrockcapital.sk">gdpr@crossrockcapital.sk</a></li>
+                <li>písomne na adresu CROSSROCK CAPITAL a.s., Lazaretská 3/A, 811 08 Bratislava – mestská časť Staré Mesto</li>
+            </ul>
+            <p>Odvolaním súhlasu nie je dotknuté zákonné spracovávanie osobných údajov do doby jeho odvolania (odvolanie nepôsobí spätne).</p>
+            <p style="margin-bottom: 0;">Ak ste toho názoru, že Vaše práva boli dotknuté, môžete podať sťažnosť na <strong>Úrad na ochranu osobných údajov Slovenskej republiky</strong>, Hraničná 12, 820 07 Bratislava 27; webové sídlo: <a href="https://dataprotection.gov.sk" target="_blank">dataprotection.gov.sk</a>; tel.: 02/3231 3214; e-mail: <a href="mailto:statny.dozor@pdp.gov.sk">statny.dozor@pdp.gov.sk</a>.</p>
         </div>
 
-        <h2>13. BEZPEČNOSŤ SPRACÚVANIA</h2>
-        <p>CROSSROCK CAPITAL a.s prijala v rámci zabezpečenia bezpečnosti spracúvania Vašich osobných údajov príslušné opatrenia na zamedzenia ich úniku alebo znehodnotenia.</p>
+        <!-- 12 -->
+        <h2>12. Profilovanie a spôsob spracovania vašich osobných údajov</h2>
+        <p>CROSSROCK CAPITAL a.s. vykonáva automatizované spracovávanie a profilovanie osobných údajov (vyhodnotenie aspektov správania sa klienta). Vaše osobné údaje sa spracovávajú v elektronickej podobe a/alebo v listinnej podobe, v závislosti od zvolenej formy.</p>
 
-        <h2>14. KONTAKT</h2>
-        <p>Spoločnosť môžete kontaktovať:</p>
+        <!-- 13 -->
+        <h2>13. Bezpečnosť spracúvania osobných údajov</h2>
+        <p>CROSSROCK CAPITAL a.s. prijala v rámci zabezpečenia bezpečnosti spracúvania Vašich osobných údajov príslušné opatrenia na zamedzenie ich úniku alebo znehodnotenia, a to v kvalite súčasného technického vývoja s ohľadom na personálne a organizačné predpoklady.</p>
+
+        <!-- 14 -->
+        <h2>14. Možnosť kontaktovania spoločností</h2>
+        <p>Spoločnosti z CROSSROCK CAPITAL a.s. je možné kontaktovať ohľadom spracúvania osobných údajov:</p>
         <ul>
-            <li>Písomne: <strong>Lazaretská 3/A, 811 08 Bratislava</strong></li>
-            <li>Email: <a href="mailto:gdpr@crossrockcapital.sk">gdpr@crossrockcapital.sk</a></li>
+            <li>písomným listom doručeným na adresu sídla: <strong>CROSSROCK CAPITAL a.s., Lazaretská 3/A, 811 08 Bratislava – mestská časť Staré Mesto</strong></li>
+            <li>e-mailom na adresu: <a href="mailto:gdpr@crossrockcapital.sk">gdpr@crossrockcapital.sk</a></li>
         </ul>
 
+        <hr class="page-divider">
+
+        <!-- PRÍLOHA -->
+        <h2>Príloha: Zoznam spoločností CROSSROCK CAPITAL a.s.</h2>
         <div class="privacy-contact">
-            <h3>PRÍLOHA: ZOZNAM SPOLOČNOSTÍ</h3>
-            <p style="margin-bottom: 0;"><strong>Sprostredkovateľ:</strong> REALL INVEST s.r.o. IČO: 53783158, Kollárova 34, 917 01 Trnava</p>
+            <strong>Sprostredkovateľ:</strong> REALL INVEST s.r.o., IČO: 53783158, Kollárova 34, 917 01 Trnava
         </div>
 
-        <h2>COOKIES</h2>
-        <p>Naše webové stránky používajú cookies na zlepšenie funkcionality a používateľského zážitku. Cookies sú malé textové súbory ukladané vo vašom zariadení.</p>
+        <hr class="page-divider">
 
-        <h3>Typy cookies:</h3>
+        <!-- COOKIES -->
+        <h2>Zásady používania súborov cookies</h2>
+
+        <p>V súlade s § 109 ods. 8 zákona č. 452/2021 Z.z. o elektronických komunikáciách v znení neskorších predpisov si Vás dovoľujeme informovať o používaní cookies a upriamiť Vašu pozornosť na možnosť zmeny nastavenia Vášho internetového prehliadača pre prípad, že Vám aktuálne nastavenie využívania cookies nevyhovuje.</p>
+
+        <h3>Čo sú cookies?</h3>
+        <p>Súbory cookies sú malé textové súbory, ktoré môžu byť do internetového prehliadača odosielané pri návšteve webových stránok a ukladané do Vášho zariadenia (počítač, smartphone, tablet). Súbory cookies sa ukladajú do priečinka Vášho internetového prehliadača. Cookies obvykle obsahujú názov webovej stránky, z ktorej pochádzajú, a dátum svojho vzniku. Pri ďalšej návšteve stránky webový prehliadač znovu načíta súbory cookies a tieto informácie odošle späť webovej stránke, ktorá pôvodne cookies vytvorila. Súbory cookies, ktoré používame, nepoškodzujú Váš počítač.</p>
+
+        <h3>Typy cookies, ktoré používame</h3>
         <ul>
-            <li><strong>Základné cookies:</strong> Nevyhnutné pre fungovanie stránok</li>
-            <li><strong>Prevádzkové cookies:</strong> Štatistické informácie o používaní stránok</li>
-            <li><strong>Cookies tretích strán:</strong> Google Analytics, Facebook, YouTube a pod.</li>
+            <li><strong>Základné cookies</strong> – tvoria základ pre prevádzku našich webových stránok a umožňujú používanie základných funkcií (zabezpečené oblasti, online platby, zapamätanie prihlásenia, predvyplnenie formulárov a iné). Bez týchto cookies nemôžeme poskytovať základné služby.</li>
+            <li><strong>Prevádzkové cookies</strong> – zhromažďujeme štatistické informácie o tom, ako používate naše webové stránky (na ktoré časti ste klikli, ktorú stránku ste navštívili naposledy). Slúžia na analýzu a vylepšovanie webových stránok z hľadiska obsahu, výkonu a dizajnu.</li>
+        </ul>
+        <p>Na internetových stránkach môže prevádzkovateľ využívať nasledovné druhy cookies:</p>
+        <ul>
+            <li><strong>Relačné (dočasné) cookies</strong> – umožňujú prepájanie jednotlivých aktivít počas prehliadania stránok. Aktivujú sa pri otvorení okna prehliadača a deaktivujú sa po jeho zatvorení. Po zatvorení prehliadača sa všetky tieto súbory vymažú.</li>
+            <li><strong>Trvalé cookies</strong> – pomáhajú Váš počítač identifikovať pri opätovnej návšteve. Umožňujú prispôsobiť internetové stránky Vašim potrebám.</li>
         </ul>
 
-        <p>Používanie cookies môžete zmeniť v nastavení Vášho prehliadača.</p>
+        <h3>Cookies tretích strán</h3>
+        <p>Počas používania našich webových stránok môžu byť vytvorené súbory cookies, ktoré nepodliehajú kontrole spoločnosti CROSSROCK CAPITAL a.s. Ide napríklad o prípad, ak prezeraná webová stránka používa nástroj na analýzu alebo marketingovú automatizáciu od tretej strany (napr. nástroje spoločností Google) alebo zobrazuje obsah webových stránok tretej strany (napr. YouTube alebo Facebook). Spoločnosť CROSSROCK CAPITAL a.s. nemôže mať kontrolu nad ukladaním ani prístup k týmto súborom cookie. Ak chcete vedieť, ako tieto tretie strany používajú súbory cookie, prečítajte si ich zásady ochrany súkromia.</p>
+        <p>Používaním internetových stránok vyjadrujete súhlas prepojením najmä nasledujúcich služieb:</p>
+        <ol>
+            <li>Adform, Adform s.r.o. – River Garden II, entrance A, Rohanské nábřeží 678/23, Praha, CZ</li>
+            <li>Meta, Meta Platforms, Inc. – 1 Hacker Way, Menlo Park, CA, US</li>
+            <li>Mailkit, Mailkit s.r.o. – Novákových 970/41, 180 00 Praha 8, IČO: 26449901, CZ</li>
+            <li>Outgrow.co – USA</li>
+            <li>Universal Analytics, LLC – 2600 S 1ST ST STE 100, Austin, TX 78704, US</li>
+            <li>Teads base code, Teads Inc. – 55 5th Avenue, 17th Floor, New York, NY 10003, US</li>
+            <li>Supine.io, Supine Labs s.r.o. – Vašíčkova 3081, 272 04 Kladno, CZ</li>
+            <li>LiveAgent, Quality Unit s.r.o. – Vajnorská 100/A, 831 04 Bratislava, SK</li>
+            <li>Hotjar, Hotjar Ltd. – Dragonara Business Centre 5th Floor, Dragonara Road, Paceville, St Julian's STJ 3141, Malta</li>
+            <li>Heureka, Heureka Group a.s. – Palác Syner, Rumunská 655/9, 460 01 Liberec 4, CZ</li>
+            <li>Inspigroup s.r.o. – Újezd 450/40, Malá Strana (Praha 1), CZ</li>
+            <li>Ladenzeile GmbH – Zimmerstraße 50, 10888 Berlin, DE</li>
+            <li>Microsoft Clarity, Microsoft Corp. – One Microsoft Way, Redmond, WA, US</li>
+            <li>CJ.com – Floor 9, 2 Television Centre, 101 Wood Lane, London, W12 7FR, UK</li>
+            <li>Google Adwords, Alphabet Inc. – Google Building Gordon House, Barrow St, Dublin 4, IE</li>
+            <li>YouTube, Alphabet Inc. – Googleplex, Mountain View, California, US</li>
+            <li>Ďalší, ako sú najmä internetové prehliadače: Google Chrome, Opera, Safari, Mozilla Firefox, Microsoft Edge, Internet Explorer.</li>
+        </ol>
+        <p>Na zobrazenie cielenej reklamy v rámci reklamných a sociálnych sietí na iných internetových stránkach poskytujeme týmto sieťam údaje o Vašom správaní na webe; neposkytujeme im však Vaše identifikačné údaje.</p>
 
-        <h2>SOCIÁLNE SIETE</h2>
-        <p>Prevádzkujeme stránky na sociálnych sieťach:</p>
+        <h3>Používanie cookies</h3>
+        <p>Používaním webovej stránky prevádzkovanej spoločnosťou CROSSROCK CAPITAL a.s. vyjadrujete súhlas s použitím cookies v súlade s nastavením Vášho internetového prehliadača. Ak navštívite naše webové stránky a v prehliadači máte povolené prijímanie súborov cookies, nevykonáte zmenu nastavení a pokračujete v návšteve, považujeme to za prijatie našich podmienok používania súborov cookies.</p>
+
+        <h3>Prečo používame cookies?</h3>
+        <p>Cookies používame s cieľom optimálne vytvárať a neustále skvalitňovať naše služby, prispôsobiť ich Vašim záujmom a potrebám a zlepšovať ich štruktúru a obsah. CROSSROCK CAPITAL a.s. nepoužíva údaje získané používaním cookies na kontaktovanie prostredníctvom pošty, elektronickej pošty alebo telefónu.</p>
+
+        <h3>Ako môžete nastavenia cookies zmeniť</h3>
+        <p>Väčšina internetových prehliadačov je pôvodne nastavená na automatické akceptovanie cookies. Toto nastavenie môžete zmeniť zablokovaním cookies alebo upozornením v prípade, že sa majú cookies poslať do Vášho zariadenia. Inštrukcie na zmenu cookies nájdete vo voľbe „pomoc" každého prehliadača. Ak používate rozličné zariadenia na prístup k stránkam, odporúčame každý prehliadač na každom zariadení prispôsobiť Vašim preferenciám.</p>
+
+        <h3>Prečo si ponechať nastavenie cookies?</h3>
+        <p>Používanie cookies a ich povolenie vo webovom prehliadači je na Vašom rozhodnutí. V prípade zmeny ich nastavenia však môžu mať niektoré naše webové stránky obmedzenú funkčnosť a znížený užívateľský komfort.</p>
+
+        <hr class="page-divider">
+
+        <!-- SOCIÁLNE SIETE -->
+        <h2>Informačná povinnosť prevádzkovateľa – Sociálne siete</h2>
+
+        <h3>Účel spracúvania osobných údajov</h3>
+        <p>Účelom je propagácia (priamy i nepriamy marketing) a ponuka služieb Spoločnosti na sociálnych sieťach, komunikácia s užívateľmi, propagácia súťaží a sprievodných aktivít prostredníctvom sociálnych sietí, poskytovanie informácií širšej verejnosti.</p>
+
+        <h3>Právny základ</h3>
+        <p>Čl. 6 ods. 1 písm. f) Nariadenia – <strong>OPRÁVNENÝ ZÁUJEM</strong>. Oprávneným záujmom je vytvorenie oficiálneho profilu Spoločnosti na príslušnej sociálnej sieti, propagácia a ponuka služieb, komunikácia s užívateľmi, organizovanie súťaží, poskytovanie informácií širšej verejnosti.</p>
+
+        <h3>Stránky Spoločnosti na sociálnych sieťach</h3>
         <ul>
             <li>Facebook: <a href="https://www.facebook.com/crossrockcapital" target="_blank">facebook.com/crossrockcapital</a></li>
             <li>Instagram: <a href="https://www.instagram.com/crossrockcapital/" target="_blank">instagram.com/crossrockcapital</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/company/102631336" target="_blank">LinkedIn</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/company/102631336/admin/dashboard/" target="_blank">LinkedIn</a></li>
             <li>YouTube: <a href="https://www.youtube.com/channel/UCzT8lONkYLXhvA_DCKCLyBA" target="_blank">YouTube kanál</a></li>
         </ul>
 
-        <p style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #E5E5E5; color: #8A8A8A; font-size: 0.875rem;">Platné od 1.1.2025 | CROSSROCK CAPITAL a.s.</p>
+        <h3>Kategórie príjemcov a osobných údajov</h3>
+        <ul>
+            <li>Údaje, ktoré ste pridali na našich stránkach na sociálnych sieťach, sa zverejňujú prostredníctvom platformy a nikdy ich nespracúvame na iný účel. Vyhradzujeme si právo vymazať obsah porušujúci právne predpisy (príspevky porušujúce právne predpisy, nenávistné komentáre, vulgárne komentáre alebo prílohy porušujúce autorské práva, práva duševného vlastníctva, trestnoprávne predpisy alebo etické zásady Spoločnosti).</li>
+            <li>Váš obsah môžeme zdieľať na našej stránke, ak ide o funkciu platformy, a komunikujeme s Vami prostredníctvom platformy. Právnym základom je čl. 6 ods. 1 písm. b) Nariadenia (spoločne sme účastníkmi zmluvy sociálnej siete), prípadne čl. 6 ods. 1 písm. f) Nariadenia (oprávnený záujem).</li>
+            <li>Pokiaľ ide o údaje, ktoré nám zašlete dôverne (prostredníctvom súkromnej správy, listom alebo e-mailom), prenos týchto osobných údajov na tretiu stranu zásadne vylučujeme. Výnimočne môže dôjsť k spracúvaniu prostredníctvom nami poverených sprostredkovateľov, ktorí sú starostlivo vyberaní a zmluvne viazaní v súlade s čl. 28 Nariadenia.</li>
+        </ul>
+
+        <h3>Lehoty na vymazanie osobných údajov</h3>
+        <p>Všetky osobné údaje, ktoré ste nám poskytli v súvislosti s Vašim podnetom zaslaným prostredníctvom priamej správy na našu stránku na sociálnej sieti, budú z našej strany najneskôr do 90 dní po tom, čo Vám bude odoslaná finálna odpoveď, vymazané alebo trvalo anonymizované.</p>
+        <p>Uchovávanie údajov 90 dní po zaslaní finálnej odpovede odzrkadľuje skutočnosť, že sa zriedkavo môže vyskytnúť prípad, kedy nás budete po obdržaní odpovede opätovne kontaktovať v tej istej záležitosti.</p>
+        <p>Všetky funkcionality sociálnej siete nespravujeme a neuchovávame my, a preto napr. všetky príspevky zverejnené na našej stránke zostanú po neobmedzenú dobu na časovej osi, ak ich neodstránime z dôvodu aktualizácie základných tém, ich rozporu s právnymi predpismi alebo pokiaľ príspevok neodstránite sami.</p>
+        <p>Výmaz Vašich údajov samotným prevádzkovateľom sociálnej siete nevieme nijako ovplyvniť. Dodatočne sa teda uplatňujú aj zásady ochrany osobných údajov príslušného prevádzkovateľa sociálnej siete.</p>
+
+        <h3>Kategórie dotknutých osôb</h3>
+        <p>Registrovaní prihlásení užívatelia, registrovaní neprihlásení užívatelia a neregistrovaní užívatelia.</p>
+
+        <h3>Prevádzkovateľ platformy sociálnej siete</h3>
+        <p>Popri nás je samostatným prevádzkovateľom aj prevádzkovateľ príslušnej platformy sociálnej siete. V niektorých prípadoch vystupuje pre nás aj ako sprostredkovateľ v súlade s článkom 28 Nariadenia. Pripomíname, že prevádzkovateľ sociálnej siete vykonáva spracúvanie osobných údajov, na ktoré máme len obmedzený vplyv, ale jeho podmienky ste akceptovali pri registrácii do danej sociálnej siete.</p>
+        <p>Dbáme na to, aby naše stránky na sociálnych sieťach boli v súlade s ochranou osobných údajov. Preto najmä nevykonávame na účel reklamy vymedzenie cieľových skupín na základe demografických, záujmových parametrov ani na základe informácií o polohe. Štatistiky, ktoré nám poskytuje prevádzkovateľ platformy, môžeme ovplyvniť len v obmedzenej miere; dbáme avšak na to, aby nám neboli poskytované žiadne dodatočné voliteľné štatistiky.</p>
+
+        <h3>Cezhraničný prenos osobných údajov</h3>
+        <p>Osobné údaje pre sociálne siete Facebook a Instagram spracúva spoločnosť Meta Platforms, Inc., Meta Headquarters – 1 Hacker Way, Menlo Park, CA, US, ako je opísané v politike Meta Platforms na <a href="https://www.facebook.com/policy" target="_blank">facebook.com/policy</a>. Spoločnosť CROSSROCK CAPITAL a.s. by chcela zdôrazniť, že v tomto prípade môžu byť údaje užívateľov spracúvané aj mimo Európsku úniu.</p>
+
+        <p class="footer-note">Platné od 1.1.2025 | CROSSROCK CAPITAL a.s.</p>
     </div>
 
     <footer class="footer">
@@ -165,8 +457,7 @@
                     <div class="footer-column">
                         <h4>Právne</h4>
                         <ul>
-                            <li><a href="privacy-policy.html">Ochrana údajov</a></li>
-                            <li><a href="#">Obchodné podmienky</a></li>
+                            <li><a href="privacy-policy.html">GDPR</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                         </ul>
                     </div>
