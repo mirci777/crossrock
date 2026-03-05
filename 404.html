@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Stránka nenájdená | Crossrock Capital</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .error-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            padding: 4rem 1.5rem;
+        }
+        .error-content {
+            text-align: center;
+            max-width: 540px;
+        }
+        .error-number {
+            font-family: var(--font-display);
+            font-size: clamp(6rem, 20vw, 10rem);
+            font-weight: 900;
+            color: #D4AF37;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        .error-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 700;
+            color: #fff;
+            margin: 0.5rem 0 1.25rem;
+        }
+        .error-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-error-primary {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: #D4AF37;
+            color: #000;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .btn-error-primary:hover { opacity: 0.85; }
+        .btn-error-secondary {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: border-color 0.2s;
+        }
+        .btn-error-secondary:hover { border-color: #D4AF37; color: #D4AF37; }
+    </style>
+</head>
+<body class="error-page">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Crossrock Capital" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="investicie.html">Investície</a></li>
+                <li><a href="financovanie.html">Financovanie</a></li>
+                <li><a href="pribehy.html">Príbehy</a></li>
+                <li><a href="kontakt.html" class="btn-primary-nav">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="error-main">
+        <div class="error-content">
+            <div class="error-number">404</div>
+            <h1 class="error-title">Stránka nenájdená</h1>
+            <p class="error-desc">Stránka, ktorú hľadáte, neexistuje alebo bola presunutá.<br>Vráťte sa na hlavnú stránku.</p>
+            <div class="error-actions">
+                <a href="index.html" class="btn-error-primary">Späť na hlavnú</a>
+                <a href="kontakt.html" class="btn-error-secondary">Kontaktujte nás</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Crossrock Capital" class="footer-logo">
+                    <p class="footer-tagline">Sprístupniť investície do nehnuteľností každému a pomôcť tým, ktorí potrebujú kapitál.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigácia</h4>
+                        <ul>
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="investicie.html">Investície</a></li>
+                            <li><a href="financovanie.html">Financovanie</a></li>
+                            <li><a href="pribehy.html">Príbehy</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Právne</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">GDPR</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Kontakt</h4>
+                        <ul>
+                            <li>info@crossrockcapital.sk</li>
+                            <li>0944 633 663</li>
+                            <li>Bratislava, Slovensko</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crossrock Capital. Všetky práva vyhradené.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
