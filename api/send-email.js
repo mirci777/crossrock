@@ -6,13 +6,38 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // const FROM_EMAIL = 'Crossrock Capital <noreply@crossrockcapital.sk>';
 const FROM_EMAIL = 'Crossrock Capital <onboarding@resend.dev>';
 
-
 const SALES_EMAIL = 'info@crossrockcapital.sk';
 
+const ALLOWED_ORIGINS = [
+  'https://crossrockcapital.sk',
+  'https://www.crossrockcapital.sk',
+];
+
+// Simple in-memory rate limiter: max 5 submissions per IP per 10 minutes
+const rateLimit = new Map();
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = rateLimit.get(ip);
+  if (!entry || now - entry.windowStart > RATE_LIMIT_WINDOW_MS) {
+    rateLimit.set(ip, { count: 1, windowStart: now });
+    return false;
+  }
+  if (entry.count >= RATE_LIMIT_MAX) return true;
+  entry.count++;
+  return false;
+}
+
 module.exports = async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const origin = req.headers.origin;
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Vary', 'Origin');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -20,6 +45,11 @@ module.exports = async function handler(req, res) {
 
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress || 'unknown';
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ error: 'Too many requests. Please try again later.' });
   }
 
   const { name, email, phone, message } = req.body;
