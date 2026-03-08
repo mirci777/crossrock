@@ -8,20 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .story-detail-hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 420px;
-            margin-bottom: 4rem;
-        }
-        .story-detail-hero-text {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 3rem 3rem 3rem 0;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
         }
         .story-detail-hero-photo {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
             overflow: hidden;
-            border-radius: 0 0 0 0;
+            flex-shrink: 0;
         }
         .story-detail-hero-photo img {
             width: 100%;
@@ -30,26 +27,30 @@
             object-position: top center;
             display: block;
         }
+        .story-detail-hero-text {
+            display: flex;
+            flex-direction: column;
+        }
         .story-cat {
             display: inline-block;
-            padding: 0.25rem 0.875rem;
+            padding: 0.2rem 0.75rem;
             background: rgba(212, 175, 55, 0.12);
             color: #D4AF37;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            margin-bottom: 1rem;
+            margin-bottom: 0.4rem;
             align-self: flex-start;
         }
         .story-detail-name {
             font-family: var(--font-display);
-            font-size: 2.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.15rem;
         }
         .story-detail-situation {
-            font-size: 1rem;
+            font-size: 0.875rem;
             color: #8A8A8A;
         }
         .story-detail-body {
@@ -95,10 +96,7 @@
         }
         .story-back:hover { color: #b8962e; }
         @media (max-width: 768px) {
-            .story-detail-hero { grid-template-columns: 1fr; }
-            .story-detail-hero-photo { height: 300px; order: -1; }
-            .story-detail-hero-text { padding: 2rem 0 0; }
-            .story-detail-name { font-size: 1.75rem; }
+            .story-detail-name { font-size: 1.25rem; }
             .story-detail-quote { padding: 1.25rem; border-left: none; border-top: 3px solid #D4AF37; }
         }
     </style>
@@ -131,13 +129,13 @@
             <a href="../pribehy.html" class="story-back">&larr; Všetky príbehy</a>
 
             <div class="story-detail-hero">
+                <div class="story-detail-hero-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop&crop=face" alt="Peter">
+                </div>
                 <div class="story-detail-hero-text">
                     <span class="story-cat">Financovanie rekonštrukcie</span>
                     <h2 class="story-detail-name">Peter</h2>
                     <p class="story-detail-situation">Živnostník</p>
-                </div>
-                <div class="story-detail-hero-photo">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop&crop=face" alt="Peter">
                 </div>
             </div>
 
