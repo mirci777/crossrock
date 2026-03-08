@@ -7,142 +7,156 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .stories-hero {
-            padding: 10rem 0 4rem;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover no-repeat;
-            color: white;
-            text-align: center;
-        }
-        .stories-hero .page-subtitle {
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .story-card {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 3rem;
-            padding: 5rem 0;
-        }
-        .story-divider {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #D4AF37, transparent);
-            margin: 1rem 0;
-        }
-        .story-mini-cta {
+        .story-cat {
             display: inline-block;
-            margin-top: 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
+            padding: 0.25rem 0.875rem;
+            background: rgba(212, 175, 55, 0.12);
             color: #D4AF37;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-            transition: color 0.3s;
-        }
-        .story-mini-cta:hover {
-            color: #b8962e;
-        }
-        .story-mini-cta span {
-            margin-left: 0.35rem;
-            transition: margin-left 0.3s;
-        }
-        .story-mini-cta:hover span {
-            margin-left: 0.6rem;
-        }
-
-        .story-person {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: sticky;
-            top: 6rem;
-            align-self: start;
-        }
-        .story-avatar {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 3px solid #E5E5E5;
-        }
-        .story-name {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-        .story-situation {
-            font-size: 0.875rem;
-            color: #8A8A8A;
-            margin-bottom: 0.75rem;
-        }
-        .story-type {
-            display: inline-block;
-            padding: 0.35rem 1rem;
-            background: rgba(212, 175, 55, 0.15);
-            color: #D4AF37;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-
-        .story-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-right: 1.5rem;
-        }
-        .story-quote {
-            font-size: 1.25rem;
-            font-style: italic;
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 2rem;
-            padding: 1.5rem 2rem;
-            background: #F8F8F8;
-            border-left: 3px solid #D4AF37;
-        }
-
-        .story-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        .story-detail h4 {
-            font-size: 0.8125rem;
-            font-weight: 700;
-            text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #D4AF37;
-            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
         }
-        .story-detail p {
-            font-size: 0.9375rem;
+
+        /* Featured story */
+        .pribehy-featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid #E5E5E5;
+            margin-bottom: 3.5rem;
+            min-height: 480px;
+        }
+        .pribehy-featured-text {
+            padding: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .pribehy-featured-headline {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #000;
+            margin-bottom: 1.25rem;
+        }
+        .pribehy-featured-excerpt {
+            font-size: 1rem;
             color: #4A4A4A;
             line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .pribehy-featured-author {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+        }
+        .pribehy-featured-author img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .pribehy-featured-author-name {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #000;
+        }
+        .pribehy-featured-author-role {
+            font-size: 0.8125rem;
+            color: #8A8A8A;
+        }
+        .pribehy-featured-photo {
+            overflow: hidden;
+        }
+        .pribehy-featured-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
         }
 
+        /* Blog card grid */
+        .pribehy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .blog-card {
+            background: white;
+            border: 1px solid #E5E5E5;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.3s;
+        }
+        .blog-card:hover {
+            border-color: #D4AF37;
+        }
+        a.blog-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        a.pribehy-featured-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        a.pribehy-featured-link .pribehy-featured {
+            transition: border-color 0.3s;
+        }
+        a.pribehy-featured-link:hover .pribehy-featured {
+            border-color: #D4AF37;
+        }
+        .blog-card-headline {
+            font-family: var(--font-display);
+            font-size: 1.0625rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #000;
+            margin-bottom: 0.875rem;
+        }
+        .blog-card-excerpt {
+            font-size: 0.9375rem;
+            color: #4A4A4A;
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+        .blog-card-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid #F0F0F0;
+        }
+        .blog-card-author img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .blog-card-author-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        @media (max-width: 900px) {
+            .pribehy-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
-            .story-card {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-            .story-content {
-                padding-right: 0;
-            }
-            .story-quote {
-                padding: 1.5rem;
-                border-left: none;
-                border-top: 3px solid #D4AF37;
-                text-align: left;
-            }
-            .story-person {
-                position: static;
-            }
+            .pribehy-featured { grid-template-columns: 1fr; }
+            .pribehy-featured-photo { height: 300px; order: -1; }
+            .pribehy-featured-text { padding: 2rem; }
+            .pribehy-featured-headline { font-size: 1.375rem; }
+            .pribehy-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -162,131 +176,106 @@
         </div>
     </nav>
 
-    <section class="stories-hero">
+    <section class="page-header page-header-hero">
         <div class="container">
             <h1 class="page-title">Príbehy našich klientov</h1>
             <p class="page-subtitle">Reálne situácie. Reálne riešenia. Reálne výsledky.</p>
         </div>
     </section>
 
-    <section style="padding: 4rem 0;">
-        <div class="container" style="max-width: 1000px;">
+    <section style="padding: 5rem 0;">
+        <div class="container" style="max-width: 1200px;">
 
-            <!-- Story 1: Jozef -->
-            <div class="story-card">
-                <div class="story-person">
-                    <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=320&q=80&fit=crop&crop=face" alt="Jozef" class="story-avatar">
-                    <div class="story-name">Jozef, 42 rokov</div>
-                    <div class="story-situation">Rodina s dvoma deťmi</div>
-                    <span class="story-type">Nákup nového bytu</span>
-                </div>
-                <div class="story-content">
-                    <p class="story-quote">"Bez Crossrock by som prišiel o rezerváciu aj o peniaze čo som už zaplatil. Developer nečakal, kým predám starý byt. Crossrock mi pomohol prekleniť tento moment a dnes bývam v novom byte s rodinou."</p>
-                    <div class="story-details">
-                        <div class="story-detail">
-                            <h4>Problém</h4>
-                            <p>Pán Jozef si rezervoval nový byt u developera a zaplatil 20% rezervačný poplatok. Keď sa blížil termín na zaplatenie ďalších tranží, jeho finančná situácia sa zmenila. Starý byt ešte nebol predaný a developer nedával odklad — hrozilo, že príde o rezerváciu aj o peniaze, čo už zaplatil. Banka mu nepomohla, lebo nemal dostatok príjmu na nový úver, kým splácal ten starý.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Riešenie</h4>
-                            <p>Crossrock prebral záväzok od pána Jozefa voči developerovi. Jozef začal bývať v novom byte ako nájomník a medzitým predal starý byt. Celý proces prebehol plynulo — Crossrock komunikoval priamo s developerom a Jozef nemusel riešiť žiadne komplikácie. Po predaji starého bytu doplatil Crossrock-u investované prostriedky a byt sa previedol späť na neho.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Výsledok</h4>
-                            <p>Rodina získala nový byt bez straty rezervácie. Jozef zaplatil len úroky za preklenovacie obdobie, čo bolo zlomok toho, čo by stratil pri zrušení rezervácie. Dnes býva s rodinou v novom byte a je rád, že nemusel robiť kompromisy. "Keby som vtedy nezavolal Crossrocku, prišiel by som minimálne o 15 000 €," hovorí.</p>
+            <!-- Featured: Simona -->
+            <a href="pribehy/simona.html" class="pribehy-featured-link">
+            <div class="pribehy-featured">
+                <div class="pribehy-featured-text">
+                    <span class="story-cat">Oddlženie</span>
+                    <h2 class="pribehy-featured-headline">Bála som sa, že prídem o dom a deti nebudú mať kde bývať. Crossrock mi vrátil nádej.</h2>
+                    <p class="pribehy-featured-excerpt">Simona sa dostala do dlhovej pasce - splácala jeden úver druhým a hrozila jej exekúcia domu. Banky odmietli pomôcť. Crossrock odkúpil dom, splatil všetky dlhy a zastavil exekúciu. Simona zostala bývať a mala jasný plán, ako dom odkúpiť späť. Po 2 rokoch je bez dlhov, má dom vo vlastníctve a deti majú stabilný domov.</p>
+                    <div class="pribehy-featured-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80&fit=crop&crop=face" alt="Simona">
+                        <div>
+                            <div class="pribehy-featured-author-name">Simona</div>
+                            <div class="pribehy-featured-author-role">Samoživiteľka s deťmi</div>
                         </div>
                     </div>
-                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
+                </div>
+                <div class="pribehy-featured-photo">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80&fit=crop&crop=face" alt="Simona">
                 </div>
             </div>
-            <hr class="story-divider">
+            </a>
 
-            <!-- Story 2: Jana -->
-            <div class="story-card">
-                <div class="story-person">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=320&q=80&fit=crop&crop=face" alt="Jana" class="story-avatar">
-                    <div class="story-name">Jana</div>
-                    <div class="story-situation">Samoživiteľka s deťmi</div>
-                    <span class="story-type">Oddlženie</span>
-                </div>
-                <div class="story-content">
-                    <p class="story-quote">"Nebankovky ma dostali do pasce. Jeden úver som splácala druhým a už som nevedela čo mám robiť. Bála som sa že prídem o dom a deti nebudú mať kde bývať. Crossrock mi pomohol. Dostala som druhú šancu."</p>
-                    <div class="story-details">
-                        <div class="story-detail">
-                            <h4>Problém</h4>
-                            <p>Jana sa dostala do dlhovej pasce s nevýhodnými nebankovými úvermi. Splácala jeden úver druhým a situácia sa stále zhoršovala. Úroky rástli, splátky sa hromadili a hrozila jej exekúcia domu. Ako samoživiteľka s deťmi čelila najhoršiemu scenáru — strate strechy nad hlavou. V bankách jej nepomohli, pretože mala zlú kreditnú históriu.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Riešenie</h4>
-                            <p>Crossrock odkúpil dom, splatil všetky Janine dlhy a zastavil tak exekúciu. Jana zostala bývať v dome ako nájomníčka za prijateľný nájom. Mohla si konečne vydýchnuť a začať si postupne dávať bokom peniaze. Crossrock jej dal jasný plán — presne vedela, koľko musí nasporiť a do kedy, aby dom odkúpila späť. Žiadne skryté podmienky, žiadne prekvapenia.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Výsledok</h4>
-                            <p>Po 2 rokoch Jana dom odkúpila späť. Dnes je bez dlhov, má dom vo vlastníctve a deti majú stabilný domov. "Crossrock mi vrátil nádej v čase, keď som ju úplne stratila. Neboli to len peniaze — bol to ľudský prístup. Niekto mi konečne povedal: pomôžeme vám," spomína Jana s vďačnosťou.</p>
-                        </div>
+            <!-- Grid: 5 stories -->
+            <div class="pribehy-grid">
+
+                <!-- Marek -->
+                <a href="pribehy/marek.html" class="blog-card-link">
+                <div class="blog-card">
+                    <span class="story-cat">Financovanie obchodu</span>
+                    <h3 class="blog-card-headline">V realitnom biznise musíte konať rýchlo. Na bankový úver nebol čas.</h3>
+                    <p class="blog-card-excerpt">Marek mal atraktívnu príležitosť - starší byt v dobrej lokalite. Chýbal kapitál a čas. Crossrock nehnuteľnosť odkúpil, Marek zastrešil rekonštrukciu. Celý obchod dohodnutý za niekoľko dní. Byt predaný, marža rozdelená. Dnes spolupracujú pravidelne.</p>
+                    <div class="blog-card-author">
+                        <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=120&q=80&fit=crop&crop=face" alt="Marek">
+                        <span class="blog-card-author-name">Marek - Realitný maklér</span>
                     </div>
-                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
-            </div>
-            <hr class="story-divider">
+                </a>
 
-            <!-- Story 3: Ján -->
-            <div class="story-card">
-                <div class="story-person">
-                    <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=320&q=80&fit=crop&crop=face" alt="Ján" class="story-avatar">
-                    <div class="story-name">Ján</div>
-                    <div class="story-situation">Realitný maklér</div>
-                    <span class="story-type">Financovanie obchodu</span>
-                </div>
-                <div class="story-content">
-                    <p class="story-quote">"V realitnom biznise musíte konať rýchlo. Keď sa objaví dobrá príležitosť, máte dni, nie týždne. Crossrock mi umožnil uskutočniť tento flip bez toho, aby som musel ísť do banky alebo hľadať investorov."</p>
-                    <div class="story-details">
-                        <div class="story-detail">
-                            <h4>Problém</h4>
-                            <p>Realitný maklér Ján našiel výbornú príležitosť na trhu s nehnuteľnosťami — mohol nakúpiť starší byt v dobrej lokalite, prerobiť ho a predať s dobrým ziskom. Kalkulácia bola jasná a príležitosť overená. Nemal však dostatok vlastného kapitálu na nákup aj rekonštrukciu súčasne. Na bankový úver nebolo dosť času — schvaľovanie by trvalo týždne a medzitým by byt kúpil niekto iný.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Riešenie</h4>
-                            <p>Crossrock vstúpil do partnerstva s Jánom. Financoval nákup nehnuteľnosti aj kompletnú rekonštrukciu. Ján priniesol skúsenosti, kontakty na remeselníkov a znalosť trhu. Crossrock priniesol kapitál a rýchle rozhodovanie. Celý obchod bol dohodnutý za 3 dni od prvého telefonátu. Ján mal voľnú ruku pri rekonštrukcii a po predaji sa podelili o zisk podľa dohodnutých podmienok.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Výsledok</h4>
-                            <p>Byt bol zrekonštruovaný za 2 mesiace a predaný do týždňa od dokončenia. Ján zarobil pekné peniaze na flipe a Crossrock dostal stabilný výnos zo svojej investície. Bola to win-win situácia pre obe strany. "Spolupráca s Crossrock bola bezproblémová. Žiadna byrokracia, žiadne zbytočné otázky. Profesionáli, ktorí rozumejú biznisu," hodnotí Ján. Dnes spolupracujú na ďalších projektoch.</p>
-                        </div>
+                <!-- Lenka -->
+                <a href="pribehy/lenka.html" class="blog-card-link">
+                <div class="blog-card">
+                    <span class="story-cat">Nákup nového bytu</span>
+                    <h3 class="blog-card-headline">Termín doplatenia sa blížil a starý byt stále nemal kupca. Záloha bola v ohrození.</h3>
+                    <p class="blog-card-excerpt">Pani Lenka rezervovala nový byt u developera. Blížil sa termín, pôvodný byt nepredaný, banka odmietla preklenovací úver. Crossrock doplnil kúpnu cenu, rodina sa nasťahovala. V pokoji predala pôvodný byt a nový odkúpila späť za férovú cenu.</p>
+                    <div class="blog-card-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&fit=crop&crop=face" alt="Lenka">
+                        <span class="blog-card-author-name">Pani Lenka - Rodina s dvoma deťmi</span>
                     </div>
-                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
-            </div>
-            <hr class="story-divider">
+                </a>
 
-            <!-- Story 4: Marta -->
-            <div class="story-card">
-                <div class="story-person">
-                    <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=320&q=80&fit=crop&crop=face" alt="Marta" class="story-avatar">
-                    <div class="story-name">Marta</div>
-                    <div class="story-situation">Zdedená nehnuteľnosť</div>
-                    <span class="story-type">Rýchly predaj</span>
-                </div>
-                <div class="story-content">
-                    <p class="story-quote">"Zdedila som byt po rodičoch a potrebovala som ho predať čo najrýchlejšie. Nechcela som ale znižovať cenu len preto, že sa ponáhľam. Crossrock mi ponúkol férovú cenu a všetko vybavil za pár dní. Žiadny stres, žiadne čakanie na kupca."</p>
-                    <div class="story-details">
-                        <div class="story-detail">
-                            <h4>Problém</h4>
-                            <p>Marta zdedila byt po rodičoch, no potrebovala ho predať čo najrýchlejšie. Mala vlastné finančné záväzky a byt v inom meste bol pre ňu skôr záťažou ako prínosom — platila energie, správu a poistku. Realitné kancelárie jej radili znížiť cenu o 15-20%, aby sa byt predal rýchlo. To ale nechcela, pretože vedela, že byt má svoju reálnu hodnotu a nechcela predávať pod cenu len kvôli časovému tlaku.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Riešenie</h4>
-                            <p>Crossrock odkúpil byt za férovú trhovú cenu bez zbytočného znižovania. Žiadne vyjednávanie, žiadne podmienky typu "ak sa nám to podarí predať". Celý proces prebehol rýchlo a bez komplikácií — od prvého stretnutia po podpis zmluvy prešli len 4 pracovné dni. Marta nemusela riešiť obhliadky s potenciálnymi kupcami, ani čakať mesiace na záujemcu.</p>
-                        </div>
-                        <div class="story-detail">
-                            <h4>Výsledok</h4>
-                            <p>Marta mala peniaze na účte do niekoľkých dní od podpisu. Žiadne znižovanie ceny, žiadne mesiace neistoty a čakania. "Keby som šla cez realitku, možno by som čakala 6 mesiacov a nakoniec by som aj tak musela zľaviť. Crossrock mi dal férovú cenu hneď. Bola to obrovská úľava," hovorí Marta. Dnes je rada, že sa rozhodla správne a nemusela robiť kompromisy.</p>
-                        </div>
+                <!-- Eva -->
+                <a href="pribehy/eva.html" class="blog-card-link">
+                <div class="blog-card">
+                    <span class="story-cat">Rýchly predaj</span>
+                    <h3 class="blog-card-headline">Zdedila som byt po rodičoch. Chcela som férovú cenu - nie mesiace čakania.</h3>
+                    <p class="blog-card-excerpt">Realitky radili znížiť cenu o 15-20%. Eva vedela, že byt má svoju reálnu hodnotu. Crossrock odkúpil byt za férovú trhovú cenu bez vyjednávania. Od prvého stretnutia po podpis zmluvy prešli 4 pracovné dni. Peniaze na účte do niekoľkých dní od podpisu.</p>
+                    <div class="blog-card-author">
+                        <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=120&q=80&fit=crop&crop=face" alt="Eva">
+                        <span class="blog-card-author-name">Eva - Zdedená nehnuteľnosť</span>
                     </div>
-                    <a href="kontakt.html" class="story-mini-cta">Potrebujete podobnú pomoc? <span>&rarr;</span></a>
                 </div>
-            </div>
+                </a>
 
+                <!-- Jozef -->
+                <a href="pribehy/jozef.html" class="blog-card-link">
+                <div class="blog-card">
+                    <span class="story-cat">Financovanie výstavby</span>
+                    <h3 class="blog-card-headline">Banka odmietla môj projekt ako príliš malý. Pre Crossrock bol presne taký, aký mal byť.</h3>
+                    <p class="blog-card-excerpt">Jozef mal premyslený developerský projekt na slnečnom pozemku. Pre banku bol administratívne nezaujímavý. Crossrock detailne analyzoval ekonomiku, nastavil tranžové financovanie. Projekt dokončený, všetky domy predané, zisk rozdelený.</p>
+                    <div class="blog-card-author">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&q=80&fit=crop&crop=face" alt="Jozef">
+                        <span class="blog-card-author-name">Jozef - Developer</span>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Peter -->
+                <a href="pribehy/peter.html" class="blog-card-link">
+                <div class="blog-card">
+                    <span class="story-cat">Financovanie rekonštrukcie</span>
+                    <h3 class="blog-card-headline">Príjem mám, len ho neviem doložiť tak, ako vyžaduje banka.</h3>
+                    <p class="blog-card-excerpt">Peter mal plán rekonštrukcie aj overených remeselníkov. Banka odmietla - ako živnostník nevedel preukázať príjem klasickými dokladmi. Crossrock sa zameral na reálnu hodnotu nehnuteľnosti. Rekonštrukcia dokončená, hypotéka navýšená, Crossrock splatený.</p>
+                    <div class="blog-card-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80&fit=crop&crop=face" alt="Peter">
+                        <span class="blog-card-author-name">Peter - Živnostník</span>
+                    </div>
+                </div>
+                </a>
+
+            </div>
         </div>
     </section>
 
