@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^send-email$ send-email.php [L]
