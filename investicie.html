@@ -581,7 +581,7 @@
         };
         if (amountEl && amountEl.value) data.message = 'Suma: ' + amountEl.value + (data.message ? '\n' + data.message : '');
         try {
-            var response = await fetch('api/send-email.php', {
+            var response = await fetch('api/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

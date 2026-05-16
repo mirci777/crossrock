@@ -357,7 +357,7 @@
         btn.textContent = 'Odosiela sa...'; btn.disabled = true; err.style.display = 'none';
         try {
             var data = { name: form.querySelector('[name="name"]').value, email: form.querySelector('[name="email"]').value, phone: form.querySelector('[name="phone"]').value, interest: form.querySelector('[name="interest"]').value };
-            var r = await fetch('api/send-email.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            var r = await fetch('api/send-email', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
             var res = await r.json();
             if (res.success) { window.location.href = 'dakujeme.html'; } else { throw new Error(); }
         } catch(ex) {

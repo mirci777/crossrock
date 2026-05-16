@@ -319,7 +319,7 @@
             message: amount ? 'Suma: ' + amount : ''
         };
         try {
-            var r = await fetch('api/send-email.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            var r = await fetch('api/send-email', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
             var res = await r.json();
             if (res.success) { window.location.href = 'dakujeme-investicie.html'; } else { throw new Error(); }
         } catch(ex) {
