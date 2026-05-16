@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | Crossrock Capital</title>
+    <title>Kontakt | Bezplatná konzultácia | Crossrock Capital</title>
+    <meta name="description" content="Kontaktujte Crossrock Capital. Bezplatná konzultácia o investíciách do nehnuteľností a financovaní. Odpoveď do 24 hodín. Bratislava, Slovensko.">
+    <link rel="canonical" href="https://crossrockcapital.sk/kontakt.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crossrock Capital">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Kontakt | Crossrock Capital – Bezplatná konzultácia">
+    <meta property="og:description" content="Bezplatná konzultácia o investíciách a financovaní nehnuteľností. Odpoveď do 24 hodín.">
+    <meta property="og:url" content="https://crossrockcapital.sk/kontakt.html">
+    <meta property="og:image" content="https://crossrockcapital.sk/assets/logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontakt | Crossrock Capital">
+    <meta name="twitter:description" content="Bezplatná konzultácia o investíciách a financovaní. Odpoveď do 24 hodín.">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -208,6 +220,14 @@
                     </div>
 
                     <div class="kontakt-form-group">
+                        <label>Záujem o</label>
+                        <select name="interest" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; background: white; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8A8A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center; transition: border-color 0.3s;">
+                            <option value="Investície">Investície</option>
+                            <option value="Financovanie">Financovanie</option>
+                            <option value="Iné">Iné</option>
+                        </select>
+                    </div>
+                    <div class="kontakt-form-group">
                         <label>Vaša správa</label>
                         <textarea name="message" rows="5" maxlength="1000" style="resize: vertical;"></textarea>
                         <div style="font-size: 0.75rem; color: #8A8A8A; margin-top: 0.25rem;">Max. 1000 znakov</div>
@@ -323,7 +343,7 @@
                         <ul>
                             <li>info@crossrockcapital.sk</li>
                             <li>0944 633 663</li>
-                            <li>Bratislava, Slovensko</li>
+                            <li>Lazaretská 3/A, 811 08 Bratislava</li>
                         </ul>
                     </div>
                 </div>
@@ -343,16 +363,18 @@
 
         btn.textContent = 'Odosiela sa...';
         btn.disabled = true;
+        msg.style.display = 'none';
 
         try {
             const data = {
                 name: form.querySelector('[name="name"]').value,
                 email: form.querySelector('[name="email"]').value,
                 phone: form.querySelector('[name="phone"]').value,
+                interest: form.querySelector('[name="interest"]').value,
                 message: form.querySelector('[name="message"]').value
             };
 
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('api/send-email.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -361,22 +383,16 @@
             const result = await response.json();
 
             if (result.success) {
-                msg.textContent = '✓ Správa bola úspešne odoslaná!';
-                msg.style.background = '#D4EDDA';
-                msg.style.color = '#155724';
-                msg.style.border = '1px solid #C3E6CB';
-                msg.style.display = 'block';
-                form.reset();
+                window.location.href = 'dakujeme.html';
             } else {
                 throw new Error(result.error || 'Failed');
             }
         } catch (error) {
-            msg.textContent = '✗ Nastala chyba. Skúste to prosím znova.';
+            msg.textContent = '✗ Nastala chyba. Skúste to prosím znova alebo zavolajte: 0944 633 663';
             msg.style.background = '#F8D7DA';
             msg.style.color = '#721C24';
             msg.style.border = '1px solid #F5C6CB';
             msg.style.display = 'block';
-        } finally {
             btn.textContent = 'Odoslať správu';
             btn.disabled = false;
         }

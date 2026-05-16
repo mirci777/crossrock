@@ -40,6 +40,9 @@ $email = trim($input['email'] ?? '');
 $phone = trim($input['phone'] ?? '') ?: 'Neuvedené';
 $interest = trim($input['interest'] ?? '') ?: '';
 $message = trim($input['message'] ?? '') ?: '';
+$source = trim($input['source'] ?? '') ?: '';
+$amountRaw = trim($input['amount'] ?? '');
+$amountInt = $amountRaw ? (int) preg_replace('/[^0-9]/', '', $amountRaw) : null;
 
 // Validation
 if (empty($name) || empty($email)) {
@@ -72,15 +75,19 @@ $timestamp = (new IntlDateFormatter(
 // SEND EMAILS
 // ============================================
 try {
-    // 1. Customer confirmation email
-    $customerHtml = getCustomerEmailTemplate($name, $email, $phone, $interest, $message);
-    sendResendEmail(
-        $RESEND_API_KEY,
-        $FROM_CUSTOMER,
-        $email,
-        'Ďakujeme za Váš záujem - Crossrock Capital',
-        $customerHtml
-    );
+    $isInvesticie = ($source === 'investicie');
+
+    // 1. Customer confirmation email (Resend) — skip for investície, Ecomail handles it
+    if (!$isInvesticie) {
+        $customerHtml = getCustomerEmailTemplate($name, $email, $phone, $interest, $message);
+        sendResendEmail(
+            $RESEND_API_KEY,
+            $FROM_CUSTOMER,
+            $email,
+            'Ďakujeme za Váš záujem - Crossrock Capital',
+            $customerHtml
+        );
+    }
 
     // 2. Sales notification email
     $subject = $interest
@@ -95,11 +102,59 @@ try {
         $salesHtml
     );
 
+    // 3. Add to Ecomail list with custom fields
+    $listId = $isInvesticie ? $ECOMAIL_LIST_INVESTICIE : $ECOMAIL_LIST_FINANCOVANIE;
+    $customFields = $isInvesticie ? [
+        'produkt' => preg_replace('/\s*-.*$/', '', $interest),
+        'suma'    => $amountInt,
+        'sprava'  => $message ?: null,
+    ] : [];
+    try { addToEcomail($ECOMAIL_API_KEY, $listId, $email, $name, $phone, $customFields); } catch (Exception $e) {}
+
     echo json_encode(['success' => true, 'message' => 'Emails sent successfully']);
 
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode(['error' => 'Failed to send email', 'details' => $e->getMessage()]);
+}
+
+// ============================================
+// ECOMAIL API CALL
+// ============================================
+function addToEcomail($apiKey, $listId, $email, $name, $phone, $customFields = [])
+{
+    $subscriberData = array_filter([
+        'email'  => $email,
+        'name'   => $name,
+        'phone'  => $phone,
+    ]);
+
+    if (!empty($customFields)) {
+        $filtered = [];
+        foreach ($customFields as $k => $v) {
+            if ($v !== null && $v !== '') $filtered[$k] = $v;
+        }
+        if (!empty($filtered)) $subscriberData['custom_fields'] = $filtered;
+    }
+
+    $ch = curl_init("https://api2.ecomailapp.cz/lists/{$listId}/subscribe");
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            'key: ' . $apiKey,
+            'Content-Type: application/json',
+        ],
+        CURLOPT_POSTFIELDS => json_encode([
+            'subscriber_data'        => $subscriberData,
+            'trigger_autoresponders' => true,
+            'update_existing'        => true,
+            'skip_confirmation'      => true,
+        ]),
+    ]);
+    curl_exec($ch);
+    curl_close($ch);
+    // Ecomail errors are non-fatal — email delivery already succeeded
 }
 
 // ============================================

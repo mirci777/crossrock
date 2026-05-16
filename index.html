@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossrock Capital | Investície do nehnuteľností a financovanie</title>
-    <meta name="description" content="Stabilný 9-12% ročný výnos krytý nehnuteľnosťami. Financovanie pre každého - aj bez tradičnej hypotéky.">
+    <title>Crossrock Capital | Investície do nehnuteľností 9-12% a financovanie</title>
+    <meta name="description" content="Stabilný 9-12% ročný výnos krytý nehnuteľnosťami. Mesačné vyplácanie úrokov. Financovanie aj bez hypotéky – schválenie do 48 hodín.">
+    <link rel="canonical" href="https://crossrockcapital.sk/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crossrock Capital">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Crossrock Capital | Investície do nehnuteľností 9-12% a financovanie">
+    <meta property="og:description" content="Stabilný 9-12% ročný výnos krytý nehnuteľnosťami. Mesačné vyplácanie úrokov. Financovanie aj bez hypotéky – schválenie do 48 hodín.">
+    <meta property="og:url" content="https://crossrockcapital.sk/">
+    <meta property="og:image" content="https://crossrockcapital.sk/assets/logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crossrock Capital | Investície 9-12% a financovanie nehnuteľností">
+    <meta name="twitter:description" content="Stabilný 9-12% ročný výnos krytý nehnuteľnosťami. Financovanie aj bez hypotéky.">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FinancialService","name":"Crossrock Capital","url":"https://crossrockcapital.sk","logo":"https://crossrockcapital.sk/assets/logo.svg","description":"Investície do nehnuteľností s 9-12% ročným výnosom a financovanie nehnuteľností na Slovensku.","address":{"@type":"PostalAddress","streetAddress":"Lazaretská 3/A","addressLocality":"Bratislava","postalCode":"811 08","addressCountry":"SK"},"telephone":"+421944633663","email":"info@crossrockcapital.sk","areaServed":"SK"}
+    </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -373,19 +387,74 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Začnite investovať alebo získajte financovanie</h2>
-                <p>Sme tu, aby sme vám pomohli dosiahnuť vaše finančné ciele</p>
-                <div class="cta-buttons">
-                    <a href="kontakt.html" class="btn-primary btn-large">Kontaktujte nás</a>
-                    <a href="investicie.html#kalkulacka-vynosov" class="btn-secondary btn-large">Vypočítať výnos</a>
+    <!-- Lead Form Section -->
+    <section style="padding: 5rem 0; background: #000; color: white;">
+        <div class="container" style="max-width: 680px;">
+            <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; text-align: center;">Napíšte nám</h2>
+            <p style="color: rgba(255,255,255,0.45); font-size: 0.9375rem; text-align: center; margin-bottom: 2.5rem;">Ozveme sa do 24 hodín.</p>
+            <form id="indexForm">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;" class="idx-form-row">
+                    <div>
+                        <input type="text" name="name" required maxlength="100" placeholder="Meno *" style="width: 100%; padding: 0.875rem 1rem; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: white; font-family: inherit; font-size: 0.9375rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='rgba(212,175,55,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" required maxlength="20" placeholder="Telefón *" style="width: 100%; padding: 0.875rem 1rem; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: white; font-family: inherit; font-size: 0.9375rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='rgba(212,175,55,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+                    </div>
+                    <div>
+                        <input type="email" name="email" required maxlength="100" placeholder="Email *" style="width: 100%; padding: 0.875rem 1rem; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: white; font-family: inherit; font-size: 0.9375rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='rgba(212,175,55,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+                    </div>
                 </div>
-            </div>
+                <div style="display: grid; grid-template-columns: 1fr auto; gap: 0.75rem; align-items: start;" class="idx-form-row-2">
+                    <select name="interest" style="width: 100%; padding: 0.875rem 1rem; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7); font-family: inherit; font-size: 0.9375rem; box-sizing: border-box; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center; transition: border-color 0.3s;" onfocus="this.style.borderColor='rgba(212,175,55,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+                        <option value="Investície">Investície</option>
+                        <option value="Financovanie">Financovanie</option>
+                        <option value="Oboje / neviem">Oboje / neviem</option>
+                    </select>
+                    <button type="submit" id="indexFormBtn" style="padding: 0.875rem 2rem; background: transparent; color: #D4AF37; font-weight: 600; font-size: 0.9375rem; cursor: pointer; border: 1px solid rgba(212,175,55,0.5); font-family: inherit; white-space: nowrap; transition: all 0.3s;" onmouseover="this.style.borderColor='#D4AF37';this.style.background='rgba(212,175,55,0.08)'" onmouseout="this.style.borderColor='rgba(212,175,55,0.5)';this.style.background='transparent'">Odoslať</button>
+                </div>
+                <div id="indexFormError" style="display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: rgba(248,215,218,0.1); color: #f5a0a8; border: 1px solid rgba(245,160,168,0.3); font-size: 0.875rem;"></div>
+                <p style="font-size: 0.6875rem; color: rgba(255,255,255,0.25); margin-top: 1rem; text-align: center;">
+                    Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="privacy-policy.html" style="color: rgba(212,175,55,0.5);">GDPR</a>.
+                </p>
+            </form>
         </div>
     </section>
+    <script>
+    document.getElementById('indexForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = document.getElementById('indexFormBtn');
+        var err = document.getElementById('indexFormError');
+        btn.textContent = 'Odosiela sa...';
+        btn.disabled = true;
+        err.style.display = 'none';
+        try {
+            var data = {
+                name: form.querySelector('[name="name"]').value,
+                email: form.querySelector('[name="email"]').value,
+                phone: form.querySelector('[name="phone"]').value,
+                interest: form.querySelector('[name="interest"]').value
+            };
+            var response = await fetch('api/send-email.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            var result = await response.json();
+            if (result.success) {
+                window.location.href = 'dakujeme.html';
+            } else { throw new Error('Failed'); }
+        } catch (ex) {
+            err.textContent = '✗ Nastala chyba. Zavolajte nám: 0944 633 663';
+            err.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Odoslať';
+        }
+    });
+    document.querySelectorAll('.idx-form-row').forEach(function(r) {
+        if (window.innerWidth <= 768) r.style.gridTemplateColumns = '1fr';
+    });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -425,7 +494,7 @@
                         <ul>
                             <li>info@crossrockcapital.sk</li>
                             <li>0944 633 663</li>
-                            <li>Bratislava, Slovensko</li>
+                            <li>Lazaretská 3/A, 811 08 Bratislava</li>
                         </ul>
                     </div>
                 </div>

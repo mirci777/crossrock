@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Príbehy klientov | Crossrock Capital</title>
+    <title>Príbehy klientov | Reálne skúsenosti | Crossrock Capital</title>
+    <meta name="description" content="Reálne príbehy klientov Crossrock Capital. Ako sme pomohli pri kúpe bytu, oddlžení, financovaní rekonštrukcie aj investovaní. Prečítajte si a nájdite sa v príbehu.">
+    <link rel="canonical" href="https://crossrockcapital.sk/pribehy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crossrock Capital">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Príbehy klientov | Crossrock Capital">
+    <meta property="og:description" content="Reálne príbehy klientov. Investície, oddlženie, financovanie výstavby. Prečítajte si a nájdite sa.">
+    <meta property="og:url" content="https://crossrockcapital.sk/pribehy.html">
+    <meta property="og:image" content="https://crossrockcapital.sk/assets/logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Príbehy klientov | Crossrock Capital">
+    <meta name="twitter:description" content="Reálne príbehy klientov Crossrock Capital. Investície, oddlženie, financovanie.">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -296,14 +308,65 @@
         </div>
     </section>
 
-    <!-- Single CTA at bottom -->
-    <section style="padding: 5rem 0; background: #F8F8F8; text-align: center;">
-        <div class="container" style="max-width: 600px;">
-            <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; color: #000;">Napíšte aj vy svoj príbeh</h2>
-            <p style="margin-bottom: 2rem; color: #4A4A4A; font-size: 1.125rem; line-height: 1.7;">Pomohli sme už desiatkám klientov nájsť riešenie. Radi pomôžeme aj vám.</p>
-            <a href="kontakt.html" style="display: inline-block; padding: 1.125rem 2.5rem; background: #D4AF37; color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; font-size: 0.9375rem;">Kontaktujte nás</a>
+    <!-- Lead Form -->
+    <section style="padding: 6rem 0; background: #000; color: white;">
+        <div class="container" style="max-width: 760px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem;">Napíšte aj vy svoj príbeh</h2>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.0625rem; line-height: 1.7;">Pomohli sme už desiatkám klientov. Radi pomôžeme aj vám.</p>
+            </div>
+            <div style="background: white; padding: 2.5rem;">
+                <form id="pribehy-form">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;" class="pb-form-row">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Meno a priezvisko *</label>
+                            <input type="text" name="name" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Telefón *</label>
+                            <input type="tel" name="phone" required maxlength="20" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;" class="pb-form-row">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Email *</label>
+                            <input type="email" name="email" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Záujem o</label>
+                            <select name="interest" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; background: white; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8A8A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center;">
+                                <option value="Financovanie">Financovanie</option>
+                                <option value="Investície">Investície</option>
+                                <option value="Iné">Iné</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" id="pribehyFormBtn" style="width: 100%; padding: 1.25rem; background: #D4AF37; color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9375rem; cursor: pointer; border: none; font-family: inherit;">Odoslať</button>
+                    <div id="pribehyFormError" style="display: none; margin-top: 1rem; padding: 1rem; background: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; text-align: center; font-weight: 600;"></div>
+                    <p style="font-size: 0.75rem; color: #8A8A8A; margin-top: 1rem; text-align: center; line-height: 1.6;">Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="privacy-policy.html" style="color: #D4AF37;">GDPR</a>.</p>
+                </form>
+            </div>
         </div>
     </section>
+    <script>
+    document.getElementById('pribehy-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = document.getElementById('pribehyFormBtn');
+        var err = document.getElementById('pribehyFormError');
+        btn.textContent = 'Odosiela sa...'; btn.disabled = true; err.style.display = 'none';
+        try {
+            var data = { name: form.querySelector('[name="name"]').value, email: form.querySelector('[name="email"]').value, phone: form.querySelector('[name="phone"]').value, interest: form.querySelector('[name="interest"]').value };
+            var r = await fetch('api/send-email.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            var res = await r.json();
+            if (res.success) { window.location.href = 'dakujeme.html'; } else { throw new Error(); }
+        } catch(ex) {
+            err.textContent = '✗ Nastala chyba. Zavolajte nám: 0944 633 663'; err.style.display = 'block';
+            btn.disabled = false; btn.textContent = 'Odoslať';
+        }
+    });
+    document.querySelectorAll('.pb-form-row').forEach(function(r) { if (window.innerWidth <= 768) r.style.gridTemplateColumns = '1fr'; });
+    </script>
 
     <footer class="footer">
         <div class="container">
@@ -337,7 +400,7 @@
                         <ul>
                             <li>info@crossrockcapital.sk</li>
                             <li>0944 633 663</li>
-                            <li>Bratislava, Slovensko</li>
+                            <li>Lazaretská 3/A, 811 08 Bratislava</li>
                         </ul>
                     </div>
                 </div>

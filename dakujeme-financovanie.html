@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ďakujeme za žiadosť o financovanie | Crossrock Capital</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1661519464622583');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead', { content_name: 'Financovanie' });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1661519464622583&ev=Lead&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel -->
+    <style>
+        .thankyou-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 6rem;
+            background: var(--bg-secondary);
+        }
+        .thankyou-card {
+            max-width: 680px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--border);
+            padding: 4rem 3.5rem;
+            text-align: center;
+        }
+        .thankyou-icon {
+            width: 88px;
+            height: 88px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+        .thankyou-icon svg {
+            color: #D4AF37;
+        }
+        .thankyou-badge {
+            display: inline-block;
+            padding: 0.375rem 1rem;
+            background: rgba(212,175,55,0.12);
+            color: #D4AF37;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .thankyou-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+        .thankyou-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .thankyou-reassurance {
+            background: #000;
+            color: white;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.85);
+        }
+        .thankyou-reassurance strong {
+            color: #D4AF37;
+        }
+        .thankyou-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+            margin-bottom: 3rem;
+            background: var(--bg-secondary);
+            padding: 2rem;
+        }
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: #D4AF37;
+            color: #000;
+            font-weight: 700;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-text strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-size: 0.9375rem;
+        }
+        .step-text span {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .thankyou-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 640px) {
+            .thankyou-card {
+                padding: 2.5rem 1.5rem;
+            }
+            .thankyou-cta {
+                flex-direction: column;
+            }
+            .thankyou-cta a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Crossrock Capital" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="investicie.html">Investície</a></li>
+                <li><a href="financovanie.html">Financovanie</a></li>
+                <li><a href="pribehy.html">Príbehy</a></li>
+                <li><a href="kontakt.html" class="btn-primary-nav">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="thankyou-section">
+        <div class="container">
+            <div class="thankyou-card">
+                <div class="thankyou-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <div class="thankyou-badge">Financovanie</div>
+                <h1 class="thankyou-title">Prijali sme<br>vašu žiadosť</h1>
+                <p class="thankyou-subtitle">
+                    Ďakujeme za dôveru. Potvrdenie sme odoslali na váš email. Nie ste v tom sami.
+                </p>
+
+                <div class="thankyou-reassurance">
+                    <strong>Diskrétnosť je pre nás samozrejmosťou.</strong> Každý rok pomáhame desiatkam ľudí v podobnej situácii nájsť riešenie, ktoré zachová ich dôstojnosť.
+                </div>
+
+                <div class="thankyou-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <strong>Volanie do 24 hodín</strong>
+                            <span>Náš poradca vás diskrétne kontaktuje v pracovných dňoch.</span>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <strong>Nezáväzné ocenenie</strong>
+                            <span>Dohodujeme si obhliadku nehnuteľnosti — bez záväzkov a poplatkov.</span>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <strong>Konkrétna ponuka do 7 dní</strong>
+                            <span>Dostanete písomnú ponuku. Rozhodnete sa v pokoji, bez tlaku.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thankyou-cta">
+                    <a href="index.html" class="btn-primary">Späť na hlavnú stránku</a>
+                    <a href="pribehy.html" class="btn-secondary">Príbehy klientov</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Crossrock Capital" class="footer-logo">
+                    <p class="footer-tagline">Sprístupňujeme investície do nehnuteľností každému a pomáhame tým, ktorí potrebujú kapitál.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigácia</h4>
+                        <ul>
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="investicie.html">Investície</a></li>
+                            <li><a href="financovanie.html">Financovanie</a></li>
+                            <li><a href="pribehy.html">Príbehy</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Právne</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">GDPR</a></li>
+                            <li><a href="obchodne-podmienky.html">Obchodné podmienky</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="downloads/Crossrock_Capital_Investicie.pdf" target="_blank">Prezentácia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Kontakt</h4>
+                        <ul>
+                            <li>info@crossrockcapital.sk</li>
+                            <li>0944 633 663</li>
+                            <li>Lazaretská 3/A, 811 08 Bratislava</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crossrock Capital. Všetky práva vyhradené.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>Používame cookies na zlepšenie vášho zážitku. <a href="privacy-policy.html">Viac informácií</a></p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookieReject" class="cookie-btn cookie-btn-text">Odmietnuť</button>
+                <button id="cookieAccept" class="cookie-btn cookie-btn-primary">Prijať</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        const banner = document.getElementById("cookieBanner");
+        const acceptBtn = document.getElementById("cookieAccept");
+        const rejectBtn = document.getElementById("cookieReject");
+        if (!localStorage.getItem("cookieConsent")) {
+            setTimeout(() => { banner.style.display = "block"; }, 1000);
+        }
+        acceptBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "accepted");
+            banner.style.opacity = "0";
+            setTimeout(() => { banner.style.display = "none"; }, 300);
+        });
+        rejectBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "rejected");
+            banner.style.opacity = "0";
+            setTimeout(() => { banner.style.display = "none"; }, 300);
+        });
+    })();
+    </script>
+</body>
+</html>

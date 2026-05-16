@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investičná kalkulačka | Crossrock Capital</title>
-    <meta name="description" content="Vypočítajte si presný výnos z vašej investície. 9-12% ročne s mesačným vyplácani
-
-úrokov.">
+    <title>Investičná kalkulačka | Výnos 9-12% | Crossrock Capital</title>
+    <meta name="description" content="Vypočítajte si presný výnos z investície do nehnuteľností. Easy 9% (3 roky) alebo Profi 10% (5 rokov). Mesačné vyplácanie úrokov + ročný bonus.">
+    <link rel="canonical" href="https://crossrockcapital.sk/kalkulacka.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crossrock Capital">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Investičná kalkulačka | Výnos 9-12% | Crossrock Capital">
+    <meta property="og:description" content="Vypočítajte si presný výnos. Easy 9% (3 roky) alebo Profi 10% (5 rokov). Mesačné vyplácanie.">
+    <meta property="og:url" content="https://crossrockcapital.sk/kalkulacka.html">
+    <meta property="og:image" content="https://crossrockcapital.sk/assets/logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Investičná kalkulačka | Crossrock Capital">
+    <meta name="twitter:description" content="Vypočítajte si výnos z investície 9-12% ročne. Mesačné vyplácanie úrokov.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -234,6 +243,93 @@
     <!-- Calculator Script -->
     <script src="js/calculator.js"></script>
 
+    <!-- Investment Form after calculator -->
+    <section style="padding: 5rem 0; background: #000; color: white;">
+        <div class="container" style="max-width: 760px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: inline-block; padding: 0.375rem 1rem; background: rgba(212,175,55,0.15); color: #D4AF37; font-size: 0.8125rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.25rem;">Zaujíma vás táto investícia?</div>
+                <h2 style="font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem;">Mám záujem o investíciu</h2>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.0625rem; line-height: 1.7;">Vyplňte formulár — náš poradca vás kontaktuje do 24 hodín.</p>
+            </div>
+            <div style="background: white; padding: 2.5rem;">
+                <form id="calcLeadForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;" class="calc-form-row">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Meno a priezvisko *</label>
+                            <input type="text" name="name" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Telefón *</label>
+                            <input type="tel" name="phone" required maxlength="20" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;" class="calc-form-row">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Email *</label>
+                            <input type="email" name="email" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">Orientačná suma</label>
+                            <input type="text" id="calcFormAmount" name="amount" placeholder="napr. 50 000 €" maxlength="30" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                    </div>
+                    <input type="hidden" id="calcFormProduct" name="interest" value="Easy - 3 roky (9%)">
+                    <button type="submit" id="calcFormBtn" style="width: 100%; padding: 1.25rem; background: #D4AF37; color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9375rem; cursor: pointer; border: none; font-family: inherit;">Odoslať žiadosť</button>
+                    <div id="calcFormError" style="display: none; margin-top: 1rem; padding: 1rem; background: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; text-align: center; font-weight: 600;"></div>
+                    <p style="font-size: 0.75rem; color: #8A8A8A; margin-top: 1rem; text-align: center; line-height: 1.6;">Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="privacy-policy.html" style="color: #D4AF37;">GDPR</a>.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+    // Sync product and amount from calculator to form
+    (function() {
+        var amountInput = document.getElementById('investmentAmount');
+        var formAmount = document.getElementById('calcFormAmount');
+        var formProduct = document.getElementById('calcFormProduct');
+        function syncCalc() {
+            if (amountInput && formAmount) {
+                var val = parseInt(amountInput.value);
+                if (!isNaN(val)) formAmount.value = val.toLocaleString('sk-SK') + ' €';
+            }
+        }
+        syncCalc();
+        if (amountInput) { amountInput.addEventListener('input', syncCalc); document.getElementById('amountSlider').addEventListener('input', syncCalc); }
+        document.querySelectorAll('.period-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (formProduct) {
+                    formProduct.value = this.dataset.product === 'easy' ? 'Easy - 3 roky (9%)' : 'Profi - 5 rokov (10%)';
+                }
+            });
+        });
+    })();
+
+    document.getElementById('calcLeadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = document.getElementById('calcFormBtn');
+        var err = document.getElementById('calcFormError');
+        btn.textContent = 'Odosiela sa...'; btn.disabled = true; err.style.display = 'none';
+        var amount = form.querySelector('[name="amount"]').value;
+        var data = {
+            name: form.querySelector('[name="name"]').value,
+            email: form.querySelector('[name="email"]').value,
+            phone: form.querySelector('[name="phone"]').value,
+            interest: form.querySelector('[name="interest"]').value,
+            message: amount ? 'Suma: ' + amount : ''
+        };
+        try {
+            var r = await fetch('api/send-email.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            var res = await r.json();
+            if (res.success) { window.location.href = 'dakujeme-investicie.html'; } else { throw new Error(); }
+        } catch(ex) {
+            err.textContent = '✗ Nastala chyba. Zavolajte nám: 0944 633 663'; err.style.display = 'block';
+            btn.disabled = false; btn.textContent = 'Odoslať žiadosť';
+        }
+    });
+    document.querySelectorAll('.calc-form-row').forEach(function(r) { if (window.innerWidth <= 768) r.style.gridTemplateColumns = '1fr'; });
+    </script>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -272,7 +368,7 @@
                         <ul>
                             <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="640d0a020b2407160b1717160b070f0705140d1005084a170f">[email&#160;protected]</a></li>
                             <li>0944 633 663</li>
-                            <li>Bratislava, Slovensko</li>
+                            <li>Lazaretská 3/A, 811 08 Bratislava</li>
                         </ul>
                     </div>
                 </div>

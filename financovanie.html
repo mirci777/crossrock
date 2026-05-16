@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financovanie | Crossrock Capital</title>
+    <title>Financovanie nehnuteľností | Schválenie do 48h | Crossrock Capital</title>
+    <meta name="description" content="Financovanie nehnuteľností pre každého – aj bez hypotéky. Nákup, výstavba, rekonštrukcia, preklenovací úver. Rýchle schválenie do 48 hodín. Pomôžeme aj tam, kde banky odmietli.">
+    <link rel="canonical" href="https://crossrockcapital.sk/financovanie.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crossrock Capital">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Financovanie nehnuteľností | Schválenie do 48h | Crossrock Capital">
+    <meta property="og:description" content="Financovanie aj bez hypotéky. Nákup, výstavba, rekonštrukcia. Rýchle schválenie do 48 hodín.">
+    <meta property="og:url" content="https://crossrockcapital.sk/financovanie.html">
+    <meta property="og:image" content="https://crossrockcapital.sk/assets/logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Financovanie nehnuteľností | Schválenie do 48h | Crossrock Capital">
+    <meta name="twitter:description" content="Financovanie nehnuteľností aj bez hypotéky. Schválenie do 48 hodín.">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -30,9 +42,8 @@
             margin-bottom: 4rem;
         }
         @media (max-width: 768px) {
-            .fin-products-grid {
-                grid-template-columns: 1fr;
-            }
+            .fin-products-grid { grid-template-columns: 1fr; }
+            .fin-form-row { grid-template-columns: 1fr !important; }
         }
     </style>
 <!-- Facebook Pixel -->
@@ -73,6 +84,7 @@
         <div class="container">
             <h1 class="page-title">Financovanie nehnuteľností</h1>
             <p class="page-subtitle">Pomôžeme aj tam, kde banky odmietli. Rýchle schválenie do 48 hodín.</p>
+            <a href="#financovanie-formular" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.75rem; padding: 0.8rem 1.75rem; border: 1px solid rgba(212,175,55,0.55); color: #D4AF37; text-decoration: none; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; transition: background 0.3s;" onmouseover="this.style.background='rgba(212,175,55,0.08)'" onmouseout="this.style.background='transparent'">Mám záujem <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2v10M2 7l5 5 5-5" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
     </section>
 
@@ -135,10 +147,71 @@
                 </div>
             </div>
 
-            <div style="text-align: center;">
-                <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">Potrebujete pomoc?</h3>
-                <p style="color: #4A4A4A; margin-bottom: 2rem;">Kontaktujte nás a spoločne nájdeme riešenie</p>
-                <a href="kontakt.html" class="btn-primary btn-large">Kontaktujte nás</a>
+            <div id="financovanie-formular">
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.75rem;">Mám záujem o financovanie</h3>
+                    <p style="color: #4A4A4A;">Vyplňte formulár — ozveme sa do 24 hodín. Diskrétne a nezáväzne.</p>
+                </div>
+                <div style="background: white; padding: 2.5rem; border: 1px solid #E5E5E5; max-width: 760px; margin: 0 auto;">
+                    <form id="finForm">
+                        <input type="hidden" name="formType" value="Financovanie">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;" class="fin-form-row">
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Meno a priezvisko *</label>
+                                <input type="text" name="name" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Telefón *</label>
+                                <input type="tel" name="phone" required maxlength="20" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.25rem;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Email *</label>
+                            <input type="email" name="email" required maxlength="100" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;" class="fin-form-row">
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Typ financovania</label>
+                                <select name="interest" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; background: white; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8A8A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center;">
+                                    <option value="Financovanie obchodu s nehnuteľnosťami">Financovanie obchodu</option>
+                                    <option value="Financovanie výstavby nehnuteľností">Financovanie výstavby</option>
+                                    <option value="Financovanie nákupu nehnuteľnosti">Financovanie nákupu</option>
+                                    <option value="Financovanie rekonštrukcie nehnuteľnosti">Financovanie rekonštrukcie</option>
+                                    <option value="Iné / neviem">Iné / neviem</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Typ nehnuteľnosti</label>
+                                <select name="propertyType" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; background: white; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8A8A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center;">
+                                    <option value="Byt">Byt</option>
+                                    <option value="Dom">Dom</option>
+                                    <option value="Pozemok">Pozemok</option>
+                                    <option value="Komerčný priestor">Komerčný priestor</option>
+                                    <option value="Iné">Iné</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;" class="fin-form-row">
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Odhadovaná hodnota nehnuteľnosti</label>
+                                <input type="text" name="propertyValue" placeholder="napr. 150 000 €" maxlength="30" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Potrebná suma</label>
+                                <input type="text" name="amount" placeholder="napr. 80 000 €" maxlength="30" style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.5px;">Vaša situácia (nepovinné)</label>
+                            <textarea name="message" rows="3" maxlength="500" placeholder="Stručne opíšte vašu situáciu..." style="width: 100%; padding: 0.875rem; border: 2px solid #E5E5E5; font-family: inherit; font-size: 1rem; box-sizing: border-box; resize: vertical; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#D4AF37'" onblur="this.style.borderColor='#E5E5E5'"></textarea>
+                        </div>
+                        <button type="submit" id="finFormBtn" style="width: 100%; padding: 1.25rem; background: #000; color: white; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9375rem; cursor: pointer; border: none; font-family: inherit; transition: background 0.3s;">Odoslať žiadosť</button>
+                        <div id="finFormError" style="display: none; margin-top: 1rem; padding: 1rem; background: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; text-align: center; font-weight: 600;"></div>
+                        <p style="font-size: 0.75rem; color: #8A8A8A; margin-top: 1rem; text-align: center; line-height: 1.6;">
+                            Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="privacy-policy.html" style="color: #D4AF37;">GDPR</a>. Všetky informácie sú spracovávané diskrétne.
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -175,7 +248,7 @@
                         <ul>
                             <li>info@crossrockcapital.sk</li>
                             <li>0944 633 663</li>
-                            <li>Bratislava, Slovensko</li>
+                            <li>Lazaretská 3/A, 811 08 Bratislava</li>
                         </ul>
                     </div>
                 </div>
@@ -185,6 +258,54 @@
             </div>
         </div>
     </footer>
+    <script>
+    document.getElementById('finForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = document.getElementById('finFormBtn');
+        var err = document.getElementById('finFormError');
+        btn.textContent = 'Odosiela sa...';
+        btn.disabled = true;
+        err.style.display = 'none';
+
+        var propertyType = (form.querySelector('[name="propertyType"]') || {}).value || '';
+        var propertyValue = (form.querySelector('[name="propertyValue"]') || {}).value || '';
+        var amount = (form.querySelector('[name="amount"]') || {}).value || '';
+        var baseMsg = (form.querySelector('[name="message"]') || {}).value || '';
+        var extraInfo = [];
+        if (propertyType) extraInfo.push('Nehnuteľnosť: ' + propertyType);
+        if (propertyValue) extraInfo.push('Hodnota: ' + propertyValue);
+        if (amount) extraInfo.push('Potrebná suma: ' + amount);
+        if (baseMsg) extraInfo.push(baseMsg);
+
+        var data = {
+            name: form.querySelector('[name="name"]').value,
+            email: form.querySelector('[name="email"]').value,
+            phone: form.querySelector('[name="phone"]').value,
+            interest: form.querySelector('[name="interest"]').value,
+            message: extraInfo.join('\n')
+        };
+
+        try {
+            var response = await fetch('api/send-email.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            var result = await response.json();
+            if (result.success) {
+                window.location.href = 'dakujeme-financovanie.html';
+            } else {
+                throw new Error(result.error || 'Failed');
+            }
+        } catch (error) {
+            err.textContent = '✗ Nastala chyba. Skúste to prosím znova alebo zavolajte: 0944 633 663';
+            err.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Odoslať žiadosť';
+        }
+    });
+    </script>
     <script src="js/script.js"></script>
     <!-- Cookie Banner -->
     <div id="cookieBanner" class="cookie-banner" style="display: none;">
