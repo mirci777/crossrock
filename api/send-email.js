@@ -9,7 +9,7 @@ module.exports = async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-    const { name, email, phone, interest, message, source, amount } = req.body || {};
+    const { name, email, phone, interest, message, note, source, amount } = req.body || {};
 
     if (!name || !email) return res.status(400).json({ error: 'Missing required fields: name, email' });
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ error: 'Invalid email address' });
@@ -19,6 +19,7 @@ module.exports = async function handler(req, res) {
     const safePhone    = String(phone || 'Neuvedené').slice(0, 30);
     const safeInterest = String(interest || '').slice(0, 100);
     const safeMessage  = String(message || '').slice(0, 2000);
+    const safeNote     = String(note || '').slice(0, 2000);
     const safeSource   = String(source || '');
     const amountInt    = amount ? parseInt(String(amount).replace(/[^0-9]/g, ''), 10) || null : null;
 
@@ -29,7 +30,7 @@ module.exports = async function handler(req, res) {
         : process.env.ECOMAIL_LIST_FINANCOVANIE;
 
     const customFields = isInvesticie
-        ? buildCustomFields(safeInterest, amountInt, safeMessage)
+        ? buildCustomFields(safeInterest, amountInt, safeNote)
         : null;
 
     try {

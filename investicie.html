@@ -570,16 +570,18 @@
 
     async function sendLeadForm(formEl, btnEl, errorEl, thankYouUrl) {
         var amountEl = formEl.querySelector('[name="amount"]');
+        var note = (formEl.querySelector('[name="message"]') || {}).value || '';
         var data = {
             name: formEl.querySelector('[name="name"]').value,
             email: formEl.querySelector('[name="email"]').value,
             phone: (formEl.querySelector('[name="phone"]') || {}).value || '',
             interest: (formEl.querySelector('[name="interest"]') || {}).value || '',
-            message: (formEl.querySelector('[name="message"]') || {}).value || '',
+            message: note,
+            note: note,
             source: (formEl.querySelector('[name="source"]') || {}).value || '',
             amount: amountEl ? amountEl.value : ''
         };
-        if (amountEl && amountEl.value) data.message = 'Suma: ' + amountEl.value + (data.message ? '\n' + data.message : '');
+        if (amountEl && amountEl.value) data.message = 'Suma: ' + amountEl.value + (note ? '\n' + note : '');
         try {
             var response = await fetch('api/send-email', {
                 method: 'POST',
